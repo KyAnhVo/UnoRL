@@ -5,7 +5,7 @@ from rlcard.agents.uno_human_agent import HumanAgent
 # If your version exports a shortcut, you *might* instead be able to do:
 # from rlcard.agents import UnoHumanAgent as HumanAgent
 
-def main():
+def rlcard_test():
     # 1. Make UNO environment
     env = rlcard.make('uno', config={
         'seed': 42,
@@ -46,5 +46,5 @@ def main():
             break
 
 if __name__ == "__main__":
-    main()
+    rlcard_test()
 
