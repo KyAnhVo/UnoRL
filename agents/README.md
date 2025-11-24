@@ -38,7 +38,7 @@ True return from "episode", pure on-policy, with true return
 as label.
 
 ### Note
-We have elected to not do any non-deep state space
+We have elected to not do any non-deep algorithm
 due to the combinatorial explosion of state space. This essentially
 leaves out the algorithms that we may have considered, which are
 Certainty Equivalence (CE), State-Action-Reward-State-Action (SARSA),
