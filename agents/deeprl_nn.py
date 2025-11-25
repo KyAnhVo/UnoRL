@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-class DeepQ_NN(nn.Module):
+class DeepRL_NN(nn.Module):
     state_dim: int
     action_dim: int
 
@@ -17,7 +17,6 @@ class DeepQ_NN(nn.Module):
     lr: float
 
     EPOCH_PER_TRAIN: int
-
 
     def __init__(self, state_dim: int, action_dim, lr=1e-3):
         super().__init__()
@@ -34,17 +33,51 @@ class DeepQ_NN(nn.Module):
         self.to(self.device)
 
         self.EPOCH_PER_TRAIN = 1
-    
-    def train_batch(
+
+    def train_mc_batch(
             self, state_list: List[List[int]],
             actions_taken: List[int],
-            action_qs: List[float])->float:
-        ''' Apply batch nn training based on q learning item queues.
+            returns: List[float]
+            )->float:
+        ''' Apply batch nn training based on MC learning item queues.
 
         Args:
             state_list: List of each state s_i
             actions_taken: List of each action taken a_i
-            action_qs: list of target q values r_i + max_a(Q(s_{i+1}, a))
+            returns: the return value of each (s_i, a_i) pair in OSL
+        Returns:
+            average loss per epoch in training
+        '''
+        return self._train_batch(state_list, actions_taken, returns)
+
+    def train_q_batch(
+            self, state_list: List[List[int]],
+            actions_taken: List[int],
+            q_values: List[float]
+            )->float:
+        ''' Apply batch nn training based on Q learning item queues
+
+        Args:
+            state_list: List of each state s_i
+            actions_taken: List of each action taken a_i
+            returns: the return value of each pair (s_i, a_i) pair in q learning
+        Returns:
+            average loss per epoch in training
+        '''
+        return self._train_batch(state_list, actions_taken, q_values)
+
+    # ================ "PRIVATE" FUNCTIONS ================
+
+    def _train_batch(
+            self, state_list: List[List[int]],
+            actions_taken: List[int],
+            real_values: List[float])->float:
+        ''' Apply batch nn training based on any RL learning item queues.
+
+        Args:
+            state_list: List of each state s_i
+            actions_taken: List of each action taken a_i
+            real_labels: list of target values
         Returns:
             average loss per epoch in training
         '''
@@ -53,7 +86,7 @@ class DeepQ_NN(nn.Module):
         actions = torch.tensor(
                 actions_taken, dtype=torch.long, device=self.device)
         targets = torch.tensor(
-                action_qs, dtype=torch.float32, device=self.device)
+                real_values, dtype=torch.float32, device=self.device)
         total_loss = 0.0
 
         for _ in range(self.EPOCH_PER_TRAIN):
@@ -70,9 +103,6 @@ class DeepQ_NN(nn.Module):
 
         avg_loss = total_loss / self.EPOCH_PER_TRAIN
         return avg_loss
-
-
-
     
     def forward(self, x: torch.Tensor)->torch.Tensor:
         x = self.activation(self.fc1(x))
