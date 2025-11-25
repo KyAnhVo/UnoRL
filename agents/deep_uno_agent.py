@@ -79,7 +79,7 @@ class DeepUnoAgent(ABC):
         self.next_state_list.append(self.state_translation(next_state))
         self.action_list.append(action)
         self.rewards_list.append(reward)
-        self.dones.append(int(done))
+        self.dones.append(done)
 
     def reset_buffer(self):
         """Clear stored transitions at end of episode."""
