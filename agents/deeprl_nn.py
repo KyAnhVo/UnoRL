@@ -34,41 +34,7 @@ class DeepRL_NN(nn.Module):
 
         self.EPOCH_PER_TRAIN = 1
 
-    def train_mc_batch(
-            self, state_list: List[List[int]],
-            actions_taken: List[int],
-            returns: List[float]
-            )->float:
-        ''' Apply batch nn training based on MC learning item queues.
-
-        Args:
-            state_list: List of each state s_i
-            actions_taken: List of each action taken a_i
-            returns: the return value of each (s_i, a_i) pair in OSL
-        Returns:
-            average loss per epoch in training
-        '''
-        return self._train_batch(state_list, actions_taken, returns)
-
-    def train_q_batch(
-            self, state_list: List[List[int]],
-            actions_taken: List[int],
-            q_values: List[float]
-            )->float:
-        ''' Apply batch nn training based on Q learning item queues
-
-        Args:
-            state_list: List of each state s_i
-            actions_taken: List of each action taken a_i
-            q_values: the return value of each pair (s_i, a_i) pair in q learning
-        Returns:
-            average loss per epoch in training
-        '''
-        return self._train_batch(state_list, actions_taken, q_values)
-
-    # ================ "PRIVATE" FUNCTIONS ================
-
-    def _train_batch(
+    def train_batch(
             self, state_list: List[List[int]],
             actions_taken: List[int],
             real_values: List[float])->float:
