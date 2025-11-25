@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from typing import List
 from agents.deeprl_nn import DeepRL_NN
 
-class UnoAgent(ABC):
+class DeepUnoAgent(ABC):
     state_dim: int
     gamma: float
 
@@ -51,7 +51,7 @@ class UnoAgent(ABC):
     # ------------------------------------------------------
 
     @abstractmethod
-    def state_translation(self, state):
+    def state_translation(self, state)->List[int]:
         """Convert RLCard state to encoded vector."""
         pass
 

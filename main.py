@@ -13,7 +13,7 @@ def rlcard_test():
     })
 
     # 2. Human agent (CLI interface)
-    human_agent = HumanAgent(env.action_num)
+    human_agent = MyRandomAgent(env.action_num)
 
     # 3. Load rule-based UNO model from the model zoo
     #    This returns a Model; `.agents` is a list of agents for each seat.
@@ -44,6 +44,24 @@ def rlcard_test():
         cont = input("Play another game? (y/n): ").strip().lower()
         if cont != 'y':
             break
+import numpy as np
+
+
+class MyRandomAgent:
+    def __init__(self, num_actions):
+        self.use_raw = False
+        self.num_actions = num_actions
+
+    @staticmethod
+    def step(state):
+        print('================================')
+        print(state)
+        return np.random.choice(list(state['legal_actions']))
+
+    def eval_step(self, state):
+        info = {}
+        return self.step(state), info
+
 
 if __name__ == "__main__":
     rlcard_test()

@@ -6,15 +6,22 @@
 State representation will be
 ```
 Player hands:
-    #red, #blue, #yellow, #green,
-    #numbers, #actions,
-    #wilds, #wild+4s
-Opponent (in play order from player):
-    opp1 #card, opp2 #card, opp3 #card
+    #red, #green, #blue, #yellow,
+    #number, #skip, #reverse, #draw_2
+    #wild, #wild_draw_4
+Opponent:
+    #card
 Discarded deck:
-    #red, #blue, #yellow, #green,
-    #numbers, #actions,
-    #wilds, #wild+4s
+    #red, #green, #blue, #yellow,
+    #number, #skip, #reverse, #draw_2
+    #wild, #wild_draw_4
+Target card (top of played/discarded pile):
+    top color onehot (index in order of
+    red, green, blue, yellow)
+    top suit onehot (index in order of 
+    number, skip, reverse, draw_2, wild, wild_draw_4)
+    top number onehot (index in order 0-9,
+    if not a Number card then all 0)
 ```
 
 ### Card
@@ -23,9 +30,23 @@ State representation will be
 Player hands:
     #card for each unique card (0, 1, or 2)
 Opponent (in play order from player):
-    opp1 #card, opp2 #card, opp3 #card
+    #card
 Discarded deck:
     #card for each unique card (0, 1, or 2)
+Target card (top of played/discarded pile):
+    top color onehot (index in order of
+    red, green, blue, yellow)
+    top suit onehot (index in order of 
+    number, skip, reverse, draw_2, wild, wild_draw_4)
+    top number onehot (index in order 0-9,
+    if not a Number card then all 0)
+```
+
+### Tabular
+Note: this is used for either SARSA, tabular Q, or
+tabular OSL.
+```
+NEED THINKING
 ```
 
 ## Divide by model
