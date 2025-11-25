@@ -23,7 +23,7 @@ class UnoAgent(ABC):
 
     @abstractmethod
     def step(self, state) -> int:
-        """Action selection during training (e.g., epsilon-greedy)."""
+        """Action selection during training (epsilon-greedy)."""
         pass
 
     @abstractmethod
@@ -32,7 +32,7 @@ class UnoAgent(ABC):
         pass
 
     def use_raw(self) -> bool:
-        """RLCard asks this; 'False' means you expect processed env states."""
+        """'False' means expect processed env states."""
         return False
 
     # ------------------------------------------------------
@@ -41,7 +41,7 @@ class UnoAgent(ABC):
 
     @abstractmethod
     def state_translation(self, state):
-        """Convert RLCard state to your encoded vector."""
+        """Convert RLCard state to encoded vector."""
         pass
 
     @abstractmethod
@@ -70,7 +70,7 @@ class UnoAgent(ABC):
         self.rewards_list.append(reward)
         self.dones.append(int(done))
 
-    def reset_episode_buffer(self):
+    def reset_buffer(self):
         """Clear stored transitions at end of episode."""
         self.state_list.clear()
         self.next_state_list.clear()
