@@ -3,6 +3,17 @@ from typing import List
 from agents.deeprl_nn import DeepRL_NN
 
 class UnoAgent(ABC):
+    state_dim: int
+    gamma: float
+
+    online_nn: DeepRL_NN
+
+    state_list:         List[List[int]]
+    next_state_list:    List[List[int]]
+    action_list:        List[int]
+    rewards_list:       List[float]
+    dones:              List[bool]
+
     def __init__(self, state_dim: int, gamma: float = 0.99):
         self.state_dim = state_dim
         self.gamma     = gamma
