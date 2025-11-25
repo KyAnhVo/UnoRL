@@ -60,7 +60,7 @@ class DeepRL_NN(nn.Module):
         Args:
             state_list: List of each state s_i
             actions_taken: List of each action taken a_i
-            returns: the return value of each pair (s_i, a_i) pair in q learning
+            q_values: the return value of each pair (s_i, a_i) pair in q learning
         Returns:
             average loss per epoch in training
         '''
@@ -108,5 +108,4 @@ class DeepRL_NN(nn.Module):
         x = self.activation(self.fc1(x))
         x = self.activation(self.fc2(x))
         return self.fc3(x)
-
 
