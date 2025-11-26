@@ -7,13 +7,25 @@ import torch
 
 class DeepQStratAgent(DeepUnoAgent):
     target_nn: DeepRL_NN
-    episodes: int
+
+    # train after every TRAIN_RATE games
+    TRAIN_RATE: int
+
+    # target_nn gets params from online_nn after
+    # SYNC_RATE games
+    SYNC_RATE: int
 
     def __init__(self):
         super().__init__(state_dim=STRAT_STATE_DIM_COUNT)
         self.target_nn = DeepRL_NN(state_dim=STRAT_STATE_DIM_COUNT,
                                    action_dim=61)
         self.target_nn.load_state_dict(self.online_nn.state_dict())
+
+        # Smaller == faster training, higher fluctuation
+        self.TRAIN_RATE = 10
+
+        # lower == more unstable model
+        self.SYNC_RATE = 100
     
     @override
     def state_translation(self, state) -> List[int]:
@@ -29,23 +41,18 @@ class DeepQStratAgent(DeepUnoAgent):
                 dtype=torch.float32,
                 device=device,
             )
-
             rewards = torch.tensor(
                 self.rewards_list,
                 dtype=torch.float32,
                 device=device,
             )
-
             dones = torch.tensor(
                 self.dones,
                 dtype=torch.float32,
                 device=device,
             )
-
-            # Q_target(s', ·)
             next_q_values = self.target_nn(next_states)
             max_next_q = next_q_values.max(dim=1).values
-
             targets = rewards + self.gamma * max_next_q * (1.0 - dones)
 
         return targets.cpu().tolist()

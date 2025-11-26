@@ -7,6 +7,7 @@ class DeepUnoAgent(ABC):
     gamma: float
 
     online_nn: DeepRL_NN
+    episode_count: int
 
     state_list:         List[List[int]]
     next_state_list:    List[List[int]]
@@ -27,6 +28,7 @@ class DeepUnoAgent(ABC):
         self.action_list     = []
         self.rewards_list    = []
         self.dones           = []
+
 
     # ------------------------------------------------------
     # RLCard-required API
