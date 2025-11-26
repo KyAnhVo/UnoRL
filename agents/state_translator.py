@@ -171,3 +171,4 @@ def strategic_state_translate(state: Dict)->List[int]:
 def card_state_translate(state: Dict):
     ''' Translate from env given state to card state:
     '''
+    pass
