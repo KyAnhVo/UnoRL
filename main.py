@@ -2,7 +2,6 @@
 
 import rlcard
 from rlcard import models
-from rlcard.agents.human_agents.uno_human_agent import HumanAgent
 
 # If your version exports a shortcut, you *might* instead be able to do:
 # from rlcard.agents import UnoHumanAgent as HumanAgent
