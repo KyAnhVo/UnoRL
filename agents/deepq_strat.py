@@ -21,13 +21,35 @@ class DeepQStratAgent(DeepUnoAgent):
 
     @override
     def compute_targets(self) -> List[float]:
-        next_q_values = self.target_nn.forward(
-                torch.tensor(self.next_state_list, dtype=torch.float32))
-        max_next_q = next_q_values.max(dim=1).values
-        rewards = torch.tensor(self.rewards_list, dtype=torch.float32)
-        dones = torch.tensor(self.dones, dtype=torch.float32)
+        device = self.target_nn.device
 
-        return (rewards + self.gamma * max_next_q * (1 - dones)).tolist()
+        with torch.no_grad():
+            next_states = torch.tensor(
+                self.next_state_list,
+                dtype=torch.float32,
+                device=device,
+            )
+
+            rewards = torch.tensor(
+                self.rewards_list,
+                dtype=torch.float32,
+                device=device,
+            )
+
+            dones = torch.tensor(
+                self.dones,
+                dtype=torch.float32,
+                device=device,
+            )
+
+            # Q_target(s', ·)
+            next_q_values = self.target_nn(next_states)
+            max_next_q = next_q_values.max(dim=1).values
+
+            targets = rewards + self.gamma * max_next_q * (1.0 - dones)
+
+        return targets.cpu().tolist()
+
 
 
 

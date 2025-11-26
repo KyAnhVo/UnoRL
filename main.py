@@ -1,6 +1,8 @@
+#!/usr/bin/env python3
+
 import rlcard
 from rlcard import models
-from rlcard.agents.uno_human_agent import HumanAgent
+from rlcard.agents.human_agents.uno_human_agent import HumanAgent
 
 # If your version exports a shortcut, you *might* instead be able to do:
 # from rlcard.agents import UnoHumanAgent as HumanAgent
@@ -13,7 +15,7 @@ def rlcard_test():
     })
 
     # 2. Human agent (CLI interface)
-    human_agent = MyRandomAgent(env.action_num)
+    human_agent = MyRandomAgent(env.num_actions)
 
     # 3. Load rule-based UNO model from the model zoo
     #    This returns a Model; `.agents` is a list of agents for each seat.
