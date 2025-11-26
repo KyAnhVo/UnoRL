@@ -64,6 +64,75 @@ class Suit(IntEnum):
     WILD = 4
     WILD_DRAW_4 = 5
 
+def card_to_int(card: str)->int:
+    val = 0
+    card_detached = card.split('-')
+    color_str, value_str = card_detached[0], card_detached[1]
+
+    match color_str:
+        case 'r':
+            val += Color.R
+        case 'g':
+            val += Color.G
+        case 'b':
+            val += Color.B
+        case 'y':
+            val += Color.Y
+    
+    val *= 15
+
+    match value_str:
+        case v if v.isdigit():
+            val += int(v)
+        case 'skip':
+            val += Suit.SKIP + 9
+        case 'reverse':
+            val += Suit.REVERSE + 9
+        case 'draw_2':
+            val += Suit.DRAW_2 + 9
+        case 'wild':
+            val += Suit.WILD + 9
+        case 'wild_draw_4':
+            val += Suit.WILD_DRAW_4 + 9
+
+    return val
+
+def int_to_action(action_int: int)->str:
+    if action_int == 60:
+        return 'draw'
+    
+    color = action_int // 15
+    suit = action_int % 15
+    ret = ''
+    match color:
+        case Color.R:
+            ret += 'r-'
+        case Color.G:
+            ret += 'g-'
+        case Color.B:
+            ret += 'b-'
+        case Color.Y:
+            ret += 'y-'
+    
+    if 0 <= suit <= 9:
+        ret += str(suit)
+    else:
+        suit -= 9
+        match suit:
+            case Suit.SKIP:
+                ret += 'skip'
+            case Suit.REVERSE:
+                ret += 'reverse'
+            case Suit.DRAW_2:
+                ret += 'draw_2'
+            case Suit.WILD:
+                ret += 'wild'
+            case Suit.WILD_DRAW_4:
+                ret += 'wild_draw_4'
+
+    return ret
+
+
 def translate_card(card: str)->Tuple[Color, Suit, int]:
     card_detached = card.split('-')
     color_str, value_str = card_detached[0], card_detached[1]
@@ -172,3 +241,26 @@ def card_state_translate(state: Dict):
     ''' Translate from env given state to card state:
     '''
     pass
+
+def strat_state_reward(
+        state1: List[int], 
+        state2: List[int], 
+        gain_card_penalty: float, 
+        lose_card_reward: float)->float:
+    initial_state = True
+    for i in (state1):
+        if i != 0:
+            initial_state = False
+            break
+
+    if initial_state:
+        return 0
+
+    card_count_1 = sum(state1[4:10])
+    card_count_2 = sum(state2[4:10])
+
+    card_change = card_count_2 - card_count_1
+    if card_change <= 0:
+        return -lose_card_reward * card_change
+    else:
+        return -gain_card_penalty * card_change

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from env import get_rule_based_agent
+
 import rlcard
 from rlcard import models
 
@@ -65,5 +67,6 @@ class MyRandomAgent:
 
 
 if __name__ == "__main__":
-    rlcard_test()
+    print(get_rule_based_agent())
+    # rlcard_test()
 

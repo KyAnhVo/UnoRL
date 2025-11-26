@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List
 from agents.deeprl_nn import DeepRL_NN
+from random import randint
 
 class DeepUnoAgent(ABC):
     state_dim: int
@@ -8,6 +9,9 @@ class DeepUnoAgent(ABC):
 
     online_nn: DeepRL_NN
     episode_count: int
+
+    # train after every TRAIN_RATE games
+    TRAIN_RATE: int
 
     state_list:         List[List[int]]
     next_state_list:    List[List[int]]
@@ -29,6 +33,8 @@ class DeepUnoAgent(ABC):
         self.rewards_list    = []
         self.dones           = []
 
+        # Smaller == faster training, higher fluctuation
+        self.TRAIN_RATE = 10
 
     # ------------------------------------------------------
     # RLCard-required API
@@ -49,7 +55,7 @@ class DeepUnoAgent(ABC):
         return False
 
     # ------------------------------------------------------
-    # Required for your architecture
+    # Required for training
     # ------------------------------------------------------
 
     @abstractmethod
@@ -71,15 +77,47 @@ class DeepUnoAgent(ABC):
             real_values     = targets,
         )
 
+    @abstractmethod
+    def before_game(self):
+        """ Before-game setup: alter buffer, etc. """
+
+        # adjust buffer
+        buffer_state = [0 for _ in range(self.state_dim)]
+        self.state_list.append(buffer_state)
+        self.action_list.append(randint(0, 60)) # doesnt matter
+
+
+    @abstractmethod
+    def after_game(self, payoff: int):
+        """ After-game setup: adjust buffer, training, etc. """
+        # adjust buffer
+        self.next_state_list.append([0 for _ in range(self.state_dim)])
+        self.rewards_list.append(payoff)
+        self.dones.append(True)
+
+        # training
+        self.episode_count += 1
+        if self.episode_count % self.TRAIN_RATE == self.TRAIN_RATE - 1:
+            self.train_online_nn()
+            self.reset_buffer()
+
+
     # ------------------------------------------------------
     # Helpers that SHOULD be included
     # ------------------------------------------------------
 
-    def record_transition(self, state, action, reward, next_state, done):
+    def record_transition(self, 
+                          state: List[int], 
+                          action: int, 
+                          reward: float, 
+                          next_state: List[int], 
+                          done: bool):
         """Add a transition to buffers."""
         self.state_list.append(self.state_translation(state))
-        self.next_state_list.append(self.state_translation(next_state))
-        self.action_list.append(action)
+        if next_state != None:
+            self.next_state_list.append(self.state_translation(next_state))
+        if action != -1:
+            self.action_list.append(action)
         self.rewards_list.append(reward)
         self.dones.append(done)
 

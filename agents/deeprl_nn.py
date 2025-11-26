@@ -74,4 +74,3 @@ class DeepRL_NN(nn.Module):
         x = self.activation(self.fc1(x))
         x = self.activation(self.fc2(x))
         return self.fc3(x)
-

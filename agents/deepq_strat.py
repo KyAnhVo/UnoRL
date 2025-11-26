@@ -1,4 +1,4 @@
-from agents.state_translator import STRAT_STATE_DIM_COUNT, strategic_state_translate
+from agents.state_translator import STRAT_STATE_DIM_COUNT, strategic_state_translate, strat_state_reward
 from agents.deep_uno_agent import DeepUnoAgent
 from agents.deeprl_nn import DeepRL_NN
 
@@ -8,12 +8,12 @@ import torch
 class DeepQStratAgent(DeepUnoAgent):
     target_nn: DeepRL_NN
 
-    # train after every TRAIN_RATE games
-    TRAIN_RATE: int
-
-    # target_nn gets params from online_nn after
-    # SYNC_RATE games
+    # sync target_nn param using online_nn after
+    # every SYNC_RATE episodes
     SYNC_RATE: int
+    
+    GAIN_CARD_PENALTY: float
+    LOSE_CARD_REWARD: float
 
     def __init__(self):
         super().__init__(state_dim=STRAT_STATE_DIM_COUNT)
@@ -21,11 +21,58 @@ class DeepQStratAgent(DeepUnoAgent):
                                    action_dim=61)
         self.target_nn.load_state_dict(self.online_nn.state_dict())
 
-        # Smaller == faster training, higher fluctuation
-        self.TRAIN_RATE = 10
-
         # lower == more unstable model
         self.SYNC_RATE = 100
+
+        self.GAIN_CARD_PENALTY = 0.02
+        self.LOSE_CARD_REWARD = 0.02
+
+    # ------------------------------------------------------
+    # RLCard-required API
+    # ------------------------------------------------------
+
+    @override
+    def step(self, state)->int:
+        curr_state = self.state_translation(state)
+        q_values = self.online_nn.forward(
+                torch.tensor(curr_state,
+                             dtype= torch.float32,
+                             device = self.online_nn.device))
+        legal: List[int] = state['legal_actions']
+        
+        mask = torch.full_like(q_values, float('-inf'))
+        mask[legal] = 0.0
+
+        masked_q = q_values + mask
+
+        action = torch.argmax(masked_q).item()
+
+        # update values for training lists
+        # calculate reward
+        # append state into state_list and next_state_list
+        # append action into action_list
+        reward = strat_state_reward(
+                self.state_list[-1],
+                curr_state,
+                lose_card_reward= self.LOSE_CARD_REWARD,
+                gain_card_penalty= self.GAIN_CARD_PENALTY
+                )
+
+        self.record_transition(
+                state=curr_state,
+                action=int(action),
+                reward=reward,
+                next_state=curr_state,
+                done=False
+                )
+
+        return int(action)
+
+        
+
+    # ------------------------------------------------------
+    # Required for training
+    # ------------------------------------------------------
     
     @override
     def state_translation(self, state) -> List[int]:
@@ -57,6 +104,10 @@ class DeepQStratAgent(DeepUnoAgent):
 
         return targets.cpu().tolist()
 
-
+    @override
+    def before_game(self):
+        super().before_game()
+        
+        # add state [0...0] to state_list, and some action 0.
 
 
