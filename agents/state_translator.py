@@ -47,8 +47,11 @@ NOTE: Card is denoted by "color-number" where
     ]
 }
 '''
-
+# hand: 10, op: 1, discarded: 10, top: 20
 STRAT_STATE_DIM_COUNT = 41
+
+# hand: 60, op: 1, discarded: 60, top: 20
+CARD_STATE_DIM_COUNT = 141
 
 class Color(IntEnum):
     R = 0
@@ -240,15 +243,58 @@ def strategic_state_translate(state: Dict)->List[int]:
 def card_state_translate(state: Dict):
     ''' Translate from env given state to card state:
     '''
-    pass
+    real_state = state['raw_obs']
+    card_state = [0 for _ in range(CARD_STATE_DIM_COUNT)]
+
+    agent_player_id = real_state['current_player']
+    opp_player_id = 0 if agent_player_id == 1 else 1
+
+    # agent hand
+    start_index = 0
+    for card in real_state['hand']:
+        index = 0
+        color, suit, number = translate_card(card)
+        index += color * 15
+        if number != -1 and suit != Suit.NUMBER:
+            index += number
+        else:
+            index += suit + 9
+        card_state[start_index + index] += 1
+
+    # opp hand count
+    card_state[60] = real_state['card_num'][opp_player_id]
+
+    # discarded deck
+    start_index = 61
+    for card in real_state['played_cards']:
+        index = 0
+        color, suit, number = translate_card(card)
+        index += color * 15
+        if number != -1 and suit != Suit.NUMBER:
+            index += number
+        else:
+            index += suit + 9
+        card_state[start_index + index] += 1
+
+    # target card
+    color_start_index = 121
+    suit_start_index = 125
+    number_start_index = 131
+    color, suit, number = translate_card(real_state['target'])
+    card_state[color_start_index + color] = 1
+    card_state[suit_start_index + suit] = 1
+    if suit == Suit.NUMBER and number != -1:
+        card_state[number_start_index + number] = 1
+
+    return card_state
 
 def strat_state_reward(
-        state1: List[int], 
-        state2: List[int], 
+        prev_state: List[int], 
+        curr_state: List[int], 
         gain_card_penalty: float, 
         lose_card_reward: float)->float:
     initial_state = True
-    for i in (state1):
+    for i in (prev_state):
         if i != 0:
             initial_state = False
             break
@@ -256,9 +302,29 @@ def strat_state_reward(
     if initial_state:
         return 0
 
-    card_count_1 = sum(state1[4:10])
-    card_count_2 = sum(state2[4:10])
+    card_count_1 = sum(prev_state[4:10])
+    card_count_2 = sum(curr_state[4:10])
 
+    card_change = card_count_2 - card_count_1
+    if card_change <= 0:
+        return -lose_card_reward * card_change
+    else:
+        return -gain_card_penalty * card_change
+
+def card_state_reward(
+        prev_state: List[int], curr_state: List[int],
+        gain_card_penalty: float,
+        lose_card_reward: float)->float:
+    initial_state = True
+    for i in prev_state:
+        if i != 0:
+            initial_state = False
+            break
+    if initial_state:
+        return 0
+
+    card_count_1 = sum(prev_state[0:60])
+    card_count_2 = sum(curr_state[0:60])
     card_change = card_count_2 - card_count_1
     if card_change <= 0:
         return -lose_card_reward * card_change

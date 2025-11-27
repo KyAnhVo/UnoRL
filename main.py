@@ -3,6 +3,7 @@
 from env import get_rule_based_agent
 import env
 from agents.deepq_strat import DeepQStratAgent
+from agents.deepq_card import DeepQCardAgent
 
 import rlcard
 from rlcard import models
@@ -69,7 +70,8 @@ class MyRandomAgent:
         return self.step(state), info
 
 def test_deepq_strat():
-    my_model = DeepQStratAgent()
+    deepq_card = DeepQCardAgent()
+    deepq_strat = DeepQStratAgent()
     '''
     enemy = RandomAgent(61)
     agents = [my_model, enemy]
@@ -77,7 +79,7 @@ def test_deepq_strat():
     for i in range(epoch):
         env.play_game(agents, is_training=True)
     '''
-    env.train(training_agents=[my_model], epoch=100000)
+    env.train(training_agents=[deepq_card, deepq_strat], epoch=100000)
 
 if __name__ == "__main__":
     # rlcard_test()
