@@ -137,7 +137,7 @@ class DeepQStratAgent(DeepUnoAgent):
                 )
         if self.episode_count % self.SYNC_RATE == self.SYNC_RATE - 1:
             self.target_nn.load_state_dict(self.online_nn.state_dict())
-            torch.save(self.target_nn.state_dict(), f'qstrat_ep{self.episode_count}.pth')
+            torch.save(self.target_nn.state_dict(), f'model_history/qstrat_ep{self.episode_count}.pth')
             print(f"DEEP Q STRAT MODEL, ITER {self.episode_count + 1}:")
             print(f"\tWR: {(self.win_count / self.SYNC_RATE * 100):.2f}%")
             print(f"\tepsilon: {self.epsilon}")
