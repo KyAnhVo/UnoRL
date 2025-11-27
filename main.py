@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 
 from env import get_rule_based_agent
+import env
+from agents.deepq_strat import DeepQStratAgent
 
 import rlcard
 from rlcard import models
+from rlcard.agents.random_agent import RandomAgent
+import numpy as np
 
 # If your version exports a shortcut, you *might* instead be able to do:
 # from rlcard.agents import UnoHumanAgent as HumanAgent
@@ -47,7 +51,6 @@ def rlcard_test():
         cont = input("Play another game? (y/n): ").strip().lower()
         if cont != 'y':
             break
-import numpy as np
 
 
 class MyRandomAgent:
@@ -65,8 +68,15 @@ class MyRandomAgent:
         info = {}
         return self.step(state), info
 
+def test_deepq_strat():
+    my_model = DeepQStratAgent()
+    enemy = RandomAgent(61)
+    agents = [my_model, enemy]
+    epoch = 100000
+    for i in range(epoch):
+        env.play_game(agents, is_training=True)
+    # env.train(training_agents=[my_model], epoch=100000)
 
 if __name__ == "__main__":
-    print(get_rule_based_agent())
     # rlcard_test()
-
+    test_deepq_strat()

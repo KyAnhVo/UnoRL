@@ -9,6 +9,7 @@ class DeepUnoAgent(ABC):
 
     online_nn: DeepRL_NN
     episode_count: int
+    win_count: int
 
     # train after every TRAIN_RATE games
     TRAIN_RATE: int
@@ -34,21 +35,24 @@ class DeepUnoAgent(ABC):
         self.dones           = []
 
         # Smaller == faster training, higher fluctuation
-        self.TRAIN_RATE = 10
+        self.TRAIN_RATE = 4
+
+        self.episode_count = 0
+        self.win_count = 0
 
     # ------------------------------------------------------
     # RLCard-required API
     # ------------------------------------------------------
 
     @abstractmethod
-    def step(self, state)->int:
+    def step(self, state)->str:
         """Action selection during training (epsilon-greedy)."""
         pass
 
     @abstractmethod
-    def eval_step(self, state)->Tuple[int, Collection]:
+    def eval_step(self, state)->Tuple[str, Collection]:
         """Action selection during evaluation (greedy)."""
-        return (0, [])
+        return ('', [])
 
     def use_raw(self) -> bool:
         """'False' means expect processed env states."""
@@ -97,6 +101,7 @@ class DeepUnoAgent(ABC):
 
         # training
         self.episode_count += 1
+        self.win_count += 1 if payoff == 1 else 0
         if self.episode_count % self.TRAIN_RATE == self.TRAIN_RATE - 1:
             self.train_online_nn()
             self.reset_buffer()
@@ -113,9 +118,9 @@ class DeepUnoAgent(ABC):
                           next_state: List[int], 
                           done: bool):
         """Add a transition to buffers."""
-        self.state_list.append(self.state_translation(state))
+        self.state_list.append(state)
         if next_state != None:
-            self.next_state_list.append(self.state_translation(next_state))
+            self.next_state_list.append(state)
         if action != -1:
             self.action_list.append(action)
         self.rewards_list.append(reward)

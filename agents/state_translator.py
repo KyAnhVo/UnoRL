@@ -196,7 +196,7 @@ def strategic_state_translate(state: Dict)->List[int]:
     top number onehot (index in order 0-9,
     nothing is 1 if suit is not Number) [31-40]
     '''
-    
+
     real_state = state['raw_obs']
     strat_state = [0 for _ in range(41)]
 

@@ -1,9 +1,12 @@
-from agents.state_translator import STRAT_STATE_DIM_COUNT, strategic_state_translate, strat_state_reward
+import math
+from agents.state_translator import STRAT_STATE_DIM_COUNT, strategic_state_translate, strat_state_reward, int_to_action
 from agents.deep_uno_agent import DeepUnoAgent
 from agents.deeprl_nn import DeepRL_NN
 
 from typing import Collection, override, List, Tuple
 import torch
+
+import random
 
 class DeepQStratAgent(DeepUnoAgent):
     target_nn: DeepRL_NN
@@ -15,6 +18,12 @@ class DeepQStratAgent(DeepUnoAgent):
     GAIN_CARD_PENALTY: float
     LOSE_CARD_REWARD: float
 
+    epsilon: float
+    EPSILON_MIN: float
+    EPSILON_MAX: float
+    EPSILON_DECAY_CONSTANT: float
+
+
     def __init__(self):
         super().__init__(state_dim=STRAT_STATE_DIM_COUNT)
         self.target_nn = DeepRL_NN(state_dim=STRAT_STATE_DIM_COUNT,
@@ -22,17 +31,25 @@ class DeepQStratAgent(DeepUnoAgent):
         self.target_nn.load_state_dict(self.online_nn.state_dict())
 
         # lower == more unstable model
-        self.SYNC_RATE = 100
+        self.SYNC_RATE = 1000
 
         self.GAIN_CARD_PENALTY = 0.02
         self.LOSE_CARD_REWARD = 0.02
+        
+        self.EPSILON_MIN = 0.05
+        self.EPSILON_MAX = 1.00
+        self.EPSILON_DECAY_CONSTANT = 5e-5
+
+        self.epsilon = self.EPSILON_MAX
 
     # ------------------------------------------------------
     # RLCard-required API
     # ------------------------------------------------------
 
     @override
-    def step(self, state)->int:
+    def step(self, state)->str:
+        if random.random() < self.epsilon:
+            return random.choice(state['raw_legal_actions'])
         curr_state = self.state_translation(state)
         q_values = self.online_nn.forward(
                 torch.tensor(curr_state,
@@ -66,10 +83,10 @@ class DeepQStratAgent(DeepUnoAgent):
                 done=False
                 )
 
-        return int(action)
+        return int_to_action(int(action))
 
     @override
-    def eval_step(self, state)->Tuple[int, Collection]:
+    def eval_step(self, state)->Tuple[str, Collection]:
         return self.step(state), []
 
         
@@ -115,5 +132,14 @@ class DeepQStratAgent(DeepUnoAgent):
     @override
     def after_game(self, payoff: int):
         super().after_game(payoff)
+        self.epsilon = self.EPSILON_MIN + (self.EPSILON_MAX - self.EPSILON_MIN) * math.exp(
+                -self.EPSILON_DECAY_CONSTANT * self.episode_count
+                )
         if self.episode_count % self.SYNC_RATE == self.SYNC_RATE - 1:
             self.target_nn.load_state_dict(self.online_nn.state_dict())
+            torch.save(self.target_nn.state_dict(), f'qstrat_ep{self.episode_count}.pth')
+            print(f"DEEP Q STRAT MODEL, ITER {self.episode_count + 1}:")
+            print(f"\tWR: {(self.win_count / self.SYNC_RATE * 100):.2f}%")
+            print(f"\tepsilon: {self.epsilon}")
+            self.win_count = 0
+
