@@ -18,6 +18,9 @@ def play_game(agents: List, is_training: bool):
             'record_action': True,
         })
     env.set_agents(agents)
+    for index, agent in enumerate(agents):
+        if isinstance(agent, DeepUnoAgent):
+            agent.before_game()
     trajectories, payoff = env.run(is_training)
     for index, agent in enumerate(agents):
         if isinstance(agent, DeepUnoAgent):

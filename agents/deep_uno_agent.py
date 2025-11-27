@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import List
+from typing import Collection, List, Tuple
 from agents.deeprl_nn import DeepRL_NN
 from random import randint
 
@@ -41,14 +41,14 @@ class DeepUnoAgent(ABC):
     # ------------------------------------------------------
 
     @abstractmethod
-    def step(self, state) -> int:
+    def step(self, state)->int:
         """Action selection during training (epsilon-greedy)."""
         pass
 
     @abstractmethod
-    def eval_step(self, state) -> int:
+    def eval_step(self, state)->Tuple[int, Collection]:
         """Action selection during evaluation (greedy)."""
-        pass
+        return (0, [])
 
     def use_raw(self) -> bool:
         """'False' means expect processed env states."""

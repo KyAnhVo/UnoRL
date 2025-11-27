@@ -2,7 +2,7 @@ from agents.state_translator import STRAT_STATE_DIM_COUNT, strategic_state_trans
 from agents.deep_uno_agent import DeepUnoAgent
 from agents.deeprl_nn import DeepRL_NN
 
-from typing import override, List
+from typing import Collection, override, List, Tuple
 import torch
 
 class DeepQStratAgent(DeepUnoAgent):
@@ -68,6 +68,10 @@ class DeepQStratAgent(DeepUnoAgent):
 
         return int(action)
 
+    @override
+    def eval_step(self, state)->Tuple[int, Collection]:
+        return self.step(state), []
+
         
 
     # ------------------------------------------------------
@@ -107,7 +111,9 @@ class DeepQStratAgent(DeepUnoAgent):
     @override
     def before_game(self):
         super().before_game()
-        
-        # add state [0...0] to state_list, and some action 0.
 
-
+    @override
+    def after_game(self, payoff: int):
+        super().after_game(payoff)
+        if self.episode_count % self.SYNC_RATE == self.SYNC_RATE - 1:
+            self.target_nn.load_state_dict(self.online_nn.state_dict())
