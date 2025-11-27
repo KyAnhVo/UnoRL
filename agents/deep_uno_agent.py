@@ -119,10 +119,8 @@ class DeepUnoAgent(ABC):
                           done: bool):
         """Add a transition to buffers."""
         self.state_list.append(state)
-        if next_state != None:
-            self.next_state_list.append(state)
-        if action != -1:
-            self.action_list.append(action)
+        self.next_state_list.append(next_state)
+        self.action_list.append(action)
         self.rewards_list.append(reward)
         self.dones.append(done)
 
