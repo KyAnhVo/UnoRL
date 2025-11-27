@@ -72,6 +72,7 @@ class MyRandomAgent:
 def test_deepq_strat():
     deepq_card = DeepQCardAgent()
     deepq_strat = DeepQStratAgent()
+    epoch_count = 500000
     '''
     enemy = RandomAgent(61)
     agents = [my_model, enemy]
@@ -79,7 +80,20 @@ def test_deepq_strat():
     for i in range(epoch):
         env.play_game(agents, is_training=True)
     '''
-    env.train(training_agents=[deepq_card, deepq_strat], epoch=100000)
+    env.train(training_agents=[deepq_card, deepq_strat], epoch=epoch_count)
+
+    print("Finished training, statistics:")
+    print(f"games played = {epoch_count}")
+    while True:
+        print("==========================================================================================")
+        last_games = int(input("WR last how many games? "))
+        if last_games > epoch_count:
+            print("Invalid statistics analysis")
+        else:
+            win_arr_card = deepq_card.win_count[epoch_count - last_games:]
+            win_arr_strat = deepq_strat.win_count[epoch_count - last_games:]
+            print(f"WR for Deepq_Card:  {(sum(win_arr_card) / len(win_arr_card) * 100):.2f}%")
+            print(f"WR for Deepq_Strat: {(sum(win_arr_strat) / len(win_arr_strat) * 100):.2f}%")
 
 if __name__ == "__main__":
     # rlcard_test()

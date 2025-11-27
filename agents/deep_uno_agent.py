@@ -9,7 +9,7 @@ class DeepUnoAgent(ABC):
 
     online_nn: DeepRL_NN
     episode_count: int
-    win_count: int
+    win_count: List[int]
 
     # train after every TRAIN_RATE games
     TRAIN_RATE: int
@@ -35,10 +35,10 @@ class DeepUnoAgent(ABC):
         self.dones           = []
 
         # Smaller == faster training, higher fluctuation
-        self.TRAIN_RATE = 4
+        self.TRAIN_RATE = 100
 
         self.episode_count = 0
-        self.win_count = 0
+        self.win_count = []
 
     # ------------------------------------------------------
     # RLCard-required API
@@ -101,7 +101,7 @@ class DeepUnoAgent(ABC):
 
         # training
         self.episode_count += 1
-        self.win_count += 1 if payoff == 1 else 0
+        self.win_count.append(1 if payoff == 1 else 0)
         if self.episode_count % self.TRAIN_RATE == self.TRAIN_RATE - 1:
             self.train_online_nn()
             self.reset_buffer()

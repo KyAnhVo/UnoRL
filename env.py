@@ -44,12 +44,10 @@ def train(epoch: int, training_agents: List):
     # setup
     rlcard_agents = []
     for i in range(len(training_agents)):
-        if i % 4 == 0:
-            bot = get_rule_based_agent()
-            rlcard_agents.append(bot)
-        elif i % 4 == 2:
-            bot = RandomAgent(61)
-            rlcard_agents.append(bot)
+        bot = get_rule_based_agent()
+        rlcard_agents.append(bot)
+        bot = RandomAgent(61)
+        rlcard_agents.append(bot)
     all_agents = training_agents + rlcard_agents
     
     for i in range(epoch):

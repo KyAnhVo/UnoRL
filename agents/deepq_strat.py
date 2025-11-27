@@ -27,9 +27,5 @@ class DeepQStratAgent(DeepQAgent):
         
         # Override the save path for strategic models specifically
         if self.episode_count % self.SYNC_RATE == self.SYNC_RATE - 1:
-            print(f"DEEP Q MODEL: STRAT REP, ITER {self.episode_count + 1}:")
-            print(f"\tWR: {(self.win_count / self.SYNC_RATE * 100):.2f}%")
-            print(f"\tepsilon: {self.epsilon}")
-            self.win_count = 0
             # Parent already saved as 'deepq_ep{n}.pth', save another copy with specific name
             torch.save(self.target_nn.state_dict(), f'model_history/qstrat_{self.episode_count}')
