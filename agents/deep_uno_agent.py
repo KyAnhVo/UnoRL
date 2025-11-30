@@ -2,6 +2,10 @@ from abc import ABC, abstractmethod
 from typing import Collection, List, Tuple
 from agents.deeprl_nn import DeepRL_NN
 from random import randint
+from agents.state_translator import int_to_action
+import random
+import math
+import torch
 
 class DeepUnoAgent(ABC):
     state_dim: int
@@ -20,6 +24,14 @@ class DeepUnoAgent(ABC):
     rewards_list:       List[float]
     dones:              List[bool]
 
+    epsilon: float
+    EPSILON_MIN: float
+    EPSILON_MAX: float
+    EPSILON_DECAY_CONSTANT: float
+
+    SAVE_RATE: int
+    FILE_NAME: str
+
     def __init__(self, state_dim: int, gamma: float = 0.99):
         self.state_dim = state_dim
         self.gamma     = gamma
@@ -37,30 +49,95 @@ class DeepUnoAgent(ABC):
         # Smaller == faster training, higher fluctuation
         self.TRAIN_RATE = 4
 
+        # Save file datas
+        self.SAVE_RATE = 100000
+        self.FILE_NAME = ""
+
         self.episode_count = 0
         self.win_count = []
+
+        self.EPSILON_MIN = 0.05
+        self.EPSILON_MAX = 1.00
+        self.EPSILON_DECAY_CONSTANT = 5e-5
+
+        self.epsilon = self.EPSILON_MAX
 
     # ------------------------------------------------------
     # RLCard-required API
     # ------------------------------------------------------
 
-    @abstractmethod
     def step(self, state)->str:
         """Action selection during training (epsilon-greedy)."""
-        pass
+        curr_state = self.state_translation(state)
+        
+        # Calculate reward based on previous state
+        reward = 0
+        if len(self.state_list) > 0:
+            reward = self.calculate_reward(self.state_list[-1], curr_state)
+        
+        # Record transition
+        self.record_transition(
+            state=curr_state,
+            action=0,  # Will be updated below
+            reward=reward,
+            next_state=curr_state,
+            done=False
+        )
+        
+        # Action selection (epsilon-greedy)
+        if random.random() < self.epsilon:
+            # Random action
+            action_int = random.choice(state['legal_actions'])
+        else:
+            action_int = self._greedy_step(state)
 
-    @abstractmethod
+        return int_to_action(action_int)
+
     def eval_step(self, state)->Tuple[str, Collection]:
         """Action selection during evaluation (greedy)."""
-        return ('', [])
+        curr_state = self.state_translation(state)
+
+        # Calculate reward based on previous state
+        reward = 0
+        if len(self.state_list) > 0:
+            reward = self.calculate_reward(self.state_list[-1], curr_state)
+        
+        # Record transition
+        self.record_transition(
+            state=curr_state,
+            action=0,  # Will be updated below
+            reward=reward,
+            next_state=curr_state,
+            done=False
+        )
+        return int_to_action(self._greedy_step(state)), []
 
     def use_raw(self) -> bool:
         """'False' means expect processed env states."""
         return False
 
+    def _greedy_step(self, state)->int:
+        curr_state = self.state_translation(state)
+        # Greedy action
+        q_values = self.online_nn.forward(
+            torch.tensor(curr_state, dtype=torch.float32, device=self.online_nn.device)
+        )
+        legal: List[int] = state['legal_actions']
+        
+        mask = torch.full_like(q_values, float('-inf'))
+        mask[legal] = 0.0
+        masked_q = q_values + mask
+        
+        return int(torch.argmax(masked_q).item())
+
     # ------------------------------------------------------
     # Required for training
     # ------------------------------------------------------
+
+    @abstractmethod
+    def calculate_reward(self, prev_state: List[int], curr_state: List[int]) -> float:
+        """To be implemented by subclasses"""
+        raise NotImplementedError("Subclasses must implement calculate_reward")
 
     @abstractmethod
     def state_translation(self, state)->List[int]:
@@ -93,19 +170,21 @@ class DeepUnoAgent(ABC):
             self.loss_history = []
         self.loss_history.append(loss)
         
-    @abstractmethod
     def before_game(self):
         """ Before-game setup: alter buffer, etc. """
-
         # adjust buffer
         buffer_state = [0 for _ in range(self.state_dim)]
         self.state_list.append(buffer_state)
         self.action_list.append(randint(0, 60)) # doesnt matter
 
-
     @abstractmethod
     def after_game(self, payoff: int):
         """ After-game setup: adjust buffer, training, etc. """
+        # epsilon decay
+        self.epsilon = self.EPSILON_MIN + (self.EPSILON_MAX - self.EPSILON_MIN) * math.exp(
+            -self.EPSILON_DECAY_CONSTANT * self.episode_count
+        )
+
         # adjust buffer
         self.next_state_list.append([0 for _ in range(self.state_dim)])
         self.rewards_list.append(payoff)
@@ -117,6 +196,12 @@ class DeepUnoAgent(ABC):
         if self.episode_count % self.TRAIN_RATE == self.TRAIN_RATE - 1:
             self.train_online_nn()
             self.reset_buffer()
+
+        
+        # Override the save path for strategic models specifically
+        if self.episode_count % self.SAVE_RATE == self.SAVE_RATE - 1:
+            # Parent already saved as 'deepq_ep{n}.pth', save another copy with specific name
+            torch.save(self.online_nn.state_dict(), f'model_history/{self.FILE_NAME}_{self.episode_count}')
 
 
     # ------------------------------------------------------

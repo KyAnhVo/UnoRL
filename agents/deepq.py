@@ -1,10 +1,7 @@
-import math
 from agents.deep_uno_agent import DeepUnoAgent
 from agents.deeprl_nn import DeepRL_NN
-from typing import Collection, override, List, Tuple
+from typing import override, List
 import torch
-import random
-from agents.state_translator import int_to_action, card_to_int
 
 class DeepQAgent(DeepUnoAgent):
     target_nn: DeepRL_NN
@@ -16,11 +13,6 @@ class DeepQAgent(DeepUnoAgent):
     GAIN_CARD_PENALTY: float
     LOSE_CARD_REWARD: float
 
-    epsilon: float
-    EPSILON_MIN: float
-    EPSILON_MAX: float
-    EPSILON_DECAY_CONSTANT: float
-
     def __init__(self, state_dim: int):
         super().__init__(state_dim=state_dim)
         self.target_nn = DeepRL_NN(state_dim=state_dim, action_dim=61)
@@ -31,108 +23,6 @@ class DeepQAgent(DeepUnoAgent):
 
         self.GAIN_CARD_PENALTY = 0.02
         self.LOSE_CARD_REWARD = 0.02
-        
-        self.EPSILON_MIN = 0.05
-        self.EPSILON_MAX = 1.00
-        self.EPSILON_DECAY_CONSTANT = 5e-5
-
-        self.epsilon = self.EPSILON_MAX
-
-    # ------------------------------------------------------
-    # RLCard-required API
-    # ------------------------------------------------------
-
-    @override
-    def step(self, state) -> str:
-
-        curr_state = self.state_translation(state)
-        
-        # Calculate reward based on previous state
-        reward = 0
-        if len(self.state_list) > 0:
-            reward = self.calculate_reward(self.state_list[-1], curr_state)
-        
-        # Record transition
-        self.record_transition(
-            state=curr_state,
-            action=0,  # Will be updated below
-            reward=reward,
-            next_state=curr_state,
-            done=False
-        )
-        
-        # Action selection (epsilon-greedy)
-        if random.random() < self.epsilon:
-            # Random action
-            action_int = random.choice(state['legal_actions'])
-        else:
-            # Greedy action
-            q_values = self.online_nn.forward(
-                torch.tensor(curr_state, dtype=torch.float32, device=self.online_nn.device)
-            )
-            legal: List[int] = state['legal_actions']
-            
-            mask = torch.full_like(q_values, float('-inf'))
-            mask[legal] = 0.0
-            masked_q = q_values + mask
-            
-            action_int = torch.argmax(masked_q).item()
-        
-        action_str = int_to_action(int(action_int))
-        
-        # Update the action in the buffer
-        self.action_list[-1] = int(action_int)
-        
-        return action_str
-
-    @override
-    def eval_step(self, state) -> Tuple[str, Collection]:
-        curr_state = self.state_translation(state)
-        
-        # Calculate reward based on previous state
-        reward = 0
-        if len(self.state_list) > 0:
-            reward = self.calculate_reward(self.state_list[-1], curr_state)
-        
-        # Record transition
-        self.record_transition(
-            state=curr_state,
-            action=0,  # Will be updated below
-            reward=reward,
-            next_state=curr_state,
-            done=False
-        )
-
-        q_values = self.online_nn.forward(
-            torch.tensor(curr_state, dtype=torch.float32, device=self.online_nn.device)
-        )
-        legal: List[int] = state['legal_actions']
-        
-        mask = torch.full_like(q_values, float('-inf'))
-        mask[legal] = 0.0
-        masked_q = q_values + mask
-        
-        action_int = torch.argmax(masked_q).item()
-        action_str = int_to_action(int(action_int))
-        
-        # Update the action in the buffer
-        self.action_list[-1] = int(action_int)
-        
-        return action_str, []
-        
-
-    # ------------------------------------------------------
-    # Required for training
-    # ------------------------------------------------------
-    
-    @override
-    def state_translation(self, state) -> List[int]:
-        """To be implemented by subclasses"""
-        raise NotImplementedError("Subclasses must implement state_translation")
-    
-    def calculate_reward(self, prev_state: List[int], curr_state: List[int]) -> float:
-        """To be implemented by subclasses"""
-        raise NotImplementedError("Subclasses must implement calculate_reward")
 
     @override
     def compute_targets(self) -> List[float]:
@@ -160,19 +50,9 @@ class DeepQAgent(DeepUnoAgent):
 
         return targets.cpu().tolist()
 
-    @override
-    def before_game(self):
-        super().before_game()
-
-    @override
     def after_game(self, payoff: int):
         super().after_game(payoff)
-        
-        # Epsilon decay
-        self.epsilon = self.EPSILON_MIN + (self.EPSILON_MAX - self.EPSILON_MIN) * math.exp(
-            -self.EPSILON_DECAY_CONSTANT * self.episode_count
-        )
-        
         # Sync target network periodically
         if self.episode_count % self.SYNC_RATE == self.SYNC_RATE - 1:
             self.target_nn.load_state_dict(self.online_nn.state_dict())
+

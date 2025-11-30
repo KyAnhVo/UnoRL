@@ -6,6 +6,7 @@ import torch
 class DeepQStratAgent(DeepQAgent):
     def __init__(self):
         super().__init__(state_dim=STRAT_STATE_DIM_COUNT)
+        self.FILE_NAME = "qstrat"
     
     @override
     def state_translation(self, state) -> List[int]:
@@ -25,8 +26,4 @@ class DeepQStratAgent(DeepQAgent):
         # Call parent's after_game
         super().after_game(payoff)
         
-        # Override the save path for strategic models specifically
-        if self.episode_count % self.SYNC_RATE == self.SYNC_RATE - 1:
-            # Parent already saved as 'deepq_ep{n}.pth', save another copy with specific name
-            torch.save(self.target_nn.state_dict(), f'model_history/qstrat_{self.episode_count}')
-            pass
+

@@ -6,6 +6,7 @@ import torch
 class DeepQCardAgent(DeepQAgent):
     def __init__(self):
         super().__init__(state_dim=CARD_STATE_DIM_COUNT)
+        self.FILE_NAME = "qcard"
     
     @override
     def state_translation(self, state) -> List[int]:
@@ -24,9 +25,3 @@ class DeepQCardAgent(DeepQAgent):
     def after_game(self, payoff: int):
         # Call parent's after_game
         super().after_game(payoff)
-        
-        # Override the save path for strategic models specifically
-        if self.episode_count % self.SYNC_RATE == self.SYNC_RATE - 1:
-            # Parent already saved as 'deepq_ep{n}.pth', save another copy with specific name
-            torch.save(self.target_nn.state_dict(), f'model_history/qcard_{self.episode_count}')
-            pass
