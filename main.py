@@ -72,15 +72,9 @@ class MyRandomAgent:
 def test_deepq_strat():
     deepq_card = DeepQCardAgent()
     deepq_strat = DeepQStratAgent()
-    epoch_count = 500000
-    '''
-    enemy = RandomAgent(61)
-    agents = [my_model, enemy]
-    epoch = 100000
-    for i in range(epoch):
-        env.play_game(agents, is_training=True)
-    '''
-    env.train(training_agents=[deepq_card, deepq_strat], epoch=epoch_count)
+    epoch_count = 1000000
+
+    env.train(training_agents=[deepq_card, deepq_strat], total_games=epoch_count)
 
     print("Finished training, statistics:")
     print(f"games played = {epoch_count}")

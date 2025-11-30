@@ -1,0 +1,4021 @@
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   agents/deep_uno_agent.py
+	modified:   agents/deepq.py
+	modified:   agents/deepq_card.py
+	modified:   agents/deepq_strat.py
+	modified:   agents/reward.py
+	modified:   env.py
+	modified:   main.py
+	modified:   model_history/qcard_100999
+	modified:   model_history/qcard_101999
+	modified:   model_history/qcard_102999
+	modified:   model_history/qcard_103999
+	modified:   model_history/qcard_104999
+	modified:   model_history/qcard_105999
+	modified:   model_history/qcard_106999
+	modified:   model_history/qcard_107999
+	modified:   model_history/qcard_108999
+	modified:   model_history/qcard_10999
+	modified:   model_history/qcard_109999
+	modified:   model_history/qcard_110999
+	modified:   model_history/qcard_111999
+	modified:   model_history/qcard_112999
+	modified:   model_history/qcard_113999
+	modified:   model_history/qcard_114999
+	modified:   model_history/qcard_115999
+	modified:   model_history/qcard_116999
+	modified:   model_history/qcard_117999
+	modified:   model_history/qcard_118999
+	modified:   model_history/qcard_11999
+	modified:   model_history/qcard_119999
+	modified:   model_history/qcard_120999
+	modified:   model_history/qcard_121999
+	modified:   model_history/qcard_122999
+	modified:   model_history/qcard_123999
+	modified:   model_history/qcard_124999
+	modified:   model_history/qcard_125999
+	modified:   model_history/qcard_126999
+	modified:   model_history/qcard_127999
+	modified:   model_history/qcard_128999
+	modified:   model_history/qcard_12999
+	modified:   model_history/qcard_129999
+	modified:   model_history/qcard_130999
+	modified:   model_history/qcard_131999
+	modified:   model_history/qcard_132999
+	modified:   model_history/qcard_133999
+	modified:   model_history/qcard_134999
+	modified:   model_history/qcard_135999
+	modified:   model_history/qcard_136999
+	modified:   model_history/qcard_137999
+	modified:   model_history/qcard_138999
+	modified:   model_history/qcard_13999
+	modified:   model_history/qcard_139999
+	modified:   model_history/qcard_140999
+	modified:   model_history/qcard_141999
+	modified:   model_history/qcard_142999
+	modified:   model_history/qcard_143999
+	modified:   model_history/qcard_144999
+	modified:   model_history/qcard_145999
+	modified:   model_history/qcard_146999
+	modified:   model_history/qcard_147999
+	modified:   model_history/qcard_148999
+	modified:   model_history/qcard_14999
+	modified:   model_history/qcard_149999
+	modified:   model_history/qcard_150999
+	modified:   model_history/qcard_151999
+	modified:   model_history/qcard_152999
+	modified:   model_history/qcard_153999
+	modified:   model_history/qcard_154999
+	modified:   model_history/qcard_155999
+	modified:   model_history/qcard_156999
+	modified:   model_history/qcard_157999
+	modified:   model_history/qcard_158999
+	modified:   model_history/qcard_15999
+	modified:   model_history/qcard_159999
+	modified:   model_history/qcard_160999
+	modified:   model_history/qcard_161999
+	modified:   model_history/qcard_162999
+	modified:   model_history/qcard_163999
+	modified:   model_history/qcard_164999
+	modified:   model_history/qcard_165999
+	modified:   model_history/qcard_166999
+	modified:   model_history/qcard_167999
+	modified:   model_history/qcard_168999
+	modified:   model_history/qcard_16999
+	modified:   model_history/qcard_169999
+	modified:   model_history/qcard_170999
+	modified:   model_history/qcard_171999
+	modified:   model_history/qcard_172999
+	modified:   model_history/qcard_173999
+	modified:   model_history/qcard_174999
+	modified:   model_history/qcard_175999
+	modified:   model_history/qcard_176999
+	modified:   model_history/qcard_177999
+	modified:   model_history/qcard_178999
+	modified:   model_history/qcard_17999
+	modified:   model_history/qcard_179999
+	modified:   model_history/qcard_180999
+	modified:   model_history/qcard_181999
+	modified:   model_history/qcard_182999
+	modified:   model_history/qcard_183999
+	modified:   model_history/qcard_184999
+	modified:   model_history/qcard_185999
+	modified:   model_history/qcard_186999
+	modified:   model_history/qcard_187999
+	modified:   model_history/qcard_188999
+	modified:   model_history/qcard_18999
+	modified:   model_history/qcard_189999
+	modified:   model_history/qcard_190999
+	modified:   model_history/qcard_191999
+	modified:   model_history/qcard_192999
+	modified:   model_history/qcard_193999
+	modified:   model_history/qcard_194999
+	modified:   model_history/qcard_195999
+	modified:   model_history/qcard_196999
+	modified:   model_history/qcard_197999
+	modified:   model_history/qcard_198999
+	modified:   model_history/qcard_1999
+	modified:   model_history/qcard_19999
+	modified:   model_history/qcard_199999
+	modified:   model_history/qcard_200999
+	modified:   model_history/qcard_201999
+	modified:   model_history/qcard_202999
+	modified:   model_history/qcard_203999
+	modified:   model_history/qcard_204999
+	modified:   model_history/qcard_205999
+	modified:   model_history/qcard_206999
+	modified:   model_history/qcard_207999
+	modified:   model_history/qcard_208999
+	modified:   model_history/qcard_20999
+	modified:   model_history/qcard_209999
+	modified:   model_history/qcard_210999
+	modified:   model_history/qcard_211999
+	modified:   model_history/qcard_212999
+	modified:   model_history/qcard_213999
+	modified:   model_history/qcard_214999
+	modified:   model_history/qcard_215999
+	modified:   model_history/qcard_216999
+	modified:   model_history/qcard_217999
+	modified:   model_history/qcard_218999
+	modified:   model_history/qcard_21999
+	modified:   model_history/qcard_219999
+	modified:   model_history/qcard_220999
+	modified:   model_history/qcard_221999
+	modified:   model_history/qcard_222999
+	modified:   model_history/qcard_223999
+	modified:   model_history/qcard_224999
+	modified:   model_history/qcard_225999
+	modified:   model_history/qcard_226999
+	modified:   model_history/qcard_227999
+	modified:   model_history/qcard_228999
+	modified:   model_history/qcard_22999
+	modified:   model_history/qcard_229999
+	modified:   model_history/qcard_230999
+	modified:   model_history/qcard_231999
+	modified:   model_history/qcard_232999
+	modified:   model_history/qcard_233999
+	modified:   model_history/qcard_234999
+	modified:   model_history/qcard_235999
+	modified:   model_history/qcard_236999
+	modified:   model_history/qcard_237999
+	modified:   model_history/qcard_238999
+	modified:   model_history/qcard_23999
+	modified:   model_history/qcard_239999
+	modified:   model_history/qcard_240999
+	modified:   model_history/qcard_241999
+	modified:   model_history/qcard_242999
+	modified:   model_history/qcard_243999
+	modified:   model_history/qcard_244999
+	modified:   model_history/qcard_245999
+	modified:   model_history/qcard_246999
+	modified:   model_history/qcard_247999
+	modified:   model_history/qcard_248999
+	modified:   model_history/qcard_24999
+	modified:   model_history/qcard_249999
+	modified:   model_history/qcard_250999
+	modified:   model_history/qcard_251999
+	modified:   model_history/qcard_252999
+	modified:   model_history/qcard_253999
+	modified:   model_history/qcard_254999
+	modified:   model_history/qcard_255999
+	modified:   model_history/qcard_256999
+	modified:   model_history/qcard_257999
+	modified:   model_history/qcard_258999
+	modified:   model_history/qcard_25999
+	modified:   model_history/qcard_259999
+	modified:   model_history/qcard_260999
+	modified:   model_history/qcard_261999
+	modified:   model_history/qcard_262999
+	modified:   model_history/qcard_263999
+	modified:   model_history/qcard_264999
+	modified:   model_history/qcard_265999
+	modified:   model_history/qcard_266999
+	modified:   model_history/qcard_267999
+	modified:   model_history/qcard_268999
+	modified:   model_history/qcard_26999
+	modified:   model_history/qcard_269999
+	modified:   model_history/qcard_270999
+	modified:   model_history/qcard_271999
+	modified:   model_history/qcard_272999
+	modified:   model_history/qcard_273999
+	modified:   model_history/qcard_274999
+	modified:   model_history/qcard_275999
+	modified:   model_history/qcard_276999
+	modified:   model_history/qcard_277999
+	modified:   model_history/qcard_278999
+	modified:   model_history/qcard_27999
+	modified:   model_history/qcard_279999
+	modified:   model_history/qcard_280999
+	modified:   model_history/qcard_281999
+	modified:   model_history/qcard_282999
+	modified:   model_history/qcard_283999
+	modified:   model_history/qcard_284999
+	modified:   model_history/qcard_285999
+	modified:   model_history/qcard_286999
+	modified:   model_history/qcard_287999
+	modified:   model_history/qcard_288999
+	modified:   model_history/qcard_28999
+	modified:   model_history/qcard_289999
+	modified:   model_history/qcard_290999
+	modified:   model_history/qcard_291999
+	modified:   model_history/qcard_292999
+	modified:   model_history/qcard_293999
+	modified:   model_history/qcard_294999
+	modified:   model_history/qcard_295999
+	modified:   model_history/qcard_296999
+	modified:   model_history/qcard_297999
+	modified:   model_history/qcard_298999
+	modified:   model_history/qcard_2999
+	modified:   model_history/qcard_29999
+	modified:   model_history/qcard_299999
+	modified:   model_history/qcard_300999
+	modified:   model_history/qcard_301999
+	modified:   model_history/qcard_302999
+	modified:   model_history/qcard_303999
+	modified:   model_history/qcard_304999
+	modified:   model_history/qcard_305999
+	modified:   model_history/qcard_306999
+	modified:   model_history/qcard_307999
+	modified:   model_history/qcard_308999
+	modified:   model_history/qcard_30999
+	modified:   model_history/qcard_309999
+	modified:   model_history/qcard_310999
+	modified:   model_history/qcard_311999
+	modified:   model_history/qcard_312999
+	modified:   model_history/qcard_313999
+	modified:   model_history/qcard_314999
+	modified:   model_history/qcard_315999
+	modified:   model_history/qcard_316999
+	modified:   model_history/qcard_317999
+	modified:   model_history/qcard_318999
+	modified:   model_history/qcard_31999
+	modified:   model_history/qcard_319999
+	modified:   model_history/qcard_320999
+	modified:   model_history/qcard_321999
+	modified:   model_history/qcard_322999
+	modified:   model_history/qcard_323999
+	modified:   model_history/qcard_324999
+	modified:   model_history/qcard_325999
+	modified:   model_history/qcard_326999
+	modified:   model_history/qcard_327999
+	modified:   model_history/qcard_328999
+	modified:   model_history/qcard_32999
+	modified:   model_history/qcard_329999
+	modified:   model_history/qcard_330999
+	modified:   model_history/qcard_331999
+	modified:   model_history/qcard_332999
+	modified:   model_history/qcard_333999
+	modified:   model_history/qcard_334999
+	modified:   model_history/qcard_335999
+	modified:   model_history/qcard_336999
+	modified:   model_history/qcard_337999
+	modified:   model_history/qcard_338999
+	modified:   model_history/qcard_33999
+	modified:   model_history/qcard_339999
+	modified:   model_history/qcard_340999
+	modified:   model_history/qcard_341999
+	modified:   model_history/qcard_342999
+	modified:   model_history/qcard_343999
+	modified:   model_history/qcard_344999
+	modified:   model_history/qcard_345999
+	modified:   model_history/qcard_346999
+	modified:   model_history/qcard_347999
+	modified:   model_history/qcard_348999
+	modified:   model_history/qcard_34999
+	modified:   model_history/qcard_349999
+	modified:   model_history/qcard_350999
+	modified:   model_history/qcard_351999
+	modified:   model_history/qcard_352999
+	modified:   model_history/qcard_353999
+	modified:   model_history/qcard_354999
+	modified:   model_history/qcard_355999
+	modified:   model_history/qcard_356999
+	modified:   model_history/qcard_357999
+	modified:   model_history/qcard_358999
+	modified:   model_history/qcard_35999
+	modified:   model_history/qcard_359999
+	modified:   model_history/qcard_360999
+	modified:   model_history/qcard_361999
+	modified:   model_history/qcard_362999
+	modified:   model_history/qcard_363999
+	modified:   model_history/qcard_364999
+	modified:   model_history/qcard_365999
+	modified:   model_history/qcard_366999
+	modified:   model_history/qcard_367999
+	modified:   model_history/qcard_368999
+	modified:   model_history/qcard_36999
+	modified:   model_history/qcard_369999
+	modified:   model_history/qcard_370999
+	modified:   model_history/qcard_371999
+	modified:   model_history/qcard_372999
+	modified:   model_history/qcard_373999
+	modified:   model_history/qcard_374999
+	modified:   model_history/qcard_375999
+	modified:   model_history/qcard_376999
+	modified:   model_history/qcard_377999
+	modified:   model_history/qcard_378999
+	modified:   model_history/qcard_37999
+	modified:   model_history/qcard_379999
+	modified:   model_history/qcard_380999
+	modified:   model_history/qcard_381999
+	modified:   model_history/qcard_382999
+	modified:   model_history/qcard_383999
+	modified:   model_history/qcard_384999
+	modified:   model_history/qcard_385999
+	modified:   model_history/qcard_386999
+	modified:   model_history/qcard_387999
+	modified:   model_history/qcard_388999
+	modified:   model_history/qcard_38999
+	modified:   model_history/qcard_389999
+	modified:   model_history/qcard_390999
+	modified:   model_history/qcard_391999
+	modified:   model_history/qcard_392999
+	modified:   model_history/qcard_393999
+	modified:   model_history/qcard_394999
+	modified:   model_history/qcard_395999
+	modified:   model_history/qcard_396999
+	modified:   model_history/qcard_397999
+	modified:   model_history/qcard_398999
+	modified:   model_history/qcard_3999
+	modified:   model_history/qcard_39999
+	modified:   model_history/qcard_399999
+	modified:   model_history/qcard_400999
+	modified:   model_history/qcard_401999
+	modified:   model_history/qcard_402999
+	modified:   model_history/qcard_403999
+	modified:   model_history/qcard_404999
+	modified:   model_history/qcard_405999
+	modified:   model_history/qcard_406999
+	modified:   model_history/qcard_407999
+	modified:   model_history/qcard_408999
+	modified:   model_history/qcard_40999
+	modified:   model_history/qcard_409999
+	modified:   model_history/qcard_410999
+	modified:   model_history/qcard_411999
+	modified:   model_history/qcard_412999
+	modified:   model_history/qcard_413999
+	modified:   model_history/qcard_414999
+	modified:   model_history/qcard_415999
+	modified:   model_history/qcard_416999
+	modified:   model_history/qcard_417999
+	modified:   model_history/qcard_418999
+	modified:   model_history/qcard_41999
+	modified:   model_history/qcard_419999
+	modified:   model_history/qcard_420999
+	modified:   model_history/qcard_421999
+	modified:   model_history/qcard_422999
+	modified:   model_history/qcard_423999
+	modified:   model_history/qcard_424999
+	modified:   model_history/qcard_425999
+	modified:   model_history/qcard_426999
+	modified:   model_history/qcard_427999
+	modified:   model_history/qcard_428999
+	modified:   model_history/qcard_42999
+	modified:   model_history/qcard_429999
+	modified:   model_history/qcard_430999
+	modified:   model_history/qcard_431999
+	modified:   model_history/qcard_432999
+	modified:   model_history/qcard_433999
+	modified:   model_history/qcard_434999
+	modified:   model_history/qcard_435999
+	modified:   model_history/qcard_436999
+	modified:   model_history/qcard_437999
+	modified:   model_history/qcard_438999
+	modified:   model_history/qcard_43999
+	modified:   model_history/qcard_439999
+	modified:   model_history/qcard_440999
+	modified:   model_history/qcard_441999
+	modified:   model_history/qcard_442999
+	modified:   model_history/qcard_443999
+	modified:   model_history/qcard_444999
+	modified:   model_history/qcard_445999
+	modified:   model_history/qcard_446999
+	modified:   model_history/qcard_447999
+	modified:   model_history/qcard_448999
+	modified:   model_history/qcard_44999
+	modified:   model_history/qcard_449999
+	modified:   model_history/qcard_450999
+	modified:   model_history/qcard_451999
+	modified:   model_history/qcard_452999
+	modified:   model_history/qcard_453999
+	modified:   model_history/qcard_454999
+	modified:   model_history/qcard_455999
+	modified:   model_history/qcard_456999
+	modified:   model_history/qcard_457999
+	modified:   model_history/qcard_458999
+	modified:   model_history/qcard_45999
+	modified:   model_history/qcard_459999
+	modified:   model_history/qcard_460999
+	modified:   model_history/qcard_461999
+	modified:   model_history/qcard_462999
+	modified:   model_history/qcard_463999
+	modified:   model_history/qcard_464999
+	modified:   model_history/qcard_465999
+	modified:   model_history/qcard_466999
+	modified:   model_history/qcard_467999
+	modified:   model_history/qcard_468999
+	modified:   model_history/qcard_46999
+	modified:   model_history/qcard_469999
+	modified:   model_history/qcard_470999
+	modified:   model_history/qcard_471999
+	modified:   model_history/qcard_472999
+	modified:   model_history/qcard_473999
+	modified:   model_history/qcard_474999
+	modified:   model_history/qcard_475999
+	modified:   model_history/qcard_476999
+	modified:   model_history/qcard_477999
+	modified:   model_history/qcard_478999
+	modified:   model_history/qcard_47999
+	modified:   model_history/qcard_479999
+	modified:   model_history/qcard_480999
+	modified:   model_history/qcard_481999
+	modified:   model_history/qcard_482999
+	modified:   model_history/qcard_483999
+	modified:   model_history/qcard_484999
+	modified:   model_history/qcard_485999
+	modified:   model_history/qcard_486999
+	modified:   model_history/qcard_487999
+	modified:   model_history/qcard_488999
+	modified:   model_history/qcard_48999
+	modified:   model_history/qcard_489999
+	modified:   model_history/qcard_490999
+	modified:   model_history/qcard_491999
+	modified:   model_history/qcard_492999
+	modified:   model_history/qcard_493999
+	modified:   model_history/qcard_494999
+	modified:   model_history/qcard_495999
+	modified:   model_history/qcard_496999
+	modified:   model_history/qcard_497999
+	modified:   model_history/qcard_498999
+	modified:   model_history/qcard_4999
+	modified:   model_history/qcard_49999
+	modified:   model_history/qcard_499999
+	modified:   model_history/qcard_50999
+	modified:   model_history/qcard_51999
+	modified:   model_history/qcard_52999
+	modified:   model_history/qcard_53999
+	modified:   model_history/qcard_54999
+	modified:   model_history/qcard_55999
+	modified:   model_history/qcard_56999
+	modified:   model_history/qcard_57999
+	modified:   model_history/qcard_58999
+	modified:   model_history/qcard_5999
+	modified:   model_history/qcard_59999
+	modified:   model_history/qcard_60999
+	modified:   model_history/qcard_61999
+	modified:   model_history/qcard_62999
+	modified:   model_history/qcard_63999
+	modified:   model_history/qcard_64999
+	modified:   model_history/qcard_65999
+	modified:   model_history/qcard_66999
+	modified:   model_history/qcard_67999
+	modified:   model_history/qcard_68999
+	modified:   model_history/qcard_6999
+	modified:   model_history/qcard_69999
+	modified:   model_history/qcard_70999
+	modified:   model_history/qcard_71999
+	modified:   model_history/qcard_72999
+	modified:   model_history/qcard_73999
+	modified:   model_history/qcard_74999
+	modified:   model_history/qcard_75999
+	modified:   model_history/qcard_76999
+	modified:   model_history/qcard_77999
+	modified:   model_history/qcard_78999
+	modified:   model_history/qcard_7999
+	modified:   model_history/qcard_79999
+	modified:   model_history/qcard_80999
+	modified:   model_history/qcard_81999
+	modified:   model_history/qcard_82999
+	modified:   model_history/qcard_83999
+	modified:   model_history/qcard_84999
+	modified:   model_history/qcard_85999
+	modified:   model_history/qcard_86999
+	modified:   model_history/qcard_87999
+	modified:   model_history/qcard_88999
+	modified:   model_history/qcard_8999
+	modified:   model_history/qcard_89999
+	modified:   model_history/qcard_90999
+	modified:   model_history/qcard_91999
+	modified:   model_history/qcard_92999
+	modified:   model_history/qcard_93999
+	modified:   model_history/qcard_94999
+	modified:   model_history/qcard_95999
+	modified:   model_history/qcard_96999
+	modified:   model_history/qcard_97999
+	modified:   model_history/qcard_98999
+	modified:   model_history/qcard_999
+	modified:   model_history/qcard_9999
+	modified:   model_history/qcard_99999
+	modified:   model_history/qstrat_100999
+	modified:   model_history/qstrat_101999
+	modified:   model_history/qstrat_102999
+	modified:   model_history/qstrat_103999
+	modified:   model_history/qstrat_104999
+	modified:   model_history/qstrat_105999
+	modified:   model_history/qstrat_106999
+	modified:   model_history/qstrat_107999
+	modified:   model_history/qstrat_108999
+	modified:   model_history/qstrat_10999
+	modified:   model_history/qstrat_109999
+	modified:   model_history/qstrat_110999
+	modified:   model_history/qstrat_111999
+	modified:   model_history/qstrat_112999
+	modified:   model_history/qstrat_113999
+	modified:   model_history/qstrat_114999
+	modified:   model_history/qstrat_115999
+	modified:   model_history/qstrat_116999
+	modified:   model_history/qstrat_117999
+	modified:   model_history/qstrat_118999
+	modified:   model_history/qstrat_11999
+	modified:   model_history/qstrat_119999
+	modified:   model_history/qstrat_120999
+	modified:   model_history/qstrat_121999
+	modified:   model_history/qstrat_122999
+	modified:   model_history/qstrat_123999
+	modified:   model_history/qstrat_124999
+	modified:   model_history/qstrat_125999
+	modified:   model_history/qstrat_126999
+	modified:   model_history/qstrat_127999
+	modified:   model_history/qstrat_128999
+	modified:   model_history/qstrat_12999
+	modified:   model_history/qstrat_129999
+	modified:   model_history/qstrat_130999
+	modified:   model_history/qstrat_131999
+	modified:   model_history/qstrat_132999
+	modified:   model_history/qstrat_133999
+	modified:   model_history/qstrat_134999
+	modified:   model_history/qstrat_135999
+	modified:   model_history/qstrat_136999
+	modified:   model_history/qstrat_137999
+	modified:   model_history/qstrat_138999
+	modified:   model_history/qstrat_13999
+	modified:   model_history/qstrat_139999
+	modified:   model_history/qstrat_140999
+	modified:   model_history/qstrat_141999
+	modified:   model_history/qstrat_142999
+	modified:   model_history/qstrat_143999
+	modified:   model_history/qstrat_144999
+	modified:   model_history/qstrat_145999
+	modified:   model_history/qstrat_146999
+	modified:   model_history/qstrat_147999
+	modified:   model_history/qstrat_148999
+	modified:   model_history/qstrat_14999
+	modified:   model_history/qstrat_149999
+	modified:   model_history/qstrat_150999
+	modified:   model_history/qstrat_151999
+	modified:   model_history/qstrat_152999
+	modified:   model_history/qstrat_153999
+	modified:   model_history/qstrat_154999
+	modified:   model_history/qstrat_155999
+	modified:   model_history/qstrat_156999
+	modified:   model_history/qstrat_157999
+	modified:   model_history/qstrat_158999
+	modified:   model_history/qstrat_15999
+	modified:   model_history/qstrat_159999
+	modified:   model_history/qstrat_160999
+	modified:   model_history/qstrat_161999
+	modified:   model_history/qstrat_162999
+	modified:   model_history/qstrat_163999
+	modified:   model_history/qstrat_164999
+	modified:   model_history/qstrat_165999
+	modified:   model_history/qstrat_166999
+	modified:   model_history/qstrat_167999
+	modified:   model_history/qstrat_168999
+	modified:   model_history/qstrat_16999
+	modified:   model_history/qstrat_169999
+	modified:   model_history/qstrat_170999
+	modified:   model_history/qstrat_171999
+	modified:   model_history/qstrat_172999
+	modified:   model_history/qstrat_173999
+	modified:   model_history/qstrat_174999
+	modified:   model_history/qstrat_175999
+	modified:   model_history/qstrat_176999
+	modified:   model_history/qstrat_177999
+	modified:   model_history/qstrat_178999
+	modified:   model_history/qstrat_17999
+	modified:   model_history/qstrat_179999
+	modified:   model_history/qstrat_180999
+	modified:   model_history/qstrat_181999
+	modified:   model_history/qstrat_182999
+	modified:   model_history/qstrat_183999
+	modified:   model_history/qstrat_184999
+	modified:   model_history/qstrat_185999
+	modified:   model_history/qstrat_186999
+	modified:   model_history/qstrat_187999
+	modified:   model_history/qstrat_188999
+	modified:   model_history/qstrat_18999
+	modified:   model_history/qstrat_189999
+	modified:   model_history/qstrat_190999
+	modified:   model_history/qstrat_191999
+	modified:   model_history/qstrat_192999
+	modified:   model_history/qstrat_193999
+	modified:   model_history/qstrat_194999
+	modified:   model_history/qstrat_195999
+	modified:   model_history/qstrat_196999
+	modified:   model_history/qstrat_197999
+	modified:   model_history/qstrat_198999
+	modified:   model_history/qstrat_1999
+	modified:   model_history/qstrat_19999
+	modified:   model_history/qstrat_199999
+	modified:   model_history/qstrat_200999
+	modified:   model_history/qstrat_201999
+	modified:   model_history/qstrat_202999
+	modified:   model_history/qstrat_203999
+	modified:   model_history/qstrat_204999
+	modified:   model_history/qstrat_205999
+	modified:   model_history/qstrat_206999
+	modified:   model_history/qstrat_207999
+	modified:   model_history/qstrat_208999
+	modified:   model_history/qstrat_20999
+	modified:   model_history/qstrat_209999
+	modified:   model_history/qstrat_210999
+	modified:   model_history/qstrat_211999
+	modified:   model_history/qstrat_212999
+	modified:   model_history/qstrat_213999
+	modified:   model_history/qstrat_214999
+	modified:   model_history/qstrat_215999
+	modified:   model_history/qstrat_216999
+	modified:   model_history/qstrat_217999
+	modified:   model_history/qstrat_218999
+	modified:   model_history/qstrat_21999
+	modified:   model_history/qstrat_219999
+	modified:   model_history/qstrat_220999
+	modified:   model_history/qstrat_221999
+	modified:   model_history/qstrat_222999
+	modified:   model_history/qstrat_223999
+	modified:   model_history/qstrat_224999
+	modified:   model_history/qstrat_225999
+	modified:   model_history/qstrat_226999
+	modified:   model_history/qstrat_227999
+	modified:   model_history/qstrat_228999
+	modified:   model_history/qstrat_22999
+	modified:   model_history/qstrat_229999
+	modified:   model_history/qstrat_230999
+	modified:   model_history/qstrat_231999
+	modified:   model_history/qstrat_232999
+	modified:   model_history/qstrat_233999
+	modified:   model_history/qstrat_234999
+	modified:   model_history/qstrat_235999
+	modified:   model_history/qstrat_236999
+	modified:   model_history/qstrat_237999
+	modified:   model_history/qstrat_238999
+	modified:   model_history/qstrat_23999
+	modified:   model_history/qstrat_239999
+	modified:   model_history/qstrat_240999
+	modified:   model_history/qstrat_241999
+	modified:   model_history/qstrat_242999
+	modified:   model_history/qstrat_243999
+	modified:   model_history/qstrat_244999
+	modified:   model_history/qstrat_245999
+	modified:   model_history/qstrat_246999
+	modified:   model_history/qstrat_247999
+	modified:   model_history/qstrat_248999
+	modified:   model_history/qstrat_24999
+	modified:   model_history/qstrat_249999
+	modified:   model_history/qstrat_250999
+	modified:   model_history/qstrat_251999
+	modified:   model_history/qstrat_252999
+	modified:   model_history/qstrat_253999
+	modified:   model_history/qstrat_254999
+	modified:   model_history/qstrat_255999
+	modified:   model_history/qstrat_256999
+	modified:   model_history/qstrat_257999
+	modified:   model_history/qstrat_258999
+	modified:   model_history/qstrat_25999
+	modified:   model_history/qstrat_259999
+	modified:   model_history/qstrat_260999
+	modified:   model_history/qstrat_261999
+	modified:   model_history/qstrat_262999
+	modified:   model_history/qstrat_263999
+	modified:   model_history/qstrat_264999
+	modified:   model_history/qstrat_265999
+	modified:   model_history/qstrat_266999
+	modified:   model_history/qstrat_267999
+	modified:   model_history/qstrat_268999
+	modified:   model_history/qstrat_26999
+	modified:   model_history/qstrat_269999
+	modified:   model_history/qstrat_270999
+	modified:   model_history/qstrat_271999
+	modified:   model_history/qstrat_272999
+	modified:   model_history/qstrat_273999
+	modified:   model_history/qstrat_274999
+	modified:   model_history/qstrat_275999
+	modified:   model_history/qstrat_276999
+	modified:   model_history/qstrat_277999
+	modified:   model_history/qstrat_278999
+	modified:   model_history/qstrat_27999
+	modified:   model_history/qstrat_279999
+	modified:   model_history/qstrat_280999
+	modified:   model_history/qstrat_281999
+	modified:   model_history/qstrat_282999
+	modified:   model_history/qstrat_283999
+	modified:   model_history/qstrat_284999
+	modified:   model_history/qstrat_285999
+	modified:   model_history/qstrat_286999
+	modified:   model_history/qstrat_287999
+	modified:   model_history/qstrat_288999
+	modified:   model_history/qstrat_28999
+	modified:   model_history/qstrat_289999
+	modified:   model_history/qstrat_290999
+	modified:   model_history/qstrat_291999
+	modified:   model_history/qstrat_292999
+	modified:   model_history/qstrat_293999
+	modified:   model_history/qstrat_294999
+	modified:   model_history/qstrat_295999
+	modified:   model_history/qstrat_296999
+	modified:   model_history/qstrat_297999
+	modified:   model_history/qstrat_298999
+	modified:   model_history/qstrat_2999
+	modified:   model_history/qstrat_29999
+	modified:   model_history/qstrat_299999
+	modified:   model_history/qstrat_300999
+	modified:   model_history/qstrat_301999
+	modified:   model_history/qstrat_302999
+	modified:   model_history/qstrat_303999
+	modified:   model_history/qstrat_304999
+	modified:   model_history/qstrat_305999
+	modified:   model_history/qstrat_306999
+	modified:   model_history/qstrat_307999
+	modified:   model_history/qstrat_308999
+	modified:   model_history/qstrat_30999
+	modified:   model_history/qstrat_309999
+	modified:   model_history/qstrat_310999
+	modified:   model_history/qstrat_311999
+	modified:   model_history/qstrat_312999
+	modified:   model_history/qstrat_313999
+	modified:   model_history/qstrat_314999
+	modified:   model_history/qstrat_315999
+	modified:   model_history/qstrat_316999
+	modified:   model_history/qstrat_317999
+	modified:   model_history/qstrat_318999
+	modified:   model_history/qstrat_31999
+	modified:   model_history/qstrat_319999
+	modified:   model_history/qstrat_320999
+	modified:   model_history/qstrat_321999
+	modified:   model_history/qstrat_322999
+	modified:   model_history/qstrat_323999
+	modified:   model_history/qstrat_324999
+	modified:   model_history/qstrat_325999
+	modified:   model_history/qstrat_326999
+	modified:   model_history/qstrat_327999
+	modified:   model_history/qstrat_328999
+	modified:   model_history/qstrat_32999
+	modified:   model_history/qstrat_329999
+	modified:   model_history/qstrat_330999
+	modified:   model_history/qstrat_331999
+	modified:   model_history/qstrat_332999
+	modified:   model_history/qstrat_333999
+	modified:   model_history/qstrat_334999
+	modified:   model_history/qstrat_335999
+	modified:   model_history/qstrat_336999
+	modified:   model_history/qstrat_337999
+	modified:   model_history/qstrat_338999
+	modified:   model_history/qstrat_33999
+	modified:   model_history/qstrat_339999
+	modified:   model_history/qstrat_340999
+	modified:   model_history/qstrat_341999
+	modified:   model_history/qstrat_342999
+	modified:   model_history/qstrat_343999
+	modified:   model_history/qstrat_344999
+	modified:   model_history/qstrat_345999
+	modified:   model_history/qstrat_346999
+	modified:   model_history/qstrat_347999
+	modified:   model_history/qstrat_348999
+	modified:   model_history/qstrat_34999
+	modified:   model_history/qstrat_349999
+	modified:   model_history/qstrat_350999
+	modified:   model_history/qstrat_351999
+	modified:   model_history/qstrat_352999
+	modified:   model_history/qstrat_353999
+	modified:   model_history/qstrat_354999
+	modified:   model_history/qstrat_355999
+	modified:   model_history/qstrat_356999
+	modified:   model_history/qstrat_357999
+	modified:   model_history/qstrat_358999
+	modified:   model_history/qstrat_35999
+	modified:   model_history/qstrat_359999
+	modified:   model_history/qstrat_360999
+	modified:   model_history/qstrat_361999
+	modified:   model_history/qstrat_362999
+	modified:   model_history/qstrat_363999
+	modified:   model_history/qstrat_364999
+	modified:   model_history/qstrat_365999
+	modified:   model_history/qstrat_366999
+	modified:   model_history/qstrat_367999
+	modified:   model_history/qstrat_368999
+	modified:   model_history/qstrat_36999
+	modified:   model_history/qstrat_369999
+	modified:   model_history/qstrat_370999
+	modified:   model_history/qstrat_371999
+	modified:   model_history/qstrat_372999
+	modified:   model_history/qstrat_373999
+	modified:   model_history/qstrat_374999
+	modified:   model_history/qstrat_375999
+	modified:   model_history/qstrat_376999
+	modified:   model_history/qstrat_377999
+	modified:   model_history/qstrat_378999
+	modified:   model_history/qstrat_37999
+	modified:   model_history/qstrat_379999
+	modified:   model_history/qstrat_380999
+	modified:   model_history/qstrat_381999
+	modified:   model_history/qstrat_382999
+	modified:   model_history/qstrat_383999
+	modified:   model_history/qstrat_384999
+	modified:   model_history/qstrat_385999
+	modified:   model_history/qstrat_386999
+	modified:   model_history/qstrat_387999
+	modified:   model_history/qstrat_388999
+	modified:   model_history/qstrat_38999
+	modified:   model_history/qstrat_389999
+	modified:   model_history/qstrat_390999
+	modified:   model_history/qstrat_391999
+	modified:   model_history/qstrat_392999
+	modified:   model_history/qstrat_393999
+	modified:   model_history/qstrat_394999
+	modified:   model_history/qstrat_395999
+	modified:   model_history/qstrat_396999
+	modified:   model_history/qstrat_397999
+	modified:   model_history/qstrat_398999
+	modified:   model_history/qstrat_3999
+	modified:   model_history/qstrat_39999
+	modified:   model_history/qstrat_399999
+	modified:   model_history/qstrat_400999
+	modified:   model_history/qstrat_401999
+	modified:   model_history/qstrat_402999
+	modified:   model_history/qstrat_403999
+	modified:   model_history/qstrat_404999
+	modified:   model_history/qstrat_405999
+	modified:   model_history/qstrat_406999
+	modified:   model_history/qstrat_407999
+	modified:   model_history/qstrat_408999
+	modified:   model_history/qstrat_40999
+	modified:   model_history/qstrat_409999
+	modified:   model_history/qstrat_410999
+	modified:   model_history/qstrat_411999
+	modified:   model_history/qstrat_412999
+	modified:   model_history/qstrat_413999
+	modified:   model_history/qstrat_414999
+	modified:   model_history/qstrat_415999
+	modified:   model_history/qstrat_416999
+	modified:   model_history/qstrat_417999
+	modified:   model_history/qstrat_418999
+	modified:   model_history/qstrat_41999
+	modified:   model_history/qstrat_419999
+	modified:   model_history/qstrat_420999
+	modified:   model_history/qstrat_421999
+	modified:   model_history/qstrat_422999
+	modified:   model_history/qstrat_423999
+	modified:   model_history/qstrat_424999
+	modified:   model_history/qstrat_425999
+	modified:   model_history/qstrat_426999
+	modified:   model_history/qstrat_427999
+	modified:   model_history/qstrat_428999
+	modified:   model_history/qstrat_42999
+	modified:   model_history/qstrat_429999
+	modified:   model_history/qstrat_430999
+	modified:   model_history/qstrat_431999
+	modified:   model_history/qstrat_432999
+	modified:   model_history/qstrat_433999
+	modified:   model_history/qstrat_434999
+	modified:   model_history/qstrat_435999
+	modified:   model_history/qstrat_436999
+	modified:   model_history/qstrat_437999
+	modified:   model_history/qstrat_438999
+	modified:   model_history/qstrat_43999
+	modified:   model_history/qstrat_439999
+	modified:   model_history/qstrat_440999
+	modified:   model_history/qstrat_441999
+	modified:   model_history/qstrat_442999
+	modified:   model_history/qstrat_443999
+	modified:   model_history/qstrat_444999
+	modified:   model_history/qstrat_445999
+	modified:   model_history/qstrat_446999
+	modified:   model_history/qstrat_447999
+	modified:   model_history/qstrat_448999
+	modified:   model_history/qstrat_44999
+	modified:   model_history/qstrat_449999
+	modified:   model_history/qstrat_450999
+	modified:   model_history/qstrat_451999
+	modified:   model_history/qstrat_452999
+	modified:   model_history/qstrat_453999
+	modified:   model_history/qstrat_454999
+	modified:   model_history/qstrat_455999
+	modified:   model_history/qstrat_456999
+	modified:   model_history/qstrat_457999
+	modified:   model_history/qstrat_458999
+	modified:   model_history/qstrat_45999
+	modified:   model_history/qstrat_459999
+	modified:   model_history/qstrat_460999
+	modified:   model_history/qstrat_461999
+	modified:   model_history/qstrat_462999
+	modified:   model_history/qstrat_463999
+	modified:   model_history/qstrat_464999
+	modified:   model_history/qstrat_465999
+	modified:   model_history/qstrat_466999
+	modified:   model_history/qstrat_467999
+	modified:   model_history/qstrat_468999
+	modified:   model_history/qstrat_46999
+	modified:   model_history/qstrat_469999
+	modified:   model_history/qstrat_470999
+	modified:   model_history/qstrat_471999
+	modified:   model_history/qstrat_472999
+	modified:   model_history/qstrat_473999
+	modified:   model_history/qstrat_474999
+	modified:   model_history/qstrat_475999
+	modified:   model_history/qstrat_476999
+	modified:   model_history/qstrat_477999
+	modified:   model_history/qstrat_478999
+	modified:   model_history/qstrat_47999
+	modified:   model_history/qstrat_479999
+	modified:   model_history/qstrat_480999
+	modified:   model_history/qstrat_481999
+	modified:   model_history/qstrat_482999
+	modified:   model_history/qstrat_483999
+	modified:   model_history/qstrat_484999
+	modified:   model_history/qstrat_485999
+	modified:   model_history/qstrat_486999
+	modified:   model_history/qstrat_487999
+	modified:   model_history/qstrat_488999
+	modified:   model_history/qstrat_48999
+	modified:   model_history/qstrat_489999
+	modified:   model_history/qstrat_490999
+	modified:   model_history/qstrat_491999
+	modified:   model_history/qstrat_492999
+	modified:   model_history/qstrat_493999
+	modified:   model_history/qstrat_494999
+	modified:   model_history/qstrat_495999
+	modified:   model_history/qstrat_496999
+	modified:   model_history/qstrat_497999
+	modified:   model_history/qstrat_498999
+	modified:   model_history/qstrat_4999
+	modified:   model_history/qstrat_49999
+	modified:   model_history/qstrat_499999
+	modified:   model_history/qstrat_50999
+	modified:   model_history/qstrat_51999
+	modified:   model_history/qstrat_52999
+	modified:   model_history/qstrat_53999
+	modified:   model_history/qstrat_54999
+	modified:   model_history/qstrat_55999
+	modified:   model_history/qstrat_56999
+	modified:   model_history/qstrat_57999
+	modified:   model_history/qstrat_58999
+	modified:   model_history/qstrat_5999
+	modified:   model_history/qstrat_59999
+	modified:   model_history/qstrat_60999
+	modified:   model_history/qstrat_61999
+	modified:   model_history/qstrat_62999
+	modified:   model_history/qstrat_63999
+	modified:   model_history/qstrat_64999
+	modified:   model_history/qstrat_65999
+	modified:   model_history/qstrat_66999
+	modified:   model_history/qstrat_67999
+	modified:   model_history/qstrat_68999
+	modified:   model_history/qstrat_6999
+	modified:   model_history/qstrat_69999
+	modified:   model_history/qstrat_70999
+	modified:   model_history/qstrat_71999
+	modified:   model_history/qstrat_72999
+	modified:   model_history/qstrat_73999
+	modified:   model_history/qstrat_74999
+	modified:   model_history/qstrat_75999
+	modified:   model_history/qstrat_76999
+	modified:   model_history/qstrat_77999
+	modified:   model_history/qstrat_78999
+	modified:   model_history/qstrat_7999
+	modified:   model_history/qstrat_79999
+	modified:   model_history/qstrat_80999
+	modified:   model_history/qstrat_81999
+	modified:   model_history/qstrat_82999
+	modified:   model_history/qstrat_83999
+	modified:   model_history/qstrat_84999
+	modified:   model_history/qstrat_85999
+	modified:   model_history/qstrat_86999
+	modified:   model_history/qstrat_87999
+	modified:   model_history/qstrat_88999
+	modified:   model_history/qstrat_8999
+	modified:   model_history/qstrat_89999
+	modified:   model_history/qstrat_90999
+	modified:   model_history/qstrat_91999
+	modified:   model_history/qstrat_92999
+	modified:   model_history/qstrat_93999
+	modified:   model_history/qstrat_94999
+	modified:   model_history/qstrat_95999
+	modified:   model_history/qstrat_96999
+	modified:   model_history/qstrat_97999
+	modified:   model_history/qstrat_98999
+	modified:   model_history/qstrat_999
+	modified:   model_history/qstrat_9999
+	modified:   model_history/qstrat_99999
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	model_history/qcard_100499
+	model_history/qcard_101499
+	model_history/qcard_102499
+	model_history/qcard_103499
+	model_history/qcard_104499
+	model_history/qcard_10499
+	model_history/qcard_105499
+	model_history/qcard_106499
+	model_history/qcard_107499
+	model_history/qcard_108499
+	model_history/qcard_109499
+	model_history/qcard_110499
+	model_history/qcard_111499
+	model_history/qcard_112499
+	model_history/qcard_113499
+	model_history/qcard_114499
+	model_history/qcard_11499
+	model_history/qcard_115499
+	model_history/qcard_116499
+	model_history/qcard_117499
+	model_history/qcard_118499
+	model_history/qcard_119499
+	model_history/qcard_120499
+	model_history/qcard_121499
+	model_history/qcard_122499
+	model_history/qcard_123499
+	model_history/qcard_124499
+	model_history/qcard_12499
+	model_history/qcard_125499
+	model_history/qcard_126499
+	model_history/qcard_127499
+	model_history/qcard_128499
+	model_history/qcard_129499
+	model_history/qcard_130499
+	model_history/qcard_131499
+	model_history/qcard_132499
+	model_history/qcard_133499
+	model_history/qcard_134499
+	model_history/qcard_13499
+	model_history/qcard_135499
+	model_history/qcard_136499
+	model_history/qcard_137499
+	model_history/qcard_138499
+	model_history/qcard_139499
+	model_history/qcard_140499
+	model_history/qcard_141499
+	model_history/qcard_142499
+	model_history/qcard_143499
+	model_history/qcard_144499
+	model_history/qcard_14499
+	model_history/qcard_145499
+	model_history/qcard_146499
+	model_history/qcard_147499
+	model_history/qcard_148499
+	model_history/qcard_149499
+	model_history/qcard_1499
+	model_history/qcard_150499
+	model_history/qcard_151499
+	model_history/qcard_152499
+	model_history/qcard_153499
+	model_history/qcard_154499
+	model_history/qcard_15499
+	model_history/qcard_155499
+	model_history/qcard_156499
+	model_history/qcard_157499
+	model_history/qcard_158499
+	model_history/qcard_159499
+	model_history/qcard_160499
+	model_history/qcard_161499
+	model_history/qcard_162499
+	model_history/qcard_163499
+	model_history/qcard_164499
+	model_history/qcard_16499
+	model_history/qcard_165499
+	model_history/qcard_166499
+	model_history/qcard_167499
+	model_history/qcard_168499
+	model_history/qcard_169499
+	model_history/qcard_170499
+	model_history/qcard_171499
+	model_history/qcard_172499
+	model_history/qcard_173499
+	model_history/qcard_174499
+	model_history/qcard_17499
+	model_history/qcard_175499
+	model_history/qcard_176499
+	model_history/qcard_177499
+	model_history/qcard_178499
+	model_history/qcard_179499
+	model_history/qcard_180499
+	model_history/qcard_181499
+	model_history/qcard_182499
+	model_history/qcard_183499
+	model_history/qcard_184499
+	model_history/qcard_18499
+	model_history/qcard_185499
+	model_history/qcard_186499
+	model_history/qcard_187499
+	model_history/qcard_188499
+	model_history/qcard_189499
+	model_history/qcard_190499
+	model_history/qcard_191499
+	model_history/qcard_192499
+	model_history/qcard_193499
+	model_history/qcard_194499
+	model_history/qcard_19499
+	model_history/qcard_195499
+	model_history/qcard_196499
+	model_history/qcard_197499
+	model_history/qcard_198499
+	model_history/qcard_199499
+	model_history/qcard_200499
+	model_history/qcard_201499
+	model_history/qcard_202499
+	model_history/qcard_203499
+	model_history/qcard_204499
+	model_history/qcard_20499
+	model_history/qcard_205499
+	model_history/qcard_206499
+	model_history/qcard_207499
+	model_history/qcard_208499
+	model_history/qcard_209499
+	model_history/qcard_210499
+	model_history/qcard_211499
+	model_history/qcard_212499
+	model_history/qcard_213499
+	model_history/qcard_214499
+	model_history/qcard_21499
+	model_history/qcard_215499
+	model_history/qcard_216499
+	model_history/qcard_217499
+	model_history/qcard_218499
+	model_history/qcard_219499
+	model_history/qcard_220499
+	model_history/qcard_221499
+	model_history/qcard_222499
+	model_history/qcard_223499
+	model_history/qcard_224499
+	model_history/qcard_22499
+	model_history/qcard_225499
+	model_history/qcard_226499
+	model_history/qcard_227499
+	model_history/qcard_228499
+	model_history/qcard_229499
+	model_history/qcard_230499
+	model_history/qcard_231499
+	model_history/qcard_232499
+	model_history/qcard_233499
+	model_history/qcard_234499
+	model_history/qcard_23499
+	model_history/qcard_235499
+	model_history/qcard_236499
+	model_history/qcard_237499
+	model_history/qcard_238499
+	model_history/qcard_239499
+	model_history/qcard_240499
+	model_history/qcard_241499
+	model_history/qcard_242499
+	model_history/qcard_243499
+	model_history/qcard_244499
+	model_history/qcard_24499
+	model_history/qcard_245499
+	model_history/qcard_246499
+	model_history/qcard_247499
+	model_history/qcard_248499
+	model_history/qcard_249499
+	model_history/qcard_2499
+	model_history/qcard_250499
+	model_history/qcard_251499
+	model_history/qcard_252499
+	model_history/qcard_253499
+	model_history/qcard_254499
+	model_history/qcard_25499
+	model_history/qcard_255499
+	model_history/qcard_256499
+	model_history/qcard_257499
+	model_history/qcard_258499
+	model_history/qcard_259499
+	model_history/qcard_260499
+	model_history/qcard_261499
+	model_history/qcard_262499
+	model_history/qcard_263499
+	model_history/qcard_264499
+	model_history/qcard_26499
+	model_history/qcard_265499
+	model_history/qcard_266499
+	model_history/qcard_267499
+	model_history/qcard_268499
+	model_history/qcard_269499
+	model_history/qcard_270499
+	model_history/qcard_271499
+	model_history/qcard_272499
+	model_history/qcard_273499
+	model_history/qcard_274499
+	model_history/qcard_27499
+	model_history/qcard_275499
+	model_history/qcard_276499
+	model_history/qcard_277499
+	model_history/qcard_278499
+	model_history/qcard_279499
+	model_history/qcard_280499
+	model_history/qcard_281499
+	model_history/qcard_282499
+	model_history/qcard_283499
+	model_history/qcard_284499
+	model_history/qcard_28499
+	model_history/qcard_285499
+	model_history/qcard_286499
+	model_history/qcard_287499
+	model_history/qcard_288499
+	model_history/qcard_289499
+	model_history/qcard_290499
+	model_history/qcard_291499
+	model_history/qcard_292499
+	model_history/qcard_293499
+	model_history/qcard_294499
+	model_history/qcard_29499
+	model_history/qcard_295499
+	model_history/qcard_296499
+	model_history/qcard_297499
+	model_history/qcard_298499
+	model_history/qcard_299499
+	model_history/qcard_300499
+	model_history/qcard_301499
+	model_history/qcard_302499
+	model_history/qcard_303499
+	model_history/qcard_304499
+	model_history/qcard_30499
+	model_history/qcard_305499
+	model_history/qcard_306499
+	model_history/qcard_307499
+	model_history/qcard_308499
+	model_history/qcard_309499
+	model_history/qcard_310499
+	model_history/qcard_311499
+	model_history/qcard_312499
+	model_history/qcard_313499
+	model_history/qcard_314499
+	model_history/qcard_31499
+	model_history/qcard_315499
+	model_history/qcard_316499
+	model_history/qcard_317499
+	model_history/qcard_318499
+	model_history/qcard_319499
+	model_history/qcard_320499
+	model_history/qcard_321499
+	model_history/qcard_322499
+	model_history/qcard_323499
+	model_history/qcard_324499
+	model_history/qcard_32499
+	model_history/qcard_325499
+	model_history/qcard_326499
+	model_history/qcard_327499
+	model_history/qcard_328499
+	model_history/qcard_329499
+	model_history/qcard_330499
+	model_history/qcard_331499
+	model_history/qcard_332499
+	model_history/qcard_333499
+	model_history/qcard_334499
+	model_history/qcard_33499
+	model_history/qcard_335499
+	model_history/qcard_336499
+	model_history/qcard_337499
+	model_history/qcard_338499
+	model_history/qcard_339499
+	model_history/qcard_340499
+	model_history/qcard_341499
+	model_history/qcard_342499
+	model_history/qcard_343499
+	model_history/qcard_344499
+	model_history/qcard_34499
+	model_history/qcard_345499
+	model_history/qcard_346499
+	model_history/qcard_347499
+	model_history/qcard_348499
+	model_history/qcard_349499
+	model_history/qcard_3499
+	model_history/qcard_350499
+	model_history/qcard_351499
+	model_history/qcard_352499
+	model_history/qcard_353499
+	model_history/qcard_354499
+	model_history/qcard_35499
+	model_history/qcard_355499
+	model_history/qcard_356499
+	model_history/qcard_357499
+	model_history/qcard_358499
+	model_history/qcard_359499
+	model_history/qcard_360499
+	model_history/qcard_361499
+	model_history/qcard_362499
+	model_history/qcard_363499
+	model_history/qcard_364499
+	model_history/qcard_36499
+	model_history/qcard_365499
+	model_history/qcard_366499
+	model_history/qcard_367499
+	model_history/qcard_368499
+	model_history/qcard_369499
+	model_history/qcard_370499
+	model_history/qcard_371499
+	model_history/qcard_372499
+	model_history/qcard_373499
+	model_history/qcard_374499
+	model_history/qcard_37499
+	model_history/qcard_375499
+	model_history/qcard_376499
+	model_history/qcard_377499
+	model_history/qcard_378499
+	model_history/qcard_379499
+	model_history/qcard_380499
+	model_history/qcard_381499
+	model_history/qcard_382499
+	model_history/qcard_383499
+	model_history/qcard_384499
+	model_history/qcard_38499
+	model_history/qcard_385499
+	model_history/qcard_386499
+	model_history/qcard_387499
+	model_history/qcard_388499
+	model_history/qcard_389499
+	model_history/qcard_390499
+	model_history/qcard_391499
+	model_history/qcard_392499
+	model_history/qcard_393499
+	model_history/qcard_394499
+	model_history/qcard_39499
+	model_history/qcard_395499
+	model_history/qcard_396499
+	model_history/qcard_397499
+	model_history/qcard_398499
+	model_history/qcard_399499
+	model_history/qcard_400499
+	model_history/qcard_401499
+	model_history/qcard_402499
+	model_history/qcard_403499
+	model_history/qcard_404499
+	model_history/qcard_40499
+	model_history/qcard_405499
+	model_history/qcard_406499
+	model_history/qcard_407499
+	model_history/qcard_408499
+	model_history/qcard_409499
+	model_history/qcard_410499
+	model_history/qcard_411499
+	model_history/qcard_412499
+	model_history/qcard_413499
+	model_history/qcard_414499
+	model_history/qcard_41499
+	model_history/qcard_415499
+	model_history/qcard_416499
+	model_history/qcard_417499
+	model_history/qcard_418499
+	model_history/qcard_419499
+	model_history/qcard_420499
+	model_history/qcard_421499
+	model_history/qcard_422499
+	model_history/qcard_423499
+	model_history/qcard_424499
+	model_history/qcard_42499
+	model_history/qcard_425499
+	model_history/qcard_426499
+	model_history/qcard_427499
+	model_history/qcard_428499
+	model_history/qcard_429499
+	model_history/qcard_430499
+	model_history/qcard_431499
+	model_history/qcard_432499
+	model_history/qcard_433499
+	model_history/qcard_434499
+	model_history/qcard_43499
+	model_history/qcard_435499
+	model_history/qcard_436499
+	model_history/qcard_437499
+	model_history/qcard_438499
+	model_history/qcard_439499
+	model_history/qcard_440499
+	model_history/qcard_441499
+	model_history/qcard_442499
+	model_history/qcard_443499
+	model_history/qcard_444499
+	model_history/qcard_44499
+	model_history/qcard_445499
+	model_history/qcard_446499
+	model_history/qcard_447499
+	model_history/qcard_448499
+	model_history/qcard_449499
+	model_history/qcard_4499
+	model_history/qcard_450499
+	model_history/qcard_451499
+	model_history/qcard_452499
+	model_history/qcard_453499
+	model_history/qcard_454499
+	model_history/qcard_45499
+	model_history/qcard_455499
+	model_history/qcard_456499
+	model_history/qcard_457499
+	model_history/qcard_458499
+	model_history/qcard_459499
+	model_history/qcard_460499
+	model_history/qcard_461499
+	model_history/qcard_462499
+	model_history/qcard_463499
+	model_history/qcard_464499
+	model_history/qcard_46499
+	model_history/qcard_465499
+	model_history/qcard_466499
+	model_history/qcard_467499
+	model_history/qcard_468499
+	model_history/qcard_469499
+	model_history/qcard_470499
+	model_history/qcard_471499
+	model_history/qcard_472499
+	model_history/qcard_473499
+	model_history/qcard_474499
+	model_history/qcard_47499
+	model_history/qcard_475499
+	model_history/qcard_476499
+	model_history/qcard_477499
+	model_history/qcard_478499
+	model_history/qcard_479499
+	model_history/qcard_480499
+	model_history/qcard_481499
+	model_history/qcard_482499
+	model_history/qcard_483499
+	model_history/qcard_484499
+	model_history/qcard_48499
+	model_history/qcard_485499
+	model_history/qcard_486499
+	model_history/qcard_487499
+	model_history/qcard_488499
+	model_history/qcard_489499
+	model_history/qcard_490499
+	model_history/qcard_491499
+	model_history/qcard_492499
+	model_history/qcard_493499
+	model_history/qcard_494499
+	model_history/qcard_49499
+	model_history/qcard_495499
+	model_history/qcard_496499
+	model_history/qcard_497499
+	model_history/qcard_498499
+	model_history/qcard_499
+	model_history/qcard_499499
+	model_history/qcard_500499
+	model_history/qcard_500999
+	model_history/qcard_501499
+	model_history/qcard_501999
+	model_history/qcard_502499
+	model_history/qcard_502999
+	model_history/qcard_503499
+	model_history/qcard_503999
+	model_history/qcard_504499
+	model_history/qcard_50499
+	model_history/qcard_504999
+	model_history/qcard_505499
+	model_history/qcard_505999
+	model_history/qcard_506499
+	model_history/qcard_506999
+	model_history/qcard_507499
+	model_history/qcard_507999
+	model_history/qcard_508499
+	model_history/qcard_508999
+	model_history/qcard_509499
+	model_history/qcard_509999
+	model_history/qcard_510499
+	model_history/qcard_510999
+	model_history/qcard_511499
+	model_history/qcard_511999
+	model_history/qcard_512499
+	model_history/qcard_512999
+	model_history/qcard_513499
+	model_history/qcard_513999
+	model_history/qcard_514499
+	model_history/qcard_51499
+	model_history/qcard_514999
+	model_history/qcard_515499
+	model_history/qcard_515999
+	model_history/qcard_516499
+	model_history/qcard_516999
+	model_history/qcard_517499
+	model_history/qcard_517999
+	model_history/qcard_518499
+	model_history/qcard_518999
+	model_history/qcard_519499
+	model_history/qcard_519999
+	model_history/qcard_520499
+	model_history/qcard_520999
+	model_history/qcard_521499
+	model_history/qcard_521999
+	model_history/qcard_522499
+	model_history/qcard_522999
+	model_history/qcard_523499
+	model_history/qcard_523999
+	model_history/qcard_524499
+	model_history/qcard_52499
+	model_history/qcard_524999
+	model_history/qcard_525499
+	model_history/qcard_525999
+	model_history/qcard_526499
+	model_history/qcard_526999
+	model_history/qcard_527499
+	model_history/qcard_527999
+	model_history/qcard_528499
+	model_history/qcard_528999
+	model_history/qcard_529499
+	model_history/qcard_529999
+	model_history/qcard_530499
+	model_history/qcard_530999
+	model_history/qcard_531499
+	model_history/qcard_531999
+	model_history/qcard_532499
+	model_history/qcard_532999
+	model_history/qcard_533499
+	model_history/qcard_533999
+	model_history/qcard_534499
+	model_history/qcard_53499
+	model_history/qcard_534999
+	model_history/qcard_535499
+	model_history/qcard_535999
+	model_history/qcard_536499
+	model_history/qcard_536999
+	model_history/qcard_537499
+	model_history/qcard_537999
+	model_history/qcard_538499
+	model_history/qcard_538999
+	model_history/qcard_539499
+	model_history/qcard_539999
+	model_history/qcard_540499
+	model_history/qcard_540999
+	model_history/qcard_541499
+	model_history/qcard_541999
+	model_history/qcard_542499
+	model_history/qcard_542999
+	model_history/qcard_543499
+	model_history/qcard_543999
+	model_history/qcard_544499
+	model_history/qcard_54499
+	model_history/qcard_544999
+	model_history/qcard_545499
+	model_history/qcard_545999
+	model_history/qcard_546499
+	model_history/qcard_546999
+	model_history/qcard_547499
+	model_history/qcard_547999
+	model_history/qcard_548499
+	model_history/qcard_548999
+	model_history/qcard_549499
+	model_history/qcard_5499
+	model_history/qcard_549999
+	model_history/qcard_550499
+	model_history/qcard_550999
+	model_history/qcard_551499
+	model_history/qcard_551999
+	model_history/qcard_552499
+	model_history/qcard_552999
+	model_history/qcard_553499
+	model_history/qcard_553999
+	model_history/qcard_554499
+	model_history/qcard_55499
+	model_history/qcard_554999
+	model_history/qcard_555499
+	model_history/qcard_555999
+	model_history/qcard_556499
+	model_history/qcard_556999
+	model_history/qcard_557499
+	model_history/qcard_557999
+	model_history/qcard_558499
+	model_history/qcard_558999
+	model_history/qcard_559499
+	model_history/qcard_559999
+	model_history/qcard_560499
+	model_history/qcard_560999
+	model_history/qcard_561499
+	model_history/qcard_561999
+	model_history/qcard_562499
+	model_history/qcard_562999
+	model_history/qcard_563499
+	model_history/qcard_563999
+	model_history/qcard_564499
+	model_history/qcard_56499
+	model_history/qcard_564999
+	model_history/qcard_565499
+	model_history/qcard_565999
+	model_history/qcard_566499
+	model_history/qcard_566999
+	model_history/qcard_567499
+	model_history/qcard_567999
+	model_history/qcard_568499
+	model_history/qcard_568999
+	model_history/qcard_569499
+	model_history/qcard_569999
+	model_history/qcard_570499
+	model_history/qcard_570999
+	model_history/qcard_571499
+	model_history/qcard_571999
+	model_history/qcard_572499
+	model_history/qcard_572999
+	model_history/qcard_573499
+	model_history/qcard_573999
+	model_history/qcard_574499
+	model_history/qcard_57499
+	model_history/qcard_574999
+	model_history/qcard_575499
+	model_history/qcard_575999
+	model_history/qcard_576499
+	model_history/qcard_576999
+	model_history/qcard_577499
+	model_history/qcard_577999
+	model_history/qcard_578499
+	model_history/qcard_578999
+	model_history/qcard_579499
+	model_history/qcard_579999
+	model_history/qcard_580499
+	model_history/qcard_580999
+	model_history/qcard_581499
+	model_history/qcard_581999
+	model_history/qcard_582499
+	model_history/qcard_582999
+	model_history/qcard_583499
+	model_history/qcard_583999
+	model_history/qcard_584499
+	model_history/qcard_58499
+	model_history/qcard_584999
+	model_history/qcard_585499
+	model_history/qcard_585999
+	model_history/qcard_586499
+	model_history/qcard_586999
+	model_history/qcard_587499
+	model_history/qcard_587999
+	model_history/qcard_588499
+	model_history/qcard_588999
+	model_history/qcard_589499
+	model_history/qcard_589999
+	model_history/qcard_590499
+	model_history/qcard_590999
+	model_history/qcard_591499
+	model_history/qcard_591999
+	model_history/qcard_592499
+	model_history/qcard_592999
+	model_history/qcard_593499
+	model_history/qcard_593999
+	model_history/qcard_594499
+	model_history/qcard_59499
+	model_history/qcard_594999
+	model_history/qcard_595499
+	model_history/qcard_595999
+	model_history/qcard_596499
+	model_history/qcard_596999
+	model_history/qcard_597499
+	model_history/qcard_597999
+	model_history/qcard_598499
+	model_history/qcard_598999
+	model_history/qcard_599499
+	model_history/qcard_599999
+	model_history/qcard_600499
+	model_history/qcard_600999
+	model_history/qcard_601499
+	model_history/qcard_601999
+	model_history/qcard_602499
+	model_history/qcard_602999
+	model_history/qcard_603499
+	model_history/qcard_603999
+	model_history/qcard_604499
+	model_history/qcard_60499
+	model_history/qcard_604999
+	model_history/qcard_605499
+	model_history/qcard_605999
+	model_history/qcard_606499
+	model_history/qcard_606999
+	model_history/qcard_607499
+	model_history/qcard_607999
+	model_history/qcard_608499
+	model_history/qcard_608999
+	model_history/qcard_609499
+	model_history/qcard_609999
+	model_history/qcard_610499
+	model_history/qcard_610999
+	model_history/qcard_611499
+	model_history/qcard_611999
+	model_history/qcard_612499
+	model_history/qcard_612999
+	model_history/qcard_613499
+	model_history/qcard_613999
+	model_history/qcard_614499
+	model_history/qcard_61499
+	model_history/qcard_614999
+	model_history/qcard_615499
+	model_history/qcard_615999
+	model_history/qcard_616499
+	model_history/qcard_616999
+	model_history/qcard_617499
+	model_history/qcard_617999
+	model_history/qcard_618499
+	model_history/qcard_618999
+	model_history/qcard_619499
+	model_history/qcard_619999
+	model_history/qcard_620499
+	model_history/qcard_620999
+	model_history/qcard_621499
+	model_history/qcard_621999
+	model_history/qcard_622499
+	model_history/qcard_622999
+	model_history/qcard_623499
+	model_history/qcard_623999
+	model_history/qcard_624499
+	model_history/qcard_62499
+	model_history/qcard_624999
+	model_history/qcard_625499
+	model_history/qcard_625999
+	model_history/qcard_626499
+	model_history/qcard_626999
+	model_history/qcard_627499
+	model_history/qcard_627999
+	model_history/qcard_628499
+	model_history/qcard_628999
+	model_history/qcard_629499
+	model_history/qcard_629999
+	model_history/qcard_630499
+	model_history/qcard_630999
+	model_history/qcard_631499
+	model_history/qcard_631999
+	model_history/qcard_632499
+	model_history/qcard_632999
+	model_history/qcard_633499
+	model_history/qcard_633999
+	model_history/qcard_634499
+	model_history/qcard_63499
+	model_history/qcard_634999
+	model_history/qcard_635499
+	model_history/qcard_635999
+	model_history/qcard_636499
+	model_history/qcard_636999
+	model_history/qcard_637499
+	model_history/qcard_637999
+	model_history/qcard_638499
+	model_history/qcard_638999
+	model_history/qcard_639499
+	model_history/qcard_639999
+	model_history/qcard_640499
+	model_history/qcard_640999
+	model_history/qcard_641499
+	model_history/qcard_641999
+	model_history/qcard_642499
+	model_history/qcard_642999
+	model_history/qcard_643499
+	model_history/qcard_643999
+	model_history/qcard_644499
+	model_history/qcard_64499
+	model_history/qcard_644999
+	model_history/qcard_645499
+	model_history/qcard_645999
+	model_history/qcard_646499
+	model_history/qcard_646999
+	model_history/qcard_647499
+	model_history/qcard_647999
+	model_history/qcard_648499
+	model_history/qcard_648999
+	model_history/qcard_649499
+	model_history/qcard_6499
+	model_history/qcard_649999
+	model_history/qcard_650499
+	model_history/qcard_650999
+	model_history/qcard_651499
+	model_history/qcard_651999
+	model_history/qcard_652499
+	model_history/qcard_652999
+	model_history/qcard_653499
+	model_history/qcard_653999
+	model_history/qcard_654499
+	model_history/qcard_65499
+	model_history/qcard_654999
+	model_history/qcard_655499
+	model_history/qcard_655999
+	model_history/qcard_656499
+	model_history/qcard_656999
+	model_history/qcard_657499
+	model_history/qcard_657999
+	model_history/qcard_658499
+	model_history/qcard_658999
+	model_history/qcard_659499
+	model_history/qcard_659999
+	model_history/qcard_660499
+	model_history/qcard_660999
+	model_history/qcard_661499
+	model_history/qcard_661999
+	model_history/qcard_662499
+	model_history/qcard_662999
+	model_history/qcard_663499
+	model_history/qcard_663999
+	model_history/qcard_664499
+	model_history/qcard_66499
+	model_history/qcard_664999
+	model_history/qcard_665499
+	model_history/qcard_665999
+	model_history/qcard_666499
+	model_history/qcard_666999
+	model_history/qcard_667499
+	model_history/qcard_667999
+	model_history/qcard_668499
+	model_history/qcard_668999
+	model_history/qcard_669499
+	model_history/qcard_669999
+	model_history/qcard_670499
+	model_history/qcard_670999
+	model_history/qcard_671499
+	model_history/qcard_671999
+	model_history/qcard_672499
+	model_history/qcard_672999
+	model_history/qcard_673499
+	model_history/qcard_673999
+	model_history/qcard_674499
+	model_history/qcard_67499
+	model_history/qcard_674999
+	model_history/qcard_675499
+	model_history/qcard_675999
+	model_history/qcard_676499
+	model_history/qcard_676999
+	model_history/qcard_677499
+	model_history/qcard_677999
+	model_history/qcard_678499
+	model_history/qcard_678999
+	model_history/qcard_679499
+	model_history/qcard_679999
+	model_history/qcard_680499
+	model_history/qcard_680999
+	model_history/qcard_681499
+	model_history/qcard_681999
+	model_history/qcard_682499
+	model_history/qcard_682999
+	model_history/qcard_683499
+	model_history/qcard_683999
+	model_history/qcard_684499
+	model_history/qcard_68499
+	model_history/qcard_684999
+	model_history/qcard_685499
+	model_history/qcard_685999
+	model_history/qcard_686499
+	model_history/qcard_686999
+	model_history/qcard_687499
+	model_history/qcard_687999
+	model_history/qcard_688499
+	model_history/qcard_688999
+	model_history/qcard_689499
+	model_history/qcard_689999
+	model_history/qcard_690499
+	model_history/qcard_690999
+	model_history/qcard_691499
+	model_history/qcard_691999
+	model_history/qcard_692499
+	model_history/qcard_692999
+	model_history/qcard_693499
+	model_history/qcard_693999
+	model_history/qcard_694499
+	model_history/qcard_69499
+	model_history/qcard_694999
+	model_history/qcard_695499
+	model_history/qcard_695999
+	model_history/qcard_696499
+	model_history/qcard_696999
+	model_history/qcard_697499
+	model_history/qcard_697999
+	model_history/qcard_698499
+	model_history/qcard_698999
+	model_history/qcard_699499
+	model_history/qcard_699999
+	model_history/qcard_700499
+	model_history/qcard_700999
+	model_history/qcard_701499
+	model_history/qcard_701999
+	model_history/qcard_702499
+	model_history/qcard_702999
+	model_history/qcard_703499
+	model_history/qcard_703999
+	model_history/qcard_704499
+	model_history/qcard_70499
+	model_history/qcard_704999
+	model_history/qcard_705499
+	model_history/qcard_705999
+	model_history/qcard_706499
+	model_history/qcard_706999
+	model_history/qcard_707499
+	model_history/qcard_707999
+	model_history/qcard_708499
+	model_history/qcard_708999
+	model_history/qcard_709499
+	model_history/qcard_709999
+	model_history/qcard_710499
+	model_history/qcard_710999
+	model_history/qcard_711499
+	model_history/qcard_711999
+	model_history/qcard_712499
+	model_history/qcard_712999
+	model_history/qcard_713499
+	model_history/qcard_713999
+	model_history/qcard_714499
+	model_history/qcard_71499
+	model_history/qcard_714999
+	model_history/qcard_715499
+	model_history/qcard_715999
+	model_history/qcard_716499
+	model_history/qcard_716999
+	model_history/qcard_717499
+	model_history/qcard_717999
+	model_history/qcard_718499
+	model_history/qcard_718999
+	model_history/qcard_719499
+	model_history/qcard_719999
+	model_history/qcard_720499
+	model_history/qcard_720999
+	model_history/qcard_721499
+	model_history/qcard_721999
+	model_history/qcard_722499
+	model_history/qcard_722999
+	model_history/qcard_723499
+	model_history/qcard_723999
+	model_history/qcard_724499
+	model_history/qcard_72499
+	model_history/qcard_724999
+	model_history/qcard_725499
+	model_history/qcard_725999
+	model_history/qcard_726499
+	model_history/qcard_726999
+	model_history/qcard_727499
+	model_history/qcard_727999
+	model_history/qcard_728499
+	model_history/qcard_728999
+	model_history/qcard_729499
+	model_history/qcard_729999
+	model_history/qcard_730499
+	model_history/qcard_730999
+	model_history/qcard_731499
+	model_history/qcard_731999
+	model_history/qcard_732499
+	model_history/qcard_732999
+	model_history/qcard_733499
+	model_history/qcard_733999
+	model_history/qcard_734499
+	model_history/qcard_73499
+	model_history/qcard_734999
+	model_history/qcard_735499
+	model_history/qcard_735999
+	model_history/qcard_736499
+	model_history/qcard_736999
+	model_history/qcard_737499
+	model_history/qcard_737999
+	model_history/qcard_738499
+	model_history/qcard_738999
+	model_history/qcard_739499
+	model_history/qcard_739999
+	model_history/qcard_740499
+	model_history/qcard_740999
+	model_history/qcard_741499
+	model_history/qcard_741999
+	model_history/qcard_742499
+	model_history/qcard_742999
+	model_history/qcard_743499
+	model_history/qcard_743999
+	model_history/qcard_744499
+	model_history/qcard_74499
+	model_history/qcard_744999
+	model_history/qcard_745499
+	model_history/qcard_745999
+	model_history/qcard_746499
+	model_history/qcard_746999
+	model_history/qcard_747499
+	model_history/qcard_747999
+	model_history/qcard_748499
+	model_history/qcard_748999
+	model_history/qcard_749499
+	model_history/qcard_7499
+	model_history/qcard_749999
+	model_history/qcard_750499
+	model_history/qcard_750999
+	model_history/qcard_751499
+	model_history/qcard_751999
+	model_history/qcard_752499
+	model_history/qcard_752999
+	model_history/qcard_753499
+	model_history/qcard_753999
+	model_history/qcard_754499
+	model_history/qcard_75499
+	model_history/qcard_754999
+	model_history/qcard_755499
+	model_history/qcard_755999
+	model_history/qcard_756499
+	model_history/qcard_756999
+	model_history/qcard_757499
+	model_history/qcard_757999
+	model_history/qcard_758499
+	model_history/qcard_758999
+	model_history/qcard_759499
+	model_history/qcard_759999
+	model_history/qcard_760499
+	model_history/qcard_760999
+	model_history/qcard_761499
+	model_history/qcard_761999
+	model_history/qcard_762499
+	model_history/qcard_762999
+	model_history/qcard_763499
+	model_history/qcard_763999
+	model_history/qcard_764499
+	model_history/qcard_76499
+	model_history/qcard_764999
+	model_history/qcard_765499
+	model_history/qcard_765999
+	model_history/qcard_766499
+	model_history/qcard_766999
+	model_history/qcard_767499
+	model_history/qcard_767999
+	model_history/qcard_768499
+	model_history/qcard_768999
+	model_history/qcard_769499
+	model_history/qcard_769999
+	model_history/qcard_770499
+	model_history/qcard_770999
+	model_history/qcard_771499
+	model_history/qcard_771999
+	model_history/qcard_772499
+	model_history/qcard_772999
+	model_history/qcard_773499
+	model_history/qcard_773999
+	model_history/qcard_774499
+	model_history/qcard_77499
+	model_history/qcard_774999
+	model_history/qcard_775499
+	model_history/qcard_775999
+	model_history/qcard_776499
+	model_history/qcard_776999
+	model_history/qcard_777499
+	model_history/qcard_777999
+	model_history/qcard_778499
+	model_history/qcard_778999
+	model_history/qcard_779499
+	model_history/qcard_779999
+	model_history/qcard_780499
+	model_history/qcard_780999
+	model_history/qcard_781499
+	model_history/qcard_781999
+	model_history/qcard_782499
+	model_history/qcard_782999
+	model_history/qcard_783499
+	model_history/qcard_783999
+	model_history/qcard_784499
+	model_history/qcard_78499
+	model_history/qcard_784999
+	model_history/qcard_785499
+	model_history/qcard_785999
+	model_history/qcard_786499
+	model_history/qcard_786999
+	model_history/qcard_787499
+	model_history/qcard_787999
+	model_history/qcard_788499
+	model_history/qcard_788999
+	model_history/qcard_789499
+	model_history/qcard_789999
+	model_history/qcard_790499
+	model_history/qcard_790999
+	model_history/qcard_791499
+	model_history/qcard_791999
+	model_history/qcard_792499
+	model_history/qcard_792999
+	model_history/qcard_793499
+	model_history/qcard_793999
+	model_history/qcard_794499
+	model_history/qcard_79499
+	model_history/qcard_794999
+	model_history/qcard_795499
+	model_history/qcard_795999
+	model_history/qcard_796499
+	model_history/qcard_796999
+	model_history/qcard_797499
+	model_history/qcard_797999
+	model_history/qcard_798499
+	model_history/qcard_798999
+	model_history/qcard_799499
+	model_history/qcard_799999
+	model_history/qcard_800499
+	model_history/qcard_800999
+	model_history/qcard_801499
+	model_history/qcard_801999
+	model_history/qcard_802499
+	model_history/qcard_802999
+	model_history/qcard_803499
+	model_history/qcard_803999
+	model_history/qcard_804499
+	model_history/qcard_80499
+	model_history/qcard_804999
+	model_history/qcard_805499
+	model_history/qcard_805999
+	model_history/qcard_806499
+	model_history/qcard_806999
+	model_history/qcard_807499
+	model_history/qcard_807999
+	model_history/qcard_808499
+	model_history/qcard_808999
+	model_history/qcard_809499
+	model_history/qcard_809999
+	model_history/qcard_810499
+	model_history/qcard_810999
+	model_history/qcard_811499
+	model_history/qcard_811999
+	model_history/qcard_812499
+	model_history/qcard_812999
+	model_history/qcard_813499
+	model_history/qcard_813999
+	model_history/qcard_814499
+	model_history/qcard_81499
+	model_history/qcard_814999
+	model_history/qcard_815499
+	model_history/qcard_815999
+	model_history/qcard_816499
+	model_history/qcard_816999
+	model_history/qcard_817499
+	model_history/qcard_817999
+	model_history/qcard_818499
+	model_history/qcard_818999
+	model_history/qcard_819499
+	model_history/qcard_819999
+	model_history/qcard_820499
+	model_history/qcard_820999
+	model_history/qcard_821499
+	model_history/qcard_821999
+	model_history/qcard_822499
+	model_history/qcard_822999
+	model_history/qcard_823499
+	model_history/qcard_823999
+	model_history/qcard_824499
+	model_history/qcard_82499
+	model_history/qcard_824999
+	model_history/qcard_825499
+	model_history/qcard_825999
+	model_history/qcard_826499
+	model_history/qcard_826999
+	model_history/qcard_827499
+	model_history/qcard_827999
+	model_history/qcard_828499
+	model_history/qcard_828999
+	model_history/qcard_829499
+	model_history/qcard_829999
+	model_history/qcard_830499
+	model_history/qcard_830999
+	model_history/qcard_831499
+	model_history/qcard_831999
+	model_history/qcard_832499
+	model_history/qcard_832999
+	model_history/qcard_833499
+	model_history/qcard_833999
+	model_history/qcard_834499
+	model_history/qcard_83499
+	model_history/qcard_834999
+	model_history/qcard_835499
+	model_history/qcard_835999
+	model_history/qcard_836499
+	model_history/qcard_836999
+	model_history/qcard_837499
+	model_history/qcard_837999
+	model_history/qcard_838499
+	model_history/qcard_838999
+	model_history/qcard_839499
+	model_history/qcard_839999
+	model_history/qcard_840499
+	model_history/qcard_840999
+	model_history/qcard_841499
+	model_history/qcard_841999
+	model_history/qcard_842499
+	model_history/qcard_842999
+	model_history/qcard_843499
+	model_history/qcard_843999
+	model_history/qcard_844499
+	model_history/qcard_84499
+	model_history/qcard_844999
+	model_history/qcard_845499
+	model_history/qcard_845999
+	model_history/qcard_846499
+	model_history/qcard_846999
+	model_history/qcard_847499
+	model_history/qcard_847999
+	model_history/qcard_848499
+	model_history/qcard_848999
+	model_history/qcard_849499
+	model_history/qcard_8499
+	model_history/qcard_849999
+	model_history/qcard_850499
+	model_history/qcard_850999
+	model_history/qcard_851499
+	model_history/qcard_851999
+	model_history/qcard_852499
+	model_history/qcard_852999
+	model_history/qcard_853499
+	model_history/qcard_853999
+	model_history/qcard_854499
+	model_history/qcard_85499
+	model_history/qcard_854999
+	model_history/qcard_855499
+	model_history/qcard_855999
+	model_history/qcard_856499
+	model_history/qcard_856999
+	model_history/qcard_857499
+	model_history/qcard_857999
+	model_history/qcard_858499
+	model_history/qcard_858999
+	model_history/qcard_859499
+	model_history/qcard_859999
+	model_history/qcard_860499
+	model_history/qcard_860999
+	model_history/qcard_861499
+	model_history/qcard_861999
+	model_history/qcard_862499
+	model_history/qcard_862999
+	model_history/qcard_863499
+	model_history/qcard_863999
+	model_history/qcard_864499
+	model_history/qcard_86499
+	model_history/qcard_864999
+	model_history/qcard_865499
+	model_history/qcard_865999
+	model_history/qcard_866499
+	model_history/qcard_866999
+	model_history/qcard_867499
+	model_history/qcard_867999
+	model_history/qcard_868499
+	model_history/qcard_868999
+	model_history/qcard_869499
+	model_history/qcard_869999
+	model_history/qcard_870499
+	model_history/qcard_870999
+	model_history/qcard_871499
+	model_history/qcard_871999
+	model_history/qcard_872499
+	model_history/qcard_872999
+	model_history/qcard_873499
+	model_history/qcard_873999
+	model_history/qcard_874499
+	model_history/qcard_87499
+	model_history/qcard_874999
+	model_history/qcard_875499
+	model_history/qcard_875999
+	model_history/qcard_876499
+	model_history/qcard_876999
+	model_history/qcard_877499
+	model_history/qcard_877999
+	model_history/qcard_878499
+	model_history/qcard_878999
+	model_history/qcard_879499
+	model_history/qcard_879999
+	model_history/qcard_880499
+	model_history/qcard_880999
+	model_history/qcard_881499
+	model_history/qcard_881999
+	model_history/qcard_882499
+	model_history/qcard_882999
+	model_history/qcard_883499
+	model_history/qcard_883999
+	model_history/qcard_884499
+	model_history/qcard_88499
+	model_history/qcard_884999
+	model_history/qcard_885499
+	model_history/qcard_885999
+	model_history/qcard_886499
+	model_history/qcard_886999
+	model_history/qcard_887499
+	model_history/qcard_887999
+	model_history/qcard_888499
+	model_history/qcard_888999
+	model_history/qcard_889499
+	model_history/qcard_889999
+	model_history/qcard_890499
+	model_history/qcard_890999
+	model_history/qcard_891499
+	model_history/qcard_891999
+	model_history/qcard_892499
+	model_history/qcard_892999
+	model_history/qcard_893499
+	model_history/qcard_893999
+	model_history/qcard_894499
+	model_history/qcard_89499
+	model_history/qcard_894999
+	model_history/qcard_895499
+	model_history/qcard_895999
+	model_history/qcard_896499
+	model_history/qcard_896999
+	model_history/qcard_897499
+	model_history/qcard_897999
+	model_history/qcard_898499
+	model_history/qcard_898999
+	model_history/qcard_899499
+	model_history/qcard_899999
+	model_history/qcard_900499
+	model_history/qcard_900999
+	model_history/qcard_901499
+	model_history/qcard_901999
+	model_history/qcard_902499
+	model_history/qcard_902999
+	model_history/qcard_903499
+	model_history/qcard_903999
+	model_history/qcard_904499
+	model_history/qcard_90499
+	model_history/qcard_904999
+	model_history/qcard_905499
+	model_history/qcard_905999
+	model_history/qcard_906499
+	model_history/qcard_906999
+	model_history/qcard_907499
+	model_history/qcard_907999
+	model_history/qcard_908499
+	model_history/qcard_908999
+	model_history/qcard_909499
+	model_history/qcard_909999
+	model_history/qcard_910499
+	model_history/qcard_910999
+	model_history/qcard_911499
+	model_history/qcard_911999
+	model_history/qcard_912499
+	model_history/qcard_912999
+	model_history/qcard_913499
+	model_history/qcard_913999
+	model_history/qcard_914499
+	model_history/qcard_91499
+	model_history/qcard_914999
+	model_history/qcard_915499
+	model_history/qcard_915999
+	model_history/qcard_916499
+	model_history/qcard_916999
+	model_history/qcard_917499
+	model_history/qcard_917999
+	model_history/qcard_918499
+	model_history/qcard_918999
+	model_history/qcard_919499
+	model_history/qcard_919999
+	model_history/qcard_920499
+	model_history/qcard_920999
+	model_history/qcard_921499
+	model_history/qcard_921999
+	model_history/qcard_922499
+	model_history/qcard_922999
+	model_history/qcard_923499
+	model_history/qcard_923999
+	model_history/qcard_924499
+	model_history/qcard_92499
+	model_history/qcard_924999
+	model_history/qcard_925499
+	model_history/qcard_925999
+	model_history/qcard_926499
+	model_history/qcard_926999
+	model_history/qcard_927499
+	model_history/qcard_927999
+	model_history/qcard_928499
+	model_history/qcard_928999
+	model_history/qcard_929499
+	model_history/qcard_929999
+	model_history/qcard_930499
+	model_history/qcard_930999
+	model_history/qcard_931499
+	model_history/qcard_931999
+	model_history/qcard_932499
+	model_history/qcard_932999
+	model_history/qcard_933499
+	model_history/qcard_933999
+	model_history/qcard_934499
+	model_history/qcard_93499
+	model_history/qcard_934999
+	model_history/qcard_935499
+	model_history/qcard_935999
+	model_history/qcard_936499
+	model_history/qcard_936999
+	model_history/qcard_937499
+	model_history/qcard_937999
+	model_history/qcard_938499
+	model_history/qcard_938999
+	model_history/qcard_939499
+	model_history/qcard_939999
+	model_history/qcard_940499
+	model_history/qcard_940999
+	model_history/qcard_941499
+	model_history/qcard_941999
+	model_history/qcard_942499
+	model_history/qcard_942999
+	model_history/qcard_943499
+	model_history/qcard_943999
+	model_history/qcard_944499
+	model_history/qcard_94499
+	model_history/qcard_944999
+	model_history/qcard_945499
+	model_history/qcard_945999
+	model_history/qcard_946499
+	model_history/qcard_946999
+	model_history/qcard_947499
+	model_history/qcard_947999
+	model_history/qcard_948499
+	model_history/qcard_948999
+	model_history/qcard_949499
+	model_history/qcard_9499
+	model_history/qcard_949999
+	model_history/qcard_950499
+	model_history/qcard_950999
+	model_history/qcard_951499
+	model_history/qcard_951999
+	model_history/qcard_952499
+	model_history/qcard_952999
+	model_history/qcard_953499
+	model_history/qcard_953999
+	model_history/qcard_954499
+	model_history/qcard_95499
+	model_history/qcard_954999
+	model_history/qcard_955499
+	model_history/qcard_955999
+	model_history/qcard_956499
+	model_history/qcard_956999
+	model_history/qcard_957499
+	model_history/qcard_957999
+	model_history/qcard_958499
+	model_history/qcard_958999
+	model_history/qcard_959499
+	model_history/qcard_959999
+	model_history/qcard_960499
+	model_history/qcard_960999
+	model_history/qcard_961499
+	model_history/qcard_961999
+	model_history/qcard_962499
+	model_history/qcard_962999
+	model_history/qcard_963499
+	model_history/qcard_963999
+	model_history/qcard_964499
+	model_history/qcard_96499
+	model_history/qcard_964999
+	model_history/qcard_965499
+	model_history/qcard_965999
+	model_history/qcard_966499
+	model_history/qcard_966999
+	model_history/qcard_967499
+	model_history/qcard_967999
+	model_history/qcard_968499
+	model_history/qcard_968999
+	model_history/qcard_969499
+	model_history/qcard_969999
+	model_history/qcard_970499
+	model_history/qcard_970999
+	model_history/qcard_971499
+	model_history/qcard_971999
+	model_history/qcard_972499
+	model_history/qcard_972999
+	model_history/qcard_973499
+	model_history/qcard_973999
+	model_history/qcard_974499
+	model_history/qcard_97499
+	model_history/qcard_974999
+	model_history/qcard_975499
+	model_history/qcard_975999
+	model_history/qcard_976499
+	model_history/qcard_976999
+	model_history/qcard_977499
+	model_history/qcard_977999
+	model_history/qcard_978499
+	model_history/qcard_978999
+	model_history/qcard_979499
+	model_history/qcard_979999
+	model_history/qcard_980499
+	model_history/qcard_980999
+	model_history/qcard_981499
+	model_history/qcard_981999
+	model_history/qcard_982499
+	model_history/qcard_982999
+	model_history/qcard_983499
+	model_history/qcard_983999
+	model_history/qcard_984499
+	model_history/qcard_98499
+	model_history/qcard_984999
+	model_history/qcard_985499
+	model_history/qcard_985999
+	model_history/qcard_986499
+	model_history/qcard_986999
+	model_history/qcard_987499
+	model_history/qcard_987999
+	model_history/qcard_988499
+	model_history/qcard_988999
+	model_history/qcard_989499
+	model_history/qcard_989999
+	model_history/qcard_990499
+	model_history/qcard_990999
+	model_history/qcard_991499
+	model_history/qcard_991999
+	model_history/qcard_992499
+	model_history/qcard_992999
+	model_history/qcard_993499
+	model_history/qcard_993999
+	model_history/qcard_994499
+	model_history/qcard_99499
+	model_history/qcard_994999
+	model_history/qcard_995499
+	model_history/qcard_995999
+	model_history/qcard_996499
+	model_history/qcard_996999
+	model_history/qcard_997499
+	model_history/qcard_997999
+	model_history/qcard_998499
+	model_history/qcard_998999
+	model_history/qcard_999499
+	model_history/qcard_999999
+	model_history/qstrat_100499
+	model_history/qstrat_101499
+	model_history/qstrat_102499
+	model_history/qstrat_103499
+	model_history/qstrat_104499
+	model_history/qstrat_10499
+	model_history/qstrat_105499
+	model_history/qstrat_106499
+	model_history/qstrat_107499
+	model_history/qstrat_108499
+	model_history/qstrat_109499
+	model_history/qstrat_110499
+	model_history/qstrat_111499
+	model_history/qstrat_112499
+	model_history/qstrat_113499
+	model_history/qstrat_114499
+	model_history/qstrat_11499
+	model_history/qstrat_115499
+	model_history/qstrat_116499
+	model_history/qstrat_117499
+	model_history/qstrat_118499
+	model_history/qstrat_119499
+	model_history/qstrat_120499
+	model_history/qstrat_121499
+	model_history/qstrat_122499
+	model_history/qstrat_123499
+	model_history/qstrat_124499
+	model_history/qstrat_12499
+	model_history/qstrat_125499
+	model_history/qstrat_126499
+	model_history/qstrat_127499
+	model_history/qstrat_128499
+	model_history/qstrat_129499
+	model_history/qstrat_130499
+	model_history/qstrat_131499
+	model_history/qstrat_132499
+	model_history/qstrat_133499
+	model_history/qstrat_134499
+	model_history/qstrat_13499
+	model_history/qstrat_135499
+	model_history/qstrat_136499
+	model_history/qstrat_137499
+	model_history/qstrat_138499
+	model_history/qstrat_139499
+	model_history/qstrat_140499
+	model_history/qstrat_141499
+	model_history/qstrat_142499
+	model_history/qstrat_143499
+	model_history/qstrat_144499
+	model_history/qstrat_14499
+	model_history/qstrat_145499
+	model_history/qstrat_146499
+	model_history/qstrat_147499
+	model_history/qstrat_148499
+	model_history/qstrat_149499
+	model_history/qstrat_1499
+	model_history/qstrat_150499
+	model_history/qstrat_151499
+	model_history/qstrat_152499
+	model_history/qstrat_153499
+	model_history/qstrat_154499
+	model_history/qstrat_15499
+	model_history/qstrat_155499
+	model_history/qstrat_156499
+	model_history/qstrat_157499
+	model_history/qstrat_158499
+	model_history/qstrat_159499
+	model_history/qstrat_160499
+	model_history/qstrat_161499
+	model_history/qstrat_162499
+	model_history/qstrat_163499
+	model_history/qstrat_164499
+	model_history/qstrat_16499
+	model_history/qstrat_165499
+	model_history/qstrat_166499
+	model_history/qstrat_167499
+	model_history/qstrat_168499
+	model_history/qstrat_169499
+	model_history/qstrat_170499
+	model_history/qstrat_171499
+	model_history/qstrat_172499
+	model_history/qstrat_173499
+	model_history/qstrat_174499
+	model_history/qstrat_17499
+	model_history/qstrat_175499
+	model_history/qstrat_176499
+	model_history/qstrat_177499
+	model_history/qstrat_178499
+	model_history/qstrat_179499
+	model_history/qstrat_180499
+	model_history/qstrat_181499
+	model_history/qstrat_182499
+	model_history/qstrat_183499
+	model_history/qstrat_184499
+	model_history/qstrat_18499
+	model_history/qstrat_185499
+	model_history/qstrat_186499
+	model_history/qstrat_187499
+	model_history/qstrat_188499
+	model_history/qstrat_189499
+	model_history/qstrat_190499
+	model_history/qstrat_191499
+	model_history/qstrat_192499
+	model_history/qstrat_193499
+	model_history/qstrat_194499
+	model_history/qstrat_19499
+	model_history/qstrat_195499
+	model_history/qstrat_196499
+	model_history/qstrat_197499
+	model_history/qstrat_198499
+	model_history/qstrat_199499
+	model_history/qstrat_200499
+	model_history/qstrat_201499
+	model_history/qstrat_202499
+	model_history/qstrat_203499
+	model_history/qstrat_204499
+	model_history/qstrat_20499
+	model_history/qstrat_205499
+	model_history/qstrat_206499
+	model_history/qstrat_207499
+	model_history/qstrat_208499
+	model_history/qstrat_209499
+	model_history/qstrat_210499
+	model_history/qstrat_211499
+	model_history/qstrat_212499
+	model_history/qstrat_213499
+	model_history/qstrat_214499
+	model_history/qstrat_21499
+	model_history/qstrat_215499
+	model_history/qstrat_216499
+	model_history/qstrat_217499
+	model_history/qstrat_218499
+	model_history/qstrat_219499
+	model_history/qstrat_220499
+	model_history/qstrat_221499
+	model_history/qstrat_222499
+	model_history/qstrat_223499
+	model_history/qstrat_224499
+	model_history/qstrat_22499
+	model_history/qstrat_225499
+	model_history/qstrat_226499
+	model_history/qstrat_227499
+	model_history/qstrat_228499
+	model_history/qstrat_229499
+	model_history/qstrat_230499
+	model_history/qstrat_231499
+	model_history/qstrat_232499
+	model_history/qstrat_233499
+	model_history/qstrat_234499
+	model_history/qstrat_23499
+	model_history/qstrat_235499
+	model_history/qstrat_236499
+	model_history/qstrat_237499
+	model_history/qstrat_238499
+	model_history/qstrat_239499
+	model_history/qstrat_240499
+	model_history/qstrat_241499
+	model_history/qstrat_242499
+	model_history/qstrat_243499
+	model_history/qstrat_244499
+	model_history/qstrat_24499
+	model_history/qstrat_245499
+	model_history/qstrat_246499
+	model_history/qstrat_247499
+	model_history/qstrat_248499
+	model_history/qstrat_249499
+	model_history/qstrat_2499
+	model_history/qstrat_250499
+	model_history/qstrat_251499
+	model_history/qstrat_252499
+	model_history/qstrat_253499
+	model_history/qstrat_254499
+	model_history/qstrat_25499
+	model_history/qstrat_255499
+	model_history/qstrat_256499
+	model_history/qstrat_257499
+	model_history/qstrat_258499
+	model_history/qstrat_259499
+	model_history/qstrat_260499
+	model_history/qstrat_261499
+	model_history/qstrat_262499
+	model_history/qstrat_263499
+	model_history/qstrat_264499
+	model_history/qstrat_26499
+	model_history/qstrat_265499
+	model_history/qstrat_266499
+	model_history/qstrat_267499
+	model_history/qstrat_268499
+	model_history/qstrat_269499
+	model_history/qstrat_270499
+	model_history/qstrat_271499
+	model_history/qstrat_272499
+	model_history/qstrat_273499
+	model_history/qstrat_274499
+	model_history/qstrat_27499
+	model_history/qstrat_275499
+	model_history/qstrat_276499
+	model_history/qstrat_277499
+	model_history/qstrat_278499
+	model_history/qstrat_279499
+	model_history/qstrat_280499
+	model_history/qstrat_281499
+	model_history/qstrat_282499
+	model_history/qstrat_283499
+	model_history/qstrat_284499
+	model_history/qstrat_28499
+	model_history/qstrat_285499
+	model_history/qstrat_286499
+	model_history/qstrat_287499
+	model_history/qstrat_288499
+	model_history/qstrat_289499
+	model_history/qstrat_290499
+	model_history/qstrat_291499
+	model_history/qstrat_292499
+	model_history/qstrat_293499
+	model_history/qstrat_294499
+	model_history/qstrat_29499
+	model_history/qstrat_295499
+	model_history/qstrat_296499
+	model_history/qstrat_297499
+	model_history/qstrat_298499
+	model_history/qstrat_299499
+	model_history/qstrat_300499
+	model_history/qstrat_301499
+	model_history/qstrat_302499
+	model_history/qstrat_303499
+	model_history/qstrat_304499
+	model_history/qstrat_30499
+	model_history/qstrat_305499
+	model_history/qstrat_306499
+	model_history/qstrat_307499
+	model_history/qstrat_308499
+	model_history/qstrat_309499
+	model_history/qstrat_310499
+	model_history/qstrat_311499
+	model_history/qstrat_312499
+	model_history/qstrat_313499
+	model_history/qstrat_314499
+	model_history/qstrat_31499
+	model_history/qstrat_315499
+	model_history/qstrat_316499
+	model_history/qstrat_317499
+	model_history/qstrat_318499
+	model_history/qstrat_319499
+	model_history/qstrat_320499
+	model_history/qstrat_321499
+	model_history/qstrat_322499
+	model_history/qstrat_323499
+	model_history/qstrat_324499
+	model_history/qstrat_32499
+	model_history/qstrat_325499
+	model_history/qstrat_326499
+	model_history/qstrat_327499
+	model_history/qstrat_328499
+	model_history/qstrat_329499
+	model_history/qstrat_330499
+	model_history/qstrat_331499
+	model_history/qstrat_332499
+	model_history/qstrat_333499
+	model_history/qstrat_334499
+	model_history/qstrat_33499
+	model_history/qstrat_335499
+	model_history/qstrat_336499
+	model_history/qstrat_337499
+	model_history/qstrat_338499
+	model_history/qstrat_339499
+	model_history/qstrat_340499
+	model_history/qstrat_341499
+	model_history/qstrat_342499
+	model_history/qstrat_343499
+	model_history/qstrat_344499
+	model_history/qstrat_34499
+	model_history/qstrat_345499
+	model_history/qstrat_346499
+	model_history/qstrat_347499
+	model_history/qstrat_348499
+	model_history/qstrat_349499
+	model_history/qstrat_3499
+	model_history/qstrat_350499
+	model_history/qstrat_351499
+	model_history/qstrat_352499
+	model_history/qstrat_353499
+	model_history/qstrat_354499
+	model_history/qstrat_35499
+	model_history/qstrat_355499
+	model_history/qstrat_356499
+	model_history/qstrat_357499
+	model_history/qstrat_358499
+	model_history/qstrat_359499
+	model_history/qstrat_360499
+	model_history/qstrat_361499
+	model_history/qstrat_362499
+	model_history/qstrat_363499
+	model_history/qstrat_364499
+	model_history/qstrat_36499
+	model_history/qstrat_365499
+	model_history/qstrat_366499
+	model_history/qstrat_367499
+	model_history/qstrat_368499
+	model_history/qstrat_369499
+	model_history/qstrat_370499
+	model_history/qstrat_371499
+	model_history/qstrat_372499
+	model_history/qstrat_373499
+	model_history/qstrat_374499
+	model_history/qstrat_37499
+	model_history/qstrat_375499
+	model_history/qstrat_376499
+	model_history/qstrat_377499
+	model_history/qstrat_378499
+	model_history/qstrat_379499
+	model_history/qstrat_380499
+	model_history/qstrat_381499
+	model_history/qstrat_382499
+	model_history/qstrat_383499
+	model_history/qstrat_384499
+	model_history/qstrat_38499
+	model_history/qstrat_385499
+	model_history/qstrat_386499
+	model_history/qstrat_387499
+	model_history/qstrat_388499
+	model_history/qstrat_389499
+	model_history/qstrat_390499
+	model_history/qstrat_391499
+	model_history/qstrat_392499
+	model_history/qstrat_393499
+	model_history/qstrat_394499
+	model_history/qstrat_39499
+	model_history/qstrat_395499
+	model_history/qstrat_396499
+	model_history/qstrat_397499
+	model_history/qstrat_398499
+	model_history/qstrat_399499
+	model_history/qstrat_400499
+	model_history/qstrat_401499
+	model_history/qstrat_402499
+	model_history/qstrat_403499
+	model_history/qstrat_404499
+	model_history/qstrat_40499
+	model_history/qstrat_405499
+	model_history/qstrat_406499
+	model_history/qstrat_407499
+	model_history/qstrat_408499
+	model_history/qstrat_409499
+	model_history/qstrat_410499
+	model_history/qstrat_411499
+	model_history/qstrat_412499
+	model_history/qstrat_413499
+	model_history/qstrat_414499
+	model_history/qstrat_41499
+	model_history/qstrat_415499
+	model_history/qstrat_416499
+	model_history/qstrat_417499
+	model_history/qstrat_418499
+	model_history/qstrat_419499
+	model_history/qstrat_420499
+	model_history/qstrat_421499
+	model_history/qstrat_422499
+	model_history/qstrat_423499
+	model_history/qstrat_424499
+	model_history/qstrat_42499
+	model_history/qstrat_425499
+	model_history/qstrat_426499
+	model_history/qstrat_427499
+	model_history/qstrat_428499
+	model_history/qstrat_429499
+	model_history/qstrat_430499
+	model_history/qstrat_431499
+	model_history/qstrat_432499
+	model_history/qstrat_433499
+	model_history/qstrat_434499
+	model_history/qstrat_43499
+	model_history/qstrat_435499
+	model_history/qstrat_436499
+	model_history/qstrat_437499
+	model_history/qstrat_438499
+	model_history/qstrat_439499
+	model_history/qstrat_440499
+	model_history/qstrat_441499
+	model_history/qstrat_442499
+	model_history/qstrat_443499
+	model_history/qstrat_444499
+	model_history/qstrat_44499
+	model_history/qstrat_445499
+	model_history/qstrat_446499
+	model_history/qstrat_447499
+	model_history/qstrat_448499
+	model_history/qstrat_449499
+	model_history/qstrat_4499
+	model_history/qstrat_450499
+	model_history/qstrat_451499
+	model_history/qstrat_452499
+	model_history/qstrat_453499
+	model_history/qstrat_454499
+	model_history/qstrat_45499
+	model_history/qstrat_455499
+	model_history/qstrat_456499
+	model_history/qstrat_457499
+	model_history/qstrat_458499
+	model_history/qstrat_459499
+	model_history/qstrat_460499
+	model_history/qstrat_461499
+	model_history/qstrat_462499
+	model_history/qstrat_463499
+	model_history/qstrat_464499
+	model_history/qstrat_46499
+	model_history/qstrat_465499
+	model_history/qstrat_466499
+	model_history/qstrat_467499
+	model_history/qstrat_468499
+	model_history/qstrat_469499
+	model_history/qstrat_470499
+	model_history/qstrat_471499
+	model_history/qstrat_472499
+	model_history/qstrat_473499
+	model_history/qstrat_474499
+	model_history/qstrat_47499
+	model_history/qstrat_475499
+	model_history/qstrat_476499
+	model_history/qstrat_477499
+	model_history/qstrat_478499
+	model_history/qstrat_479499
+	model_history/qstrat_480499
+	model_history/qstrat_481499
+	model_history/qstrat_482499
+	model_history/qstrat_483499
+	model_history/qstrat_484499
+	model_history/qstrat_48499
+	model_history/qstrat_485499
+	model_history/qstrat_486499
+	model_history/qstrat_487499
+	model_history/qstrat_488499
+	model_history/qstrat_489499
+	model_history/qstrat_490499
+	model_history/qstrat_491499
+	model_history/qstrat_492499
+	model_history/qstrat_493499
+	model_history/qstrat_494499
+	model_history/qstrat_49499
+	model_history/qstrat_495499
+	model_history/qstrat_496499
+	model_history/qstrat_497499
+	model_history/qstrat_498499
+	model_history/qstrat_499
+	model_history/qstrat_499499
+	model_history/qstrat_500499
+	model_history/qstrat_500999
+	model_history/qstrat_501499
+	model_history/qstrat_501999
+	model_history/qstrat_502499
+	model_history/qstrat_502999
+	model_history/qstrat_503499
+	model_history/qstrat_503999
+	model_history/qstrat_504499
+	model_history/qstrat_50499
+	model_history/qstrat_504999
+	model_history/qstrat_505499
+	model_history/qstrat_505999
+	model_history/qstrat_506499
+	model_history/qstrat_506999
+	model_history/qstrat_507499
+	model_history/qstrat_507999
+	model_history/qstrat_508499
+	model_history/qstrat_508999
+	model_history/qstrat_509499
+	model_history/qstrat_509999
+	model_history/qstrat_510499
+	model_history/qstrat_510999
+	model_history/qstrat_511499
+	model_history/qstrat_511999
+	model_history/qstrat_512499
+	model_history/qstrat_512999
+	model_history/qstrat_513499
+	model_history/qstrat_513999
+	model_history/qstrat_514499
+	model_history/qstrat_51499
+	model_history/qstrat_514999
+	model_history/qstrat_515499
+	model_history/qstrat_515999
+	model_history/qstrat_516499
+	model_history/qstrat_516999
+	model_history/qstrat_517499
+	model_history/qstrat_517999
+	model_history/qstrat_518499
+	model_history/qstrat_518999
+	model_history/qstrat_519499
+	model_history/qstrat_519999
+	model_history/qstrat_520499
+	model_history/qstrat_520999
+	model_history/qstrat_521499
+	model_history/qstrat_521999
+	model_history/qstrat_522499
+	model_history/qstrat_522999
+	model_history/qstrat_523499
+	model_history/qstrat_523999
+	model_history/qstrat_524499
+	model_history/qstrat_52499
+	model_history/qstrat_524999
+	model_history/qstrat_525499
+	model_history/qstrat_525999
+	model_history/qstrat_526499
+	model_history/qstrat_526999
+	model_history/qstrat_527499
+	model_history/qstrat_527999
+	model_history/qstrat_528499
+	model_history/qstrat_528999
+	model_history/qstrat_529499
+	model_history/qstrat_529999
+	model_history/qstrat_530499
+	model_history/qstrat_530999
+	model_history/qstrat_531499
+	model_history/qstrat_531999
+	model_history/qstrat_532499
+	model_history/qstrat_532999
+	model_history/qstrat_533499
+	model_history/qstrat_533999
+	model_history/qstrat_534499
+	model_history/qstrat_53499
+	model_history/qstrat_534999
+	model_history/qstrat_535499
+	model_history/qstrat_535999
+	model_history/qstrat_536499
+	model_history/qstrat_536999
+	model_history/qstrat_537499
+	model_history/qstrat_537999
+	model_history/qstrat_538499
+	model_history/qstrat_538999
+	model_history/qstrat_539499
+	model_history/qstrat_539999
+	model_history/qstrat_540499
+	model_history/qstrat_540999
+	model_history/qstrat_541499
+	model_history/qstrat_541999
+	model_history/qstrat_542499
+	model_history/qstrat_542999
+	model_history/qstrat_543499
+	model_history/qstrat_543999
+	model_history/qstrat_544499
+	model_history/qstrat_54499
+	model_history/qstrat_544999
+	model_history/qstrat_545499
+	model_history/qstrat_545999
+	model_history/qstrat_546499
+	model_history/qstrat_546999
+	model_history/qstrat_547499
+	model_history/qstrat_547999
+	model_history/qstrat_548499
+	model_history/qstrat_548999
+	model_history/qstrat_549499
+	model_history/qstrat_5499
+	model_history/qstrat_549999
+	model_history/qstrat_550499
+	model_history/qstrat_550999
+	model_history/qstrat_551499
+	model_history/qstrat_551999
+	model_history/qstrat_552499
+	model_history/qstrat_552999
+	model_history/qstrat_553499
+	model_history/qstrat_553999
+	model_history/qstrat_554499
+	model_history/qstrat_55499
+	model_history/qstrat_554999
+	model_history/qstrat_555499
+	model_history/qstrat_555999
+	model_history/qstrat_556499
+	model_history/qstrat_556999
+	model_history/qstrat_557499
+	model_history/qstrat_557999
+	model_history/qstrat_558499
+	model_history/qstrat_558999
+	model_history/qstrat_559499
+	model_history/qstrat_559999
+	model_history/qstrat_560499
+	model_history/qstrat_560999
+	model_history/qstrat_561499
+	model_history/qstrat_561999
+	model_history/qstrat_562499
+	model_history/qstrat_562999
+	model_history/qstrat_563499
+	model_history/qstrat_563999
+	model_history/qstrat_564499
+	model_history/qstrat_56499
+	model_history/qstrat_564999
+	model_history/qstrat_565499
+	model_history/qstrat_565999
+	model_history/qstrat_566499
+	model_history/qstrat_566999
+	model_history/qstrat_567499
+	model_history/qstrat_567999
+	model_history/qstrat_568499
+	model_history/qstrat_568999
+	model_history/qstrat_569499
+	model_history/qstrat_569999
+	model_history/qstrat_570499
+	model_history/qstrat_570999
+	model_history/qstrat_571499
+	model_history/qstrat_571999
+	model_history/qstrat_572499
+	model_history/qstrat_572999
+	model_history/qstrat_573499
+	model_history/qstrat_573999
+	model_history/qstrat_574499
+	model_history/qstrat_57499
+	model_history/qstrat_574999
+	model_history/qstrat_575499
+	model_history/qstrat_575999
+	model_history/qstrat_576499
+	model_history/qstrat_576999
+	model_history/qstrat_577499
+	model_history/qstrat_577999
+	model_history/qstrat_578499
+	model_history/qstrat_578999
+	model_history/qstrat_579499
+	model_history/qstrat_579999
+	model_history/qstrat_580499
+	model_history/qstrat_580999
+	model_history/qstrat_581499
+	model_history/qstrat_581999
+	model_history/qstrat_582499
+	model_history/qstrat_582999
+	model_history/qstrat_583499
+	model_history/qstrat_583999
+	model_history/qstrat_584499
+	model_history/qstrat_58499
+	model_history/qstrat_584999
+	model_history/qstrat_585499
+	model_history/qstrat_585999
+	model_history/qstrat_586499
+	model_history/qstrat_586999
+	model_history/qstrat_587499
+	model_history/qstrat_587999
+	model_history/qstrat_588499
+	model_history/qstrat_588999
+	model_history/qstrat_589499
+	model_history/qstrat_589999
+	model_history/qstrat_590499
+	model_history/qstrat_590999
+	model_history/qstrat_591499
+	model_history/qstrat_591999
+	model_history/qstrat_592499
+	model_history/qstrat_592999
+	model_history/qstrat_593499
+	model_history/qstrat_593999
+	model_history/qstrat_594499
+	model_history/qstrat_59499
+	model_history/qstrat_594999
+	model_history/qstrat_595499
+	model_history/qstrat_595999
+	model_history/qstrat_596499
+	model_history/qstrat_596999
+	model_history/qstrat_597499
+	model_history/qstrat_597999
+	model_history/qstrat_598499
+	model_history/qstrat_598999
+	model_history/qstrat_599499
+	model_history/qstrat_599999
+	model_history/qstrat_600499
+	model_history/qstrat_600999
+	model_history/qstrat_601499
+	model_history/qstrat_601999
+	model_history/qstrat_602499
+	model_history/qstrat_602999
+	model_history/qstrat_603499
+	model_history/qstrat_603999
+	model_history/qstrat_604499
+	model_history/qstrat_60499
+	model_history/qstrat_604999
+	model_history/qstrat_605499
+	model_history/qstrat_605999
+	model_history/qstrat_606499
+	model_history/qstrat_606999
+	model_history/qstrat_607499
+	model_history/qstrat_607999
+	model_history/qstrat_608499
+	model_history/qstrat_608999
+	model_history/qstrat_609499
+	model_history/qstrat_609999
+	model_history/qstrat_610499
+	model_history/qstrat_610999
+	model_history/qstrat_611499
+	model_history/qstrat_611999
+	model_history/qstrat_612499
+	model_history/qstrat_612999
+	model_history/qstrat_613499
+	model_history/qstrat_613999
+	model_history/qstrat_614499
+	model_history/qstrat_61499
+	model_history/qstrat_614999
+	model_history/qstrat_615499
+	model_history/qstrat_615999
+	model_history/qstrat_616499
+	model_history/qstrat_616999
+	model_history/qstrat_617499
+	model_history/qstrat_617999
+	model_history/qstrat_618499
+	model_history/qstrat_618999
+	model_history/qstrat_619499
+	model_history/qstrat_619999
+	model_history/qstrat_620499
+	model_history/qstrat_620999
+	model_history/qstrat_621499
+	model_history/qstrat_621999
+	model_history/qstrat_622499
+	model_history/qstrat_622999
+	model_history/qstrat_623499
+	model_history/qstrat_623999
+	model_history/qstrat_624499
+	model_history/qstrat_62499
+	model_history/qstrat_624999
+	model_history/qstrat_625499
+	model_history/qstrat_625999
+	model_history/qstrat_626499
+	model_history/qstrat_626999
+	model_history/qstrat_627499
+	model_history/qstrat_627999
+	model_history/qstrat_628499
+	model_history/qstrat_628999
+	model_history/qstrat_629499
+	model_history/qstrat_629999
+	model_history/qstrat_630499
+	model_history/qstrat_630999
+	model_history/qstrat_631499
+	model_history/qstrat_631999
+	model_history/qstrat_632499
+	model_history/qstrat_632999
+	model_history/qstrat_633499
+	model_history/qstrat_633999
+	model_history/qstrat_634499
+	model_history/qstrat_63499
+	model_history/qstrat_634999
+	model_history/qstrat_635499
+	model_history/qstrat_635999
+	model_history/qstrat_636499
+	model_history/qstrat_636999
+	model_history/qstrat_637499
+	model_history/qstrat_637999
+	model_history/qstrat_638499
+	model_history/qstrat_638999
+	model_history/qstrat_639499
+	model_history/qstrat_639999
+	model_history/qstrat_640499
+	model_history/qstrat_640999
+	model_history/qstrat_641499
+	model_history/qstrat_641999
+	model_history/qstrat_642499
+	model_history/qstrat_642999
+	model_history/qstrat_643499
+	model_history/qstrat_643999
+	model_history/qstrat_644499
+	model_history/qstrat_64499
+	model_history/qstrat_644999
+	model_history/qstrat_645499
+	model_history/qstrat_645999
+	model_history/qstrat_646499
+	model_history/qstrat_646999
+	model_history/qstrat_647499
+	model_history/qstrat_647999
+	model_history/qstrat_648499
+	model_history/qstrat_648999
+	model_history/qstrat_649499
+	model_history/qstrat_6499
+	model_history/qstrat_649999
+	model_history/qstrat_650499
+	model_history/qstrat_650999
+	model_history/qstrat_651499
+	model_history/qstrat_651999
+	model_history/qstrat_652499
+	model_history/qstrat_652999
+	model_history/qstrat_653499
+	model_history/qstrat_653999
+	model_history/qstrat_654499
+	model_history/qstrat_65499
+	model_history/qstrat_654999
+	model_history/qstrat_655499
+	model_history/qstrat_655999
+	model_history/qstrat_656499
+	model_history/qstrat_656999
+	model_history/qstrat_657499
+	model_history/qstrat_657999
+	model_history/qstrat_658499
+	model_history/qstrat_658999
+	model_history/qstrat_659499
+	model_history/qstrat_659999
+	model_history/qstrat_660499
+	model_history/qstrat_660999
+	model_history/qstrat_661499
+	model_history/qstrat_661999
+	model_history/qstrat_662499
+	model_history/qstrat_662999
+	model_history/qstrat_663499
+	model_history/qstrat_663999
+	model_history/qstrat_664499
+	model_history/qstrat_66499
+	model_history/qstrat_664999
+	model_history/qstrat_665499
+	model_history/qstrat_665999
+	model_history/qstrat_666499
+	model_history/qstrat_666999
+	model_history/qstrat_667499
+	model_history/qstrat_667999
+	model_history/qstrat_668499
+	model_history/qstrat_668999
+	model_history/qstrat_669499
+	model_history/qstrat_669999
+	model_history/qstrat_670499
+	model_history/qstrat_670999
+	model_history/qstrat_671499
+	model_history/qstrat_671999
+	model_history/qstrat_672499
+	model_history/qstrat_672999
+	model_history/qstrat_673499
+	model_history/qstrat_673999
+	model_history/qstrat_674499
+	model_history/qstrat_67499
+	model_history/qstrat_674999
+	model_history/qstrat_675499
+	model_history/qstrat_675999
+	model_history/qstrat_676499
+	model_history/qstrat_676999
+	model_history/qstrat_677499
+	model_history/qstrat_677999
+	model_history/qstrat_678499
+	model_history/qstrat_678999
+	model_history/qstrat_679499
+	model_history/qstrat_679999
+	model_history/qstrat_680499
+	model_history/qstrat_680999
+	model_history/qstrat_681499
+	model_history/qstrat_681999
+	model_history/qstrat_682499
+	model_history/qstrat_682999
+	model_history/qstrat_683499
+	model_history/qstrat_683999
+	model_history/qstrat_684499
+	model_history/qstrat_68499
+	model_history/qstrat_684999
+	model_history/qstrat_685499
+	model_history/qstrat_685999
+	model_history/qstrat_686499
+	model_history/qstrat_686999
+	model_history/qstrat_687499
+	model_history/qstrat_687999
+	model_history/qstrat_688499
+	model_history/qstrat_688999
+	model_history/qstrat_689499
+	model_history/qstrat_689999
+	model_history/qstrat_690499
+	model_history/qstrat_690999
+	model_history/qstrat_691499
+	model_history/qstrat_691999
+	model_history/qstrat_692499
+	model_history/qstrat_692999
+	model_history/qstrat_693499
+	model_history/qstrat_693999
+	model_history/qstrat_694499
+	model_history/qstrat_69499
+	model_history/qstrat_694999
+	model_history/qstrat_695499
+	model_history/qstrat_695999
+	model_history/qstrat_696499
+	model_history/qstrat_696999
+	model_history/qstrat_697499
+	model_history/qstrat_697999
+	model_history/qstrat_698499
+	model_history/qstrat_698999
+	model_history/qstrat_699499
+	model_history/qstrat_699999
+	model_history/qstrat_700499
+	model_history/qstrat_700999
+	model_history/qstrat_701499
+	model_history/qstrat_701999
+	model_history/qstrat_702499
+	model_history/qstrat_702999
+	model_history/qstrat_703499
+	model_history/qstrat_703999
+	model_history/qstrat_704499
+	model_history/qstrat_70499
+	model_history/qstrat_704999
+	model_history/qstrat_705499
+	model_history/qstrat_705999
+	model_history/qstrat_706499
+	model_history/qstrat_706999
+	model_history/qstrat_707499
+	model_history/qstrat_707999
+	model_history/qstrat_708499
+	model_history/qstrat_708999
+	model_history/qstrat_709499
+	model_history/qstrat_709999
+	model_history/qstrat_710499
+	model_history/qstrat_710999
+	model_history/qstrat_711499
+	model_history/qstrat_711999
+	model_history/qstrat_712499
+	model_history/qstrat_712999
+	model_history/qstrat_713499
+	model_history/qstrat_713999
+	model_history/qstrat_714499
+	model_history/qstrat_71499
+	model_history/qstrat_714999
+	model_history/qstrat_715499
+	model_history/qstrat_715999
+	model_history/qstrat_716499
+	model_history/qstrat_716999
+	model_history/qstrat_717499
+	model_history/qstrat_717999
+	model_history/qstrat_718499
+	model_history/qstrat_718999
+	model_history/qstrat_719499
+	model_history/qstrat_719999
+	model_history/qstrat_720499
+	model_history/qstrat_720999
+	model_history/qstrat_721499
+	model_history/qstrat_721999
+	model_history/qstrat_722499
+	model_history/qstrat_722999
+	model_history/qstrat_723499
+	model_history/qstrat_723999
+	model_history/qstrat_724499
+	model_history/qstrat_72499
+	model_history/qstrat_724999
+	model_history/qstrat_725499
+	model_history/qstrat_725999
+	model_history/qstrat_726499
+	model_history/qstrat_726999
+	model_history/qstrat_727499
+	model_history/qstrat_727999
+	model_history/qstrat_728499
+	model_history/qstrat_728999
+	model_history/qstrat_729499
+	model_history/qstrat_729999
+	model_history/qstrat_730499
+	model_history/qstrat_730999
+	model_history/qstrat_731499
+	model_history/qstrat_731999
+	model_history/qstrat_732499
+	model_history/qstrat_732999
+	model_history/qstrat_733499
+	model_history/qstrat_733999
+	model_history/qstrat_734499
+	model_history/qstrat_73499
+	model_history/qstrat_734999
+	model_history/qstrat_735499
+	model_history/qstrat_735999
+	model_history/qstrat_736499
+	model_history/qstrat_736999
+	model_history/qstrat_737499
+	model_history/qstrat_737999
+	model_history/qstrat_738499
+	model_history/qstrat_738999
+	model_history/qstrat_739499
+	model_history/qstrat_739999
+	model_history/qstrat_740499
+	model_history/qstrat_740999
+	model_history/qstrat_741499
+	model_history/qstrat_741999
+	model_history/qstrat_742499
+	model_history/qstrat_742999
+	model_history/qstrat_743499
+	model_history/qstrat_743999
+	model_history/qstrat_744499
+	model_history/qstrat_74499
+	model_history/qstrat_744999
+	model_history/qstrat_745499
+	model_history/qstrat_745999
+	model_history/qstrat_746499
+	model_history/qstrat_746999
+	model_history/qstrat_747499
+	model_history/qstrat_747999
+	model_history/qstrat_748499
+	model_history/qstrat_748999
+	model_history/qstrat_749499
+	model_history/qstrat_7499
+	model_history/qstrat_749999
+	model_history/qstrat_750499
+	model_history/qstrat_750999
+	model_history/qstrat_751499
+	model_history/qstrat_751999
+	model_history/qstrat_752499
+	model_history/qstrat_752999
+	model_history/qstrat_753499
+	model_history/qstrat_753999
+	model_history/qstrat_754499
+	model_history/qstrat_75499
+	model_history/qstrat_754999
+	model_history/qstrat_755499
+	model_history/qstrat_755999
+	model_history/qstrat_756499
+	model_history/qstrat_756999
+	model_history/qstrat_757499
+	model_history/qstrat_757999
+	model_history/qstrat_758499
+	model_history/qstrat_758999
+	model_history/qstrat_759499
+	model_history/qstrat_759999
+	model_history/qstrat_760499
+	model_history/qstrat_760999
+	model_history/qstrat_761499
+	model_history/qstrat_761999
+	model_history/qstrat_762499
+	model_history/qstrat_762999
+	model_history/qstrat_763499
+	model_history/qstrat_763999
+	model_history/qstrat_764499
+	model_history/qstrat_76499
+	model_history/qstrat_764999
+	model_history/qstrat_765499
+	model_history/qstrat_765999
+	model_history/qstrat_766499
+	model_history/qstrat_766999
+	model_history/qstrat_767499
+	model_history/qstrat_767999
+	model_history/qstrat_768499
+	model_history/qstrat_768999
+	model_history/qstrat_769499
+	model_history/qstrat_769999
+	model_history/qstrat_770499
+	model_history/qstrat_770999
+	model_history/qstrat_771499
+	model_history/qstrat_771999
+	model_history/qstrat_772499
+	model_history/qstrat_772999
+	model_history/qstrat_773499
+	model_history/qstrat_773999
+	model_history/qstrat_774499
+	model_history/qstrat_77499
+	model_history/qstrat_774999
+	model_history/qstrat_775499
+	model_history/qstrat_775999
+	model_history/qstrat_776499
+	model_history/qstrat_776999
+	model_history/qstrat_777499
+	model_history/qstrat_777999
+	model_history/qstrat_778499
+	model_history/qstrat_778999
+	model_history/qstrat_779499
+	model_history/qstrat_779999
+	model_history/qstrat_780499
+	model_history/qstrat_780999
+	model_history/qstrat_781499
+	model_history/qstrat_781999
+	model_history/qstrat_782499
+	model_history/qstrat_782999
+	model_history/qstrat_783499
+	model_history/qstrat_783999
+	model_history/qstrat_784499
+	model_history/qstrat_78499
+	model_history/qstrat_784999
+	model_history/qstrat_785499
+	model_history/qstrat_785999
+	model_history/qstrat_786499
+	model_history/qstrat_786999
+	model_history/qstrat_787499
+	model_history/qstrat_787999
+	model_history/qstrat_788499
+	model_history/qstrat_788999
+	model_history/qstrat_789499
+	model_history/qstrat_789999
+	model_history/qstrat_790499
+	model_history/qstrat_790999
+	model_history/qstrat_791499
+	model_history/qstrat_791999
+	model_history/qstrat_792499
+	model_history/qstrat_792999
+	model_history/qstrat_793499
+	model_history/qstrat_793999
+	model_history/qstrat_794499
+	model_history/qstrat_79499
+	model_history/qstrat_794999
+	model_history/qstrat_795499
+	model_history/qstrat_795999
+	model_history/qstrat_796499
+	model_history/qstrat_796999
+	model_history/qstrat_797499
+	model_history/qstrat_797999
+	model_history/qstrat_798499
+	model_history/qstrat_798999
+	model_history/qstrat_799499
+	model_history/qstrat_799999
+	model_history/qstrat_800499
+	model_history/qstrat_800999
+	model_history/qstrat_801499
+	model_history/qstrat_801999
+	model_history/qstrat_802499
+	model_history/qstrat_802999
+	model_history/qstrat_803499
+	model_history/qstrat_803999
+	model_history/qstrat_804499
+	model_history/qstrat_80499
+	model_history/qstrat_804999
+	model_history/qstrat_805499
+	model_history/qstrat_805999
+	model_history/qstrat_806499
+	model_history/qstrat_806999
+	model_history/qstrat_807499
+	model_history/qstrat_807999
+	model_history/qstrat_808499
+	model_history/qstrat_808999
+	model_history/qstrat_809499
+	model_history/qstrat_809999
+	model_history/qstrat_810499
+	model_history/qstrat_810999
+	model_history/qstrat_811499
+	model_history/qstrat_811999
+	model_history/qstrat_812499
+	model_history/qstrat_812999
+	model_history/qstrat_813499
+	model_history/qstrat_813999
+	model_history/qstrat_814499
+	model_history/qstrat_81499
+	model_history/qstrat_814999
+	model_history/qstrat_815499
+	model_history/qstrat_815999
+	model_history/qstrat_816499
+	model_history/qstrat_816999
+	model_history/qstrat_817499
+	model_history/qstrat_817999
+	model_history/qstrat_818499
+	model_history/qstrat_818999
+	model_history/qstrat_819499
+	model_history/qstrat_819999
+	model_history/qstrat_820499
+	model_history/qstrat_820999
+	model_history/qstrat_821499
+	model_history/qstrat_821999
+	model_history/qstrat_822499
+	model_history/qstrat_822999
+	model_history/qstrat_823499
+	model_history/qstrat_823999
+	model_history/qstrat_824499
+	model_history/qstrat_82499
+	model_history/qstrat_824999
+	model_history/qstrat_825499
+	model_history/qstrat_825999
+	model_history/qstrat_826499
+	model_history/qstrat_826999
+	model_history/qstrat_827499
+	model_history/qstrat_827999
+	model_history/qstrat_828499
+	model_history/qstrat_828999
+	model_history/qstrat_829499
+	model_history/qstrat_829999
+	model_history/qstrat_830499
+	model_history/qstrat_830999
+	model_history/qstrat_831499
+	model_history/qstrat_831999
+	model_history/qstrat_832499
+	model_history/qstrat_832999
+	model_history/qstrat_833499
+	model_history/qstrat_833999
+	model_history/qstrat_834499
+	model_history/qstrat_83499
+	model_history/qstrat_834999
+	model_history/qstrat_835499
+	model_history/qstrat_835999
+	model_history/qstrat_836499
+	model_history/qstrat_836999
+	model_history/qstrat_837499
+	model_history/qstrat_837999
+	model_history/qstrat_838499
+	model_history/qstrat_838999
+	model_history/qstrat_839499
+	model_history/qstrat_839999
+	model_history/qstrat_840499
+	model_history/qstrat_840999
+	model_history/qstrat_841499
+	model_history/qstrat_841999
+	model_history/qstrat_842499
+	model_history/qstrat_842999
+	model_history/qstrat_843499
+	model_history/qstrat_843999
+	model_history/qstrat_844499
+	model_history/qstrat_84499
+	model_history/qstrat_844999
+	model_history/qstrat_845499
+	model_history/qstrat_845999
+	model_history/qstrat_846499
+	model_history/qstrat_846999
+	model_history/qstrat_847499
+	model_history/qstrat_847999
+	model_history/qstrat_848499
+	model_history/qstrat_848999
+	model_history/qstrat_849499
+	model_history/qstrat_8499
+	model_history/qstrat_849999
+	model_history/qstrat_850499
+	model_history/qstrat_850999
+	model_history/qstrat_851499
+	model_history/qstrat_851999
+	model_history/qstrat_852499
+	model_history/qstrat_852999
+	model_history/qstrat_853499
+	model_history/qstrat_853999
+	model_history/qstrat_854499
+	model_history/qstrat_85499
+	model_history/qstrat_854999
+	model_history/qstrat_855499
+	model_history/qstrat_855999
+	model_history/qstrat_856499
+	model_history/qstrat_856999
+	model_history/qstrat_857499
+	model_history/qstrat_857999
+	model_history/qstrat_858499
+	model_history/qstrat_858999
+	model_history/qstrat_859499
+	model_history/qstrat_859999
+	model_history/qstrat_860499
+	model_history/qstrat_860999
+	model_history/qstrat_861499
+	model_history/qstrat_861999
+	model_history/qstrat_862499
+	model_history/qstrat_862999
+	model_history/qstrat_863499
+	model_history/qstrat_863999
+	model_history/qstrat_864499
+	model_history/qstrat_86499
+	model_history/qstrat_864999
+	model_history/qstrat_865499
+	model_history/qstrat_865999
+	model_history/qstrat_866499
+	model_history/qstrat_866999
+	model_history/qstrat_867499
+	model_history/qstrat_867999
+	model_history/qstrat_868499
+	model_history/qstrat_868999
+	model_history/qstrat_869499
+	model_history/qstrat_869999
+	model_history/qstrat_870499
+	model_history/qstrat_870999
+	model_history/qstrat_871499
+	model_history/qstrat_871999
+	model_history/qstrat_872499
+	model_history/qstrat_872999
+	model_history/qstrat_873499
+	model_history/qstrat_873999
+	model_history/qstrat_874499
+	model_history/qstrat_87499
+	model_history/qstrat_874999
+	model_history/qstrat_875499
+	model_history/qstrat_875999
+	model_history/qstrat_876499
+	model_history/qstrat_876999
+	model_history/qstrat_877499
+	model_history/qstrat_877999
+	model_history/qstrat_878499
+	model_history/qstrat_878999
+	model_history/qstrat_879499
+	model_history/qstrat_879999
+	model_history/qstrat_880499
+	model_history/qstrat_880999
+	model_history/qstrat_881499
+	model_history/qstrat_881999
+	model_history/qstrat_882499
+	model_history/qstrat_882999
+	model_history/qstrat_883499
+	model_history/qstrat_883999
+	model_history/qstrat_884499
+	model_history/qstrat_88499
+	model_history/qstrat_884999
+	model_history/qstrat_885499
+	model_history/qstrat_885999
+	model_history/qstrat_886499
+	model_history/qstrat_886999
+	model_history/qstrat_887499
+	model_history/qstrat_887999
+	model_history/qstrat_888499
+	model_history/qstrat_888999
+	model_history/qstrat_889499
+	model_history/qstrat_889999
+	model_history/qstrat_890499
+	model_history/qstrat_890999
+	model_history/qstrat_891499
+	model_history/qstrat_891999
+	model_history/qstrat_892499
+	model_history/qstrat_892999
+	model_history/qstrat_893499
+	model_history/qstrat_893999
+	model_history/qstrat_894499
+	model_history/qstrat_89499
+	model_history/qstrat_894999
+	model_history/qstrat_895499
+	model_history/qstrat_895999
+	model_history/qstrat_896499
+	model_history/qstrat_896999
+	model_history/qstrat_897499
+	model_history/qstrat_897999
+	model_history/qstrat_898499
+	model_history/qstrat_898999
+	model_history/qstrat_899499
+	model_history/qstrat_899999
+	model_history/qstrat_900499
+	model_history/qstrat_900999
+	model_history/qstrat_901499
+	model_history/qstrat_901999
+	model_history/qstrat_902499
+	model_history/qstrat_902999
+	model_history/qstrat_903499
+	model_history/qstrat_903999
+	model_history/qstrat_904499
+	model_history/qstrat_90499
+	model_history/qstrat_904999
+	model_history/qstrat_905499
+	model_history/qstrat_905999
+	model_history/qstrat_906499
+	model_history/qstrat_906999
+	model_history/qstrat_907499
+	model_history/qstrat_907999
+	model_history/qstrat_908499
+	model_history/qstrat_908999
+	model_history/qstrat_909499
+	model_history/qstrat_909999
+	model_history/qstrat_910499
+	model_history/qstrat_910999
+	model_history/qstrat_911499
+	model_history/qstrat_911999
+	model_history/qstrat_912499
+	model_history/qstrat_912999
+	model_history/qstrat_913499
+	model_history/qstrat_913999
+	model_history/qstrat_914499
+	model_history/qstrat_91499
+	model_history/qstrat_914999
+	model_history/qstrat_915499
+	model_history/qstrat_915999
+	model_history/qstrat_916499
+	model_history/qstrat_916999
+	model_history/qstrat_917499
+	model_history/qstrat_917999
+	model_history/qstrat_918499
+	model_history/qstrat_918999
+	model_history/qstrat_919499
+	model_history/qstrat_919999
+	model_history/qstrat_920499
+	model_history/qstrat_920999
+	model_history/qstrat_921499
+	model_history/qstrat_921999
+	model_history/qstrat_922499
+	model_history/qstrat_922999
+	model_history/qstrat_923499
+	model_history/qstrat_923999
+	model_history/qstrat_924499
+	model_history/qstrat_92499
+	model_history/qstrat_924999
+	model_history/qstrat_925499
+	model_history/qstrat_925999
+	model_history/qstrat_926499
+	model_history/qstrat_926999
+	model_history/qstrat_927499
+	model_history/qstrat_927999
+	model_history/qstrat_928499
+	model_history/qstrat_928999
+	model_history/qstrat_929499
+	model_history/qstrat_929999
+	model_history/qstrat_930499
+	model_history/qstrat_930999
+	model_history/qstrat_931499
+	model_history/qstrat_931999
+	model_history/qstrat_932499
+	model_history/qstrat_932999
+	model_history/qstrat_933499
+	model_history/qstrat_933999
+	model_history/qstrat_934499
+	model_history/qstrat_93499
+	model_history/qstrat_934999
+	model_history/qstrat_935499
+	model_history/qstrat_935999
+	model_history/qstrat_936499
+	model_history/qstrat_936999
+	model_history/qstrat_937499
+	model_history/qstrat_937999
+	model_history/qstrat_938499
+	model_history/qstrat_938999
+	model_history/qstrat_939499
+	model_history/qstrat_939999
+	model_history/qstrat_940499
+	model_history/qstrat_940999
+	model_history/qstrat_941499
+	model_history/qstrat_941999
+	model_history/qstrat_942499
+	model_history/qstrat_942999
+	model_history/qstrat_943499
+	model_history/qstrat_943999
+	model_history/qstrat_944499
+	model_history/qstrat_94499
+	model_history/qstrat_944999
+	model_history/qstrat_945499
+	model_history/qstrat_945999
+	model_history/qstrat_946499
+	model_history/qstrat_946999
+	model_history/qstrat_947499
+	model_history/qstrat_947999
+	model_history/qstrat_948499
+	model_history/qstrat_948999
+	model_history/qstrat_949499
+	model_history/qstrat_9499
+	model_history/qstrat_949999
+	model_history/qstrat_950499
+	model_history/qstrat_950999
+	model_history/qstrat_951499
+	model_history/qstrat_951999
+	model_history/qstrat_952499
+	model_history/qstrat_952999
+	model_history/qstrat_953499
+	model_history/qstrat_953999
+	model_history/qstrat_954499
+	model_history/qstrat_95499
+	model_history/qstrat_954999
+	model_history/qstrat_955499
+	model_history/qstrat_955999
+	model_history/qstrat_956499
+	model_history/qstrat_956999
+	model_history/qstrat_957499
+	model_history/qstrat_957999
+	model_history/qstrat_958499
+	model_history/qstrat_958999
+	model_history/qstrat_959499
+	model_history/qstrat_959999
+	model_history/qstrat_960499
+	model_history/qstrat_960999
+	model_history/qstrat_961499
+	model_history/qstrat_961999
+	model_history/qstrat_962499
+	model_history/qstrat_962999
+	model_history/qstrat_963499
+	model_history/qstrat_963999
+	model_history/qstrat_964499
+	model_history/qstrat_96499
+	model_history/qstrat_964999
+	model_history/qstrat_965499
+	model_history/qstrat_965999
+	model_history/qstrat_966499
+	model_history/qstrat_966999
+	model_history/qstrat_967499
+	model_history/qstrat_967999
+	model_history/qstrat_968499
+	model_history/qstrat_968999
+	model_history/qstrat_969499
+	model_history/qstrat_969999
+	model_history/qstrat_970499
+	model_history/qstrat_970999
+	model_history/qstrat_971499
+	model_history/qstrat_971999
+	model_history/qstrat_972499
+	model_history/qstrat_972999
+	model_history/qstrat_973499
+	model_history/qstrat_973999
+	model_history/qstrat_974499
+	model_history/qstrat_97499
+	model_history/qstrat_974999
+	model_history/qstrat_975499
+	model_history/qstrat_975999
+	model_history/qstrat_976499
+	model_history/qstrat_976999
+	model_history/qstrat_977499
+	model_history/qstrat_977999
+	model_history/qstrat_978499
+	model_history/qstrat_978999
+	model_history/qstrat_979499
+	model_history/qstrat_979999
+	model_history/qstrat_980499
+	model_history/qstrat_980999
+	model_history/qstrat_981499
+	model_history/qstrat_981999
+	model_history/qstrat_982499
+	model_history/qstrat_982999
+	model_history/qstrat_983499
+	model_history/qstrat_983999
+	model_history/qstrat_984499
+	model_history/qstrat_98499
+	model_history/qstrat_984999
+	model_history/qstrat_985499
+	model_history/qstrat_985999
+	model_history/qstrat_986499
+	model_history/qstrat_986999
+	model_history/qstrat_987499
+	model_history/qstrat_987999
+	model_history/qstrat_988499
+	model_history/qstrat_988999
+	model_history/qstrat_989499
+	model_history/qstrat_989999
+	model_history/qstrat_990499
+	model_history/qstrat_990999
+	model_history/qstrat_991499
+	model_history/qstrat_991999
+	model_history/qstrat_992499
+	model_history/qstrat_992999
+	model_history/qstrat_993499
+	model_history/qstrat_993999
+	model_history/qstrat_994499
+	model_history/qstrat_99499
+	model_history/qstrat_994999
+	model_history/qstrat_995499
+	model_history/qstrat_995999
+	model_history/qstrat_996499
+	model_history/qstrat_996999
+	model_history/qstrat_997499
+	model_history/qstrat_997999
+	model_history/qstrat_998499
+	model_history/qstrat_998999
+	model_history/qstrat_999499
+	model_history/qstrat_999999
+	presentation.py
+	presentation_agents.py
+	statusLog
+
+no changes added to commit (use "git add" and/or "git commit -a")

@@ -26,8 +26,8 @@ class DeepQAgent(DeepUnoAgent):
         self.target_nn = DeepRL_NN(state_dim=state_dim, action_dim=61)
         self.target_nn.load_state_dict(self.online_nn.state_dict())
 
-        # lower == more unstable model
-        self.SYNC_RATE = 1000
+        # lower == more unstable model, but train more frequent
+        self.SYNC_RATE = 500
 
         self.GAIN_CARD_PENALTY = 0.02
         self.LOSE_CARD_REWARD = 0.02
@@ -44,6 +44,7 @@ class DeepQAgent(DeepUnoAgent):
 
     @override
     def step(self, state) -> str:
+
         curr_state = self.state_translation(state)
         
         # Calculate reward based on previous state
@@ -62,9 +63,10 @@ class DeepQAgent(DeepUnoAgent):
         
         # Action selection (epsilon-greedy)
         if random.random() < self.epsilon:
-            action_str = random.choice(state['raw_legal_actions'])
-            action_int = card_to_int(action_str) if action_str != 'draw' else 60
+            # Random action
+            action_int = random.choice(state['legal_actions'])
         else:
+            # Greedy action
             q_values = self.online_nn.forward(
                 torch.tensor(curr_state, dtype=torch.float32, device=self.online_nn.device)
             )
@@ -75,7 +77,8 @@ class DeepQAgent(DeepUnoAgent):
             masked_q = q_values + mask
             
             action_int = torch.argmax(masked_q).item()
-            action_str = int_to_action(int(action_int))
+        
+        action_str = int_to_action(int(action_int))
         
         # Update the action in the buffer
         self.action_list[-1] = int(action_int)
@@ -84,7 +87,39 @@ class DeepQAgent(DeepUnoAgent):
 
     @override
     def eval_step(self, state) -> Tuple[str, Collection]:
-        return self.step(state), []
+        curr_state = self.state_translation(state)
+        
+        # Calculate reward based on previous state
+        reward = 0
+        if len(self.state_list) > 0:
+            reward = self.calculate_reward(self.state_list[-1], curr_state)
+        
+        # Record transition
+        self.record_transition(
+            state=curr_state,
+            action=0,  # Will be updated below
+            reward=reward,
+            next_state=curr_state,
+            done=False
+        )
+
+        q_values = self.online_nn.forward(
+            torch.tensor(curr_state, dtype=torch.float32, device=self.online_nn.device)
+        )
+        legal: List[int] = state['legal_actions']
+        
+        mask = torch.full_like(q_values, float('-inf'))
+        mask[legal] = 0.0
+        masked_q = q_values + mask
+        
+        action_int = torch.argmax(masked_q).item()
+        action_str = int_to_action(int(action_int))
+        
+        # Update the action in the buffer
+        self.action_list[-1] = int(action_int)
+        
+        return action_str, []
+        
 
     # ------------------------------------------------------
     # Required for training

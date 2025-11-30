@@ -21,7 +21,7 @@ def play_game(agents: List, is_training: bool):
     for index, agent in enumerate(agents):
         if isinstance(agent, DeepUnoAgent):
             agent.before_game()
-    trajectories, payoff = env.run(is_training)
+    _, payoff = env.run(is_training)
     for index, agent in enumerate(agents):
         if isinstance(agent, DeepUnoAgent):
             agent.after_game(payoff=payoff[index])
@@ -40,16 +40,18 @@ def play_games(agents: List, is_training: bool):
         if isinstance(pair[0], DeepUnoAgent) or isinstance(pair[1], DeepUnoAgent):
             play_game(pair, is_training)
 
-def train(epoch: int, training_agents: List):
-    # setup
+BOT_PHASE_GAMES = 500000
+def train(total_games: int, training_agents: List[DeepUnoAgent]):
     rlcard_agents = []
-    for i in range(len(training_agents)):
-        bot = get_rule_based_agent()
-        rlcard_agents.append(bot)
-        bot = RandomAgent(61)
-        rlcard_agents.append(bot)
+    for _ in range(len(training_agents)):
+        rlcard_agents.append(get_rule_based_agent())
+        rlcard_agents.append(RandomAgent(61))
     all_agents = training_agents + rlcard_agents
-    
-    for i in range(epoch):
-        is_training = not (i % TEST_EPOCH == 0)
-        play_games(all_agents, is_training)
+
+    for game_idx in range(total_games):
+        if game_idx < BOT_PHASE_GAMES:
+            # phase 1: learn vs bots + each other
+            play_games(all_agents, is_training=True)
+        else:
+            # phase 2: primarily self-play (either full list or separate env)
+            play_games(training_agents, is_training=True)

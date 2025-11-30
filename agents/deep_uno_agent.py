@@ -35,7 +35,7 @@ class DeepUnoAgent(ABC):
         self.dones           = []
 
         # Smaller == faster training, higher fluctuation
-        self.TRAIN_RATE = 100
+        self.TRAIN_RATE = 4
 
         self.episode_count = 0
         self.win_count = []
@@ -74,13 +74,25 @@ class DeepUnoAgent(ABC):
 
     def train_online_nn(self):
         """Generic training hook: compute targets then train network."""
+        if not self.verify_buffers():
+            print("Skipping training due to buffer issues")
+            return
+        if len(self.state_list) == 0:
+            print("WARNING: Trying to train with empty buffers!")
+            return
+            
         targets = self.compute_targets()
-        self.online_nn.train_batch(
+        loss = self.online_nn.train_batch(
             state_list      = self.state_list,
             actions_taken   = self.action_list,
             real_values     = targets,
         )
 
+        # Track loss
+        if not hasattr(self, 'loss_history'):
+            self.loss_history = []
+        self.loss_history.append(loss)
+        
     @abstractmethod
     def before_game(self):
         """ Before-game setup: alter buffer, etc. """
@@ -131,3 +143,13 @@ class DeepUnoAgent(ABC):
         self.action_list.clear()
         self.rewards_list.clear()
         self.dones.clear()
+
+    def verify_buffers(self):
+        """Call this before training to check buffer alignment"""
+        # They should all be the same length
+        if not all(len(lst) == len(self.state_list) for lst in 
+                   [self.next_state_list, self.action_list, self.rewards_list, self.dones]):
+            print("ERROR: Buffer size mismatch!")
+            return False
+
+        return True

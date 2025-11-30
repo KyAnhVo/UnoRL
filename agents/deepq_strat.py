@@ -29,3 +29,4 @@ class DeepQStratAgent(DeepQAgent):
         if self.episode_count % self.SYNC_RATE == self.SYNC_RATE - 1:
             # Parent already saved as 'deepq_ep{n}.pth', save another copy with specific name
             torch.save(self.target_nn.state_dict(), f'model_history/qstrat_{self.episode_count}')
+            pass
