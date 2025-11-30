@@ -9,9 +9,7 @@ class DeepQAgent(DeepUnoAgent):
     # sync target_nn param using online_nn after
     # every SYNC_RATE episodes
     SYNC_RATE: int
-    
-    GAIN_CARD_PENALTY: float
-    LOSE_CARD_REWARD: float
+
 
     def __init__(self, state_dim: int):
         super().__init__(state_dim=state_dim)
@@ -21,8 +19,6 @@ class DeepQAgent(DeepUnoAgent):
         # lower == more unstable model, but train more frequent
         self.SYNC_RATE = 500
 
-        self.GAIN_CARD_PENALTY = 0.02
-        self.LOSE_CARD_REWARD = 0.02
 
     @override
     def compute_targets(self) -> List[float]:

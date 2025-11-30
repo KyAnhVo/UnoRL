@@ -20,8 +20,4 @@ class DeepQCardAgent(DeepQAgent):
                 gain_card_penalty=self.GAIN_CARD_PENALTY,
                 lose_card_reward=self.LOSE_CARD_REWARD
                 )
-    
-    @override
-    def after_game(self, payoff: int):
-        # Call parent's after_game
-        super().after_game(payoff)
+

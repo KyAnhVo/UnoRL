@@ -32,6 +32,9 @@ class DeepUnoAgent(ABC):
     SAVE_RATE: int
     FILE_NAME: str
 
+    GAIN_CARD_PENALTY: float
+    LOSE_CARD_REWARD: float
+
     def __init__(self, state_dim: int, gamma: float = 0.99):
         self.state_dim = state_dim
         self.gamma     = gamma
@@ -53,14 +56,19 @@ class DeepUnoAgent(ABC):
         self.SAVE_RATE = 100000
         self.FILE_NAME = ""
 
+        # win count for statistics
         self.episode_count = 0
         self.win_count = []
 
+        # epsilon decay for epsilon-greedy path search
         self.EPSILON_MIN = 0.05
         self.EPSILON_MAX = 1.00
         self.EPSILON_DECAY_CONSTANT = 5e-5
-
         self.epsilon = self.EPSILON_MAX
+        
+        # reward calculation
+        self.GAIN_CARD_PENALTY = 0.02
+        self.LOSE_CARD_REWARD = 0.02
 
     # ------------------------------------------------------
     # RLCard-required API
@@ -177,7 +185,6 @@ class DeepUnoAgent(ABC):
         self.state_list.append(buffer_state)
         self.action_list.append(randint(0, 60)) # doesnt matter
 
-    @abstractmethod
     def after_game(self, payoff: int):
         """ After-game setup: adjust buffer, training, etc. """
         # epsilon decay
