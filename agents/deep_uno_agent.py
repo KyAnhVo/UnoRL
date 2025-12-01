@@ -68,7 +68,7 @@ class DeepUnoAgent(ABC):
         # epsilon decay for epsilon-greedy path search
         self.EPSILON_MIN = 0.05
         self.EPSILON_MAX = 1.00
-        self.EPSILON_DECAY_CONSTANT = 5e-5
+        self.EPSILON_DECAY_CONSTANT = 2e-5
         self.epsilon = self.EPSILON_MAX
         
         # reward calculation
@@ -217,7 +217,7 @@ class DeepUnoAgent(ABC):
         # Override the save path for strategic models specifically
         if self.episode_count % self.SAVE_RATE == self.SAVE_RATE - 1:
             # Parent already saved as 'deepq_ep{n}.pth', save another copy with specific name
-            torch.save(self.online_nn.state_dict(), f'model_history/{self.FILE_NAME}_{self.episode_count}')
+            torch.save(self.online_nn.state_dict(), f'model_history/{self.FILE_NAME}_{self.episode_count + 1}')
 
 
     # ------------------------------------------------------
