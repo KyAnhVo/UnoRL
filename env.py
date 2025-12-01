@@ -40,7 +40,7 @@ def play_games(agents: List, is_training: bool):
         if isinstance(pair[0], DeepUnoAgent) or isinstance(pair[1], DeepUnoAgent):
             play_game(pair, is_training)
 
-BOT_PHASE_GAMES = 500000
+BOT_PHASE_GAMES = 750000
 def train(total_games: int, training_agents: List[DeepUnoAgent]):
     rlcard_agents = []
     for _ in range(len(training_agents)):
