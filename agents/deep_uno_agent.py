@@ -13,7 +13,11 @@ class DeepUnoAgent(ABC):
 
     online_nn: DeepRL_NN
     episode_count: int
-    win_count: List[int]
+    
+    # each win_list[i] counts the number of won games in the range
+    # [ACCUMULATE_WIN_COUNT * i, ACCUMULATE_WIN_COUNT * (i + 1))
+    ACCUMULATE_WIN_COUNT: int
+    win_list: List[int]
 
     # train after every TRAIN_RATE games
     TRAIN_RATE: int
@@ -58,7 +62,8 @@ class DeepUnoAgent(ABC):
 
         # win count for statistics
         self.episode_count = 0
-        self.win_count = []
+        self.win_list = []
+        self.ACCUMULATE_WIN_COUNT = 1000
 
         # epsilon decay for epsilon-greedy path search
         self.EPSILON_MIN = 0.05
@@ -67,8 +72,8 @@ class DeepUnoAgent(ABC):
         self.epsilon = self.EPSILON_MAX
         
         # reward calculation
-        self.GAIN_CARD_PENALTY = 0.02
-        self.LOSE_CARD_REWARD = 0.02
+        self.GAIN_CARD_PENALTY = 0.05
+        self.LOSE_CARD_REWARD = 0.05
 
     # ------------------------------------------------------
     # RLCard-required API
@@ -197,9 +202,13 @@ class DeepUnoAgent(ABC):
         self.rewards_list.append(payoff)
         self.dones.append(True)
 
+        # win rate counting: every ACCUMULATE_WIN_COUNT games
+        if self.episode_count % self.ACCUMULATE_WIN_COUNT == 0:
+            self.win_list.append(0)
+        self.win_list[-1] += 1 if payoff == 1 else 0
+
         # training
         self.episode_count += 1
-        self.win_count.append(1 if payoff == 1 else 0)
         if self.episode_count % self.TRAIN_RATE == self.TRAIN_RATE - 1:
             self.train_online_nn()
             self.reset_buffer()

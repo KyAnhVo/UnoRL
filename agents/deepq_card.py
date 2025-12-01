@@ -1,7 +1,6 @@
 from agents.deepq import DeepQAgent
 from agents.state_translator import CARD_STATE_DIM_COUNT, card_state_translate, card_state_reward
 from typing import override, List
-import torch
 
 class DeepQCardAgent(DeepQAgent):
     def __init__(self):

@@ -13,6 +13,8 @@ class DeepQAgent(DeepUnoAgent):
 
     def __init__(self, state_dim: int):
         super().__init__(state_dim=state_dim)
+
+        # setup target network
         self.target_nn = DeepRL_NN(state_dim=state_dim, action_dim=61)
         self.target_nn.load_state_dict(self.online_nn.state_dict())
 

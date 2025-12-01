@@ -1,7 +1,6 @@
 from agents.deepq import DeepQAgent
 from agents.state_translator import STRAT_STATE_DIM_COUNT, strategic_state_translate, strat_state_reward
 from typing import override, List
-import torch
 
 class DeepQStratAgent(DeepQAgent):
     def __init__(self):
