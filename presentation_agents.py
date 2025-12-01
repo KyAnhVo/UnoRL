@@ -36,7 +36,6 @@ def find_max_suffix_file(folder_path: str, prefix: str):
             best_num = num
             best_file = name
     
-    print(best_file)
     return best_file
 
 class DeepQCardAgentPresentatiion(DeepQCardAgent):
@@ -60,8 +59,8 @@ class DeepQCardAgentPresentatiion(DeepQCardAgent):
 
     @override
     def eval_step(self, state) -> Tuple[str, Collection]:
-        print("\033[2J\033[H")
-        # print("#"*TERM_WIDTH)
+        # print("\033[2J\033[H")
+        print("-"*TERM_WIDTH)
         real_state = state['raw_obs']
 
         print(self.presentation_line)
@@ -74,21 +73,20 @@ class DeepQCardAgentPresentatiion(DeepQCardAgent):
 
         action, _ = super().eval_step(state)
         
-        input("press enter to see action")
         print()
         print(f"Play: {action}")
         print()
-        input("press enter to continue")
 
         return action, []
 
     @override
     def after_game(self, payoff: int):
-        print("\033[2J\033[H")
+        # print("\033[2J\033[H")
+        print('-' * TERM_WIDTH)
         print("DQN Card WIN!" if payoff == 1 else "DQN Card LOSE T.T")
         self.win += 1 if payoff == 1 else 0
-        input('')
-        print("\033[2J\033[H")
+        # input('')
+        # print("\033[2J\033[H")
 
 class DeepQStratAgentPresentatiion(DeepQStratAgent):
     def __init__(self):
@@ -111,7 +109,9 @@ class DeepQStratAgentPresentatiion(DeepQStratAgent):
 
     @override
     def eval_step(self, state) -> Tuple[str, Collection]:
-        print("\033[2J\033[H")
+        # print("\033[2J\033[H")
+        print("-" * TERM_WIDTH)
+
         real_state = state['raw_obs']
 
         print(self.presentation_line)
@@ -125,21 +125,19 @@ class DeepQStratAgentPresentatiion(DeepQStratAgent):
 
         action, _ = super().eval_step(state)
         
-        input("press enter to see action")
         print()
         print(f"Play: {action}")
         print()
-        input("press enter to continue")
 
         return action, []
 
     @override
     def after_game(self, payoff: int):
-        print("*" * TERM_WIDTH)
-        print("\033[2J\033[H")
+        print("-" * TERM_WIDTH)
+        # print("\033[2J\033[H")
         print("DQN Strat WIN!" if payoff == 1 else "DQN Strat LOSE T.T")
-        input('')
-        print("\033[2J\033[H")
+        # input('')
+        # print("\033[2J\033[H")
         self.win += 1 if payoff == 1 else 0
 
 class DeepMCStratAgentPresentation(DeepMCStratAgent):
@@ -162,7 +160,8 @@ class DeepMCStratAgentPresentation(DeepMCStratAgent):
 
     @override
     def eval_step(self, state) -> Tuple[str, Collection]:
-        print("\033[2J\033[H")
+        # print("\033[2J\033[H")
+        print("-" * TERM_WIDTH)
         real_state = state['raw_obs']
 
         print(self.presentation_line)
@@ -176,21 +175,19 @@ class DeepMCStratAgentPresentation(DeepMCStratAgent):
 
         action, _ = super().eval_step(state)
         
-        input("press enter to see action")
         print()
         print(f"Play: {action}")
         print()
-        input("press enter to continue")
 
         return action, []
 
     @override
     def after_game(self, payoff: int):
-        print("*" * TERM_WIDTH)
-        print("\033[2J\033[H")
+        print("-" * TERM_WIDTH)
+        # print("\033[2J\033[H")
         print("DeepMC Strat WIN!" if payoff == 1 else "DeepMC Strat LOSE T.T")
-        input('')
-        print("\033[2J\033[H")
+        # input('')
+        # print("\033[2J\033[H")
         self.win += 1 if payoff == 1 else 0
 
 class DeepMCCardAgengPresentation(DeepMCCardAgent):
@@ -213,7 +210,8 @@ class DeepMCCardAgengPresentation(DeepMCCardAgent):
 
     @override
     def eval_step(self, state) -> Tuple[str, Collection]:
-        print("\033[2J\033[H")
+        #print("\033[2J\033[H")
+        print('-' * TERM_WIDTH)
         real_state = state['raw_obs']
 
         print(self.presentation_line)
@@ -227,19 +225,17 @@ class DeepMCCardAgengPresentation(DeepMCCardAgent):
 
         action, _ = super().eval_step(state)
         
-        input("press enter to see action")
         print()
         print(f"Play: {action}")
         print()
-        input("press enter to continue")
 
         return action, []
 
     @override
     def after_game(self, payoff: int):
-        print("*" * TERM_WIDTH)
-        print("\033[2J\033[H")
+        print("-" * TERM_WIDTH)
+        # print("\033[2J\033[H")
         print("DeepMC Card WIN!" if payoff == 1 else "DeepMC Card LOSE T.T")
-        input('')
-        print("\033[2J\033[H")
+        # input('')
+        # print("\033[2J\033[H")
         self.win += 1 if payoff == 1 else 0

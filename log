@@ -1,0 +1,802 @@
+1st game: qstrat vs qcard
+--------------------------------------------------------------------------------
+DQN: Strat Presentation 
+Hand count: 7
+Hand: ['y-5', 'g-wild_draw_4', 'b-reverse', 'r-7', 'g-4', 'y-1', 'b-8']
+Target: y-3
+Opponent hand count: 7
+Discarded deck count: 1
+
+
+Play: y-5
+
+--------------------------------------------------------------------------------
+DQN: Card Presentation
+Hand count: 7
+Hand: ['y-reverse', 'b-skip', 'g-wild', 'b-7', 'g-9', 'b-9', 'y-4']
+Target: y-5
+Opponent hand count: 6
+Discarded deck count: 2
+
+
+Play: y-wild
+
+--------------------------------------------------------------------------------
+DQN: Strat Presentation 
+Hand count: 6
+Hand: ['g-wild_draw_4', 'b-reverse', 'r-7', 'g-4', 'y-1', 'b-8']
+Target: g-wild
+Opponent hand count: 6
+Discarded deck count: 3
+
+
+Play: g-4
+
+--------------------------------------------------------------------------------
+DQN: Card Presentation
+Hand count: 6
+Hand: ['y-reverse', 'b-skip', 'b-7', 'g-9', 'b-9', 'y-4']
+Target: g-4
+Opponent hand count: 5
+Discarded deck count: 4
+
+
+Play: y-4
+
+--------------------------------------------------------------------------------
+DQN: Strat Presentation 
+Hand count: 5
+Hand: ['g-wild_draw_4', 'b-reverse', 'r-7', 'y-1', 'b-8']
+Target: y-4
+Opponent hand count: 5
+Discarded deck count: 5
+
+
+Play: y-1
+
+--------------------------------------------------------------------------------
+DQN: Card Presentation
+Hand count: 5
+Hand: ['y-reverse', 'b-skip', 'b-7', 'g-9', 'b-9']
+Target: y-1
+Opponent hand count: 4
+Discarded deck count: 6
+
+
+Play: y-reverse
+
+--------------------------------------------------------------------------------
+DQN: Strat Presentation 
+Hand count: 4
+Hand: ['g-wild_draw_4', 'b-reverse', 'r-7', 'b-8']
+Target: y-reverse
+Opponent hand count: 4
+Discarded deck count: 7
+
+
+Play: b-reverse
+
+--------------------------------------------------------------------------------
+DQN: Card Presentation
+Hand count: 4
+Hand: ['b-skip', 'b-7', 'g-9', 'b-9']
+Target: b-reverse
+Opponent hand count: 3
+Discarded deck count: 8
+
+
+Play: b-9
+
+--------------------------------------------------------------------------------
+DQN: Strat Presentation 
+Hand count: 3
+Hand: ['g-wild_draw_4', 'r-7', 'b-8']
+Target: b-9
+Opponent hand count: 3
+Discarded deck count: 9
+
+
+Play: b-8
+
+--------------------------------------------------------------------------------
+DQN: Card Presentation
+Hand count: 3
+Hand: ['b-skip', 'b-7', 'g-9']
+Target: b-8
+Opponent hand count: 2
+Discarded deck count: 10
+
+
+Play: b-7
+
+--------------------------------------------------------------------------------
+DQN: Strat Presentation 
+Hand count: 2
+Hand: ['g-wild_draw_4', 'r-7']
+Target: b-7
+Opponent hand count: 2
+Discarded deck count: 11
+
+
+Play: r-7
+
+--------------------------------------------------------------------------------
+DQN: Card Presentation
+Hand count: 2
+Hand: ['b-skip', 'g-9']
+Target: r-7
+Opponent hand count: 1
+Discarded deck count: 12
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DQN: Strat Presentation 
+Hand count: 1
+Hand: ['g-wild_draw_4']
+Target: r-8
+Opponent hand count: 2
+Discarded deck count: 13
+
+
+Play: r-wild_draw_4
+
+--------------------------------------------------------------------------------
+DQN Strat WIN!
+--------------------------------------------------------------------------------
+DQN Card LOSE T.T
+2nd game: mcstrat vs mccard
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 7
+Hand: ['g-9', 'y-1', 'b-2', 'r-4', 'r-8', 'b-wild', 'r-reverse']
+Target: g-skip
+Opponent hand count: 7
+Discarded deck count: 1
+
+
+Play: r-wild
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 7
+Hand: ['b-6', 'g-7', 'y-skip', 'r-5', 'b-0', 'g-3', 'g-wild']
+Target: b-wild
+Opponent hand count: 6
+Discarded deck count: 2
+
+
+Play: g-wild
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 6
+Hand: ['g-9', 'y-1', 'b-2', 'r-4', 'r-8', 'r-reverse']
+Target: g-wild
+Opponent hand count: 6
+Discarded deck count: 3
+
+
+Play: g-9
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 6
+Hand: ['b-6', 'g-7', 'y-skip', 'r-5', 'b-0', 'g-3']
+Target: g-9
+Opponent hand count: 5
+Discarded deck count: 4
+
+
+Play: g-3
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 5
+Hand: ['y-1', 'b-2', 'r-4', 'r-8', 'r-reverse']
+Target: g-3
+Opponent hand count: 5
+Discarded deck count: 5
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 5
+Hand: ['b-6', 'g-7', 'y-skip', 'r-5', 'b-0']
+Target: g-3
+Opponent hand count: 6
+Discarded deck count: 5
+
+
+Play: g-7
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 6
+Hand: ['y-1', 'b-2', 'r-4', 'r-8', 'r-reverse', 'b-4']
+Target: g-7
+Opponent hand count: 4
+Discarded deck count: 6
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 4
+Hand: ['b-6', 'y-skip', 'r-5', 'b-0']
+Target: g-7
+Opponent hand count: 7
+Discarded deck count: 6
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 7
+Hand: ['y-1', 'b-2', 'r-4', 'r-8', 'r-reverse', 'b-4', 'y-9']
+Target: g-7
+Opponent hand count: 5
+Discarded deck count: 6
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 5
+Hand: ['b-6', 'y-skip', 'r-5', 'b-0', 'y-3']
+Target: g-7
+Opponent hand count: 8
+Discarded deck count: 6
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 8
+Hand: ['y-1', 'b-2', 'r-4', 'r-8', 'r-reverse', 'b-4', 'y-9', 'y-4']
+Target: g-7
+Opponent hand count: 6
+Discarded deck count: 6
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 6
+Hand: ['b-6', 'y-skip', 'r-5', 'b-0', 'y-3', 'b-6']
+Target: g-7
+Opponent hand count: 9
+Discarded deck count: 6
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 6
+Hand: ['b-6', 'y-skip', 'r-5', 'b-0', 'y-3', 'b-6']
+Target: g-skip
+Opponent hand count: 9
+Discarded deck count: 7
+
+
+Play: y-skip
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 5
+Hand: ['b-6', 'r-5', 'b-0', 'y-3', 'b-6']
+Target: y-skip
+Opponent hand count: 9
+Discarded deck count: 8
+
+
+Play: y-3
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 9
+Hand: ['y-1', 'b-2', 'r-4', 'r-8', 'r-reverse', 'b-4', 'y-9', 'y-4', 'y-skip']
+Target: y-3
+Opponent hand count: 4
+Discarded deck count: 9
+
+
+Play: y-skip
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 8
+Hand: ['y-1', 'b-2', 'r-4', 'r-8', 'r-reverse', 'b-4', 'y-9', 'y-4']
+Target: y-skip
+Opponent hand count: 4
+Discarded deck count: 10
+
+
+Play: y-4
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 4
+Hand: ['b-6', 'r-5', 'b-0', 'b-6']
+Target: y-4
+Opponent hand count: 7
+Discarded deck count: 11
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 7
+Hand: ['y-1', 'b-2', 'r-4', 'r-8', 'r-reverse', 'b-4', 'y-9']
+Target: y-4
+Opponent hand count: 5
+Discarded deck count: 11
+
+
+Play: y-1
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 5
+Hand: ['b-6', 'r-5', 'b-0', 'b-6', 'r-5']
+Target: y-1
+Opponent hand count: 6
+Discarded deck count: 12
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 6
+Hand: ['b-2', 'r-4', 'r-8', 'r-reverse', 'b-4', 'y-9']
+Target: y-1
+Opponent hand count: 6
+Discarded deck count: 12
+
+
+Play: y-9
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 6
+Hand: ['b-6', 'r-5', 'b-0', 'b-6', 'r-5', 'b-5']
+Target: y-9
+Opponent hand count: 5
+Discarded deck count: 13
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 5
+Hand: ['b-2', 'r-4', 'r-8', 'r-reverse', 'b-4']
+Target: y-9
+Opponent hand count: 7
+Discarded deck count: 13
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 7
+Hand: ['b-6', 'r-5', 'b-0', 'b-6', 'r-5', 'b-5', 'g-reverse']
+Target: y-9
+Opponent hand count: 6
+Discarded deck count: 13
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 6
+Hand: ['b-2', 'r-4', 'r-8', 'r-reverse', 'b-4', 'r-1']
+Target: y-9
+Opponent hand count: 8
+Discarded deck count: 13
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 8
+Hand: ['b-6', 'r-5', 'b-0', 'b-6', 'r-5', 'b-5', 'g-reverse', 'b-9']
+Target: y-9
+Opponent hand count: 7
+Discarded deck count: 13
+
+
+Play: b-9
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 7
+Hand: ['b-2', 'r-4', 'r-8', 'r-reverse', 'b-4', 'r-1', 'g-reverse']
+Target: b-9
+Opponent hand count: 7
+Discarded deck count: 14
+
+
+Play: b-4
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 7
+Hand: ['b-6', 'r-5', 'b-0', 'b-6', 'r-5', 'b-5', 'g-reverse']
+Target: b-4
+Opponent hand count: 6
+Discarded deck count: 15
+
+
+Play: b-0
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 6
+Hand: ['b-2', 'r-4', 'r-8', 'r-reverse', 'r-1', 'g-reverse']
+Target: b-0
+Opponent hand count: 6
+Discarded deck count: 16
+
+
+Play: b-2
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 6
+Hand: ['b-6', 'r-5', 'b-6', 'r-5', 'b-5', 'g-reverse']
+Target: b-2
+Opponent hand count: 5
+Discarded deck count: 17
+
+
+Play: b-6
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 5
+Hand: ['r-4', 'r-8', 'r-reverse', 'r-1', 'g-reverse']
+Target: b-6
+Opponent hand count: 5
+Discarded deck count: 18
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 5
+Hand: ['r-5', 'b-6', 'r-5', 'b-5', 'g-reverse']
+Target: b-6
+Opponent hand count: 6
+Discarded deck count: 18
+
+
+Play: b-5
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 6
+Hand: ['r-4', 'r-8', 'r-reverse', 'r-1', 'g-reverse', 'y-reverse']
+Target: b-5
+Opponent hand count: 4
+Discarded deck count: 19
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 4
+Hand: ['r-5', 'b-6', 'r-5', 'g-reverse']
+Target: b-5
+Opponent hand count: 7
+Discarded deck count: 19
+
+
+Play: r-5
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 7
+Hand: ['r-4', 'r-8', 'r-reverse', 'r-1', 'g-reverse', 'y-reverse', 'g-6']
+Target: r-5
+Opponent hand count: 3
+Discarded deck count: 20
+
+
+Play: r-reverse
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 3
+Hand: ['b-6', 'r-5', 'g-reverse']
+Target: r-reverse
+Opponent hand count: 6
+Discarded deck count: 21
+
+
+Play: r-5
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 6
+Hand: ['r-4', 'r-8', 'r-1', 'g-reverse', 'y-reverse', 'g-6']
+Target: r-5
+Opponent hand count: 2
+Discarded deck count: 22
+
+
+Play: r-1
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 2
+Hand: ['b-6', 'g-reverse']
+Target: r-1
+Opponent hand count: 5
+Discarded deck count: 23
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 5
+Hand: ['r-4', 'r-8', 'g-reverse', 'y-reverse', 'g-6']
+Target: r-1
+Opponent hand count: 3
+Discarded deck count: 23
+
+
+Play: r-4
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 3
+Hand: ['b-6', 'g-reverse', 'y-reverse']
+Target: r-4
+Opponent hand count: 4
+Discarded deck count: 24
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 4
+Hand: ['r-8', 'g-reverse', 'y-reverse', 'g-6']
+Target: r-4
+Opponent hand count: 4
+Discarded deck count: 24
+
+
+Play: r-8
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 4
+Hand: ['b-6', 'g-reverse', 'y-reverse', 'g-draw_2']
+Target: r-8
+Opponent hand count: 3
+Discarded deck count: 25
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 3
+Hand: ['g-reverse', 'y-reverse', 'g-6']
+Target: r-8
+Opponent hand count: 4
+Discarded deck count: 26
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 4
+Hand: ['b-6', 'g-reverse', 'y-reverse', 'g-draw_2']
+Target: r-8
+Opponent hand count: 4
+Discarded deck count: 26
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 4
+Hand: ['g-reverse', 'y-reverse', 'g-6', 'y-9']
+Target: r-8
+Opponent hand count: 5
+Discarded deck count: 26
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 5
+Hand: ['b-6', 'g-reverse', 'y-reverse', 'g-draw_2', 'g-4']
+Target: r-8
+Opponent hand count: 5
+Discarded deck count: 26
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 5
+Hand: ['g-reverse', 'y-reverse', 'g-6', 'y-9', 'g-0']
+Target: r-8
+Opponent hand count: 6
+Discarded deck count: 26
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 6
+Hand: ['b-6', 'g-reverse', 'y-reverse', 'g-draw_2', 'g-4', 'b-4']
+Target: r-8
+Opponent hand count: 6
+Discarded deck count: 26
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 6
+Hand: ['g-reverse', 'y-reverse', 'g-6', 'y-9', 'g-0', 'b-3']
+Target: r-9
+Opponent hand count: 6
+Discarded deck count: 27
+
+
+Play: y-9
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 6
+Hand: ['b-6', 'g-reverse', 'y-reverse', 'g-draw_2', 'g-4', 'b-4']
+Target: y-9
+Opponent hand count: 5
+Discarded deck count: 28
+
+
+Play: y-reverse
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 5
+Hand: ['g-reverse', 'y-reverse', 'g-6', 'g-0', 'b-3']
+Target: y-reverse
+Opponent hand count: 5
+Discarded deck count: 29
+
+
+Play: y-reverse
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 5
+Hand: ['b-6', 'g-reverse', 'g-draw_2', 'g-4', 'b-4']
+Target: y-reverse
+Opponent hand count: 4
+Discarded deck count: 30
+
+
+Play: g-reverse
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 4
+Hand: ['g-reverse', 'g-6', 'g-0', 'b-3']
+Target: g-reverse
+Opponent hand count: 4
+Discarded deck count: 31
+
+
+Play: g-6
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 4
+Hand: ['b-6', 'g-draw_2', 'g-4', 'b-4']
+Target: g-6
+Opponent hand count: 3
+Discarded deck count: 32
+
+
+Play: b-6
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 3
+Hand: ['g-reverse', 'g-0', 'b-3']
+Target: b-6
+Opponent hand count: 3
+Discarded deck count: 33
+
+
+Play: b-3
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 3
+Hand: ['g-draw_2', 'g-4', 'b-4']
+Target: b-3
+Opponent hand count: 2
+Discarded deck count: 34
+
+
+Play: b-4
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 2
+Hand: ['g-reverse', 'g-0']
+Target: b-4
+Opponent hand count: 2
+Discarded deck count: 35
+
+
+Play: draw
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 2
+Hand: ['g-draw_2', 'g-4']
+Target: b-4
+Opponent hand count: 3
+Discarded deck count: 35
+
+
+Play: g-4
+
+--------------------------------------------------------------------------------
+DeepMC: Card Presentation 
+Hand count: 3
+Hand: ['g-reverse', 'g-0', 'r-reverse']
+Target: g-4
+Opponent hand count: 1
+Discarded deck count: 36
+
+
+Play: g-reverse
+
+--------------------------------------------------------------------------------
+DeepMC: Strat Presentation 
+Hand count: 1
+Hand: ['g-draw_2']
+Target: g-reverse
+Opponent hand count: 2
+Discarded deck count: 37
+
+
+Play: g-draw_2
+
+--------------------------------------------------------------------------------
+DeepMC Strat WIN!
+--------------------------------------------------------------------------------
+DeepMC Card LOSE T.T

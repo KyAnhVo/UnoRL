@@ -8,13 +8,13 @@ qcard = DeepQCardAgentPresentatiion()
 mcstrat = DeepMCStratAgentPresentation()
 mccard = DeepMCCardAgengPresentation()
 
-input("1st game: qstrat vs qcard")
+print("1st game: qstrat vs qcard")
 
 play_game([qstrat, qcard], is_training=False)
 
-print("\033[2J\033[H")
+# print("\033[2J\033[H")
 
-input("2nd game: mcstrat vs mccard")
+print("2nd game: mcstrat vs mccard")
 
 play_game([mcstrat, mccard], is_training=False)
 
