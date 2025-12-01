@@ -54,10 +54,10 @@ class DeepUnoAgent(ABC):
         self.dones           = []
 
         # Smaller == faster training, higher fluctuation
-        self.TRAIN_RATE = 4
+        self.TRAIN_RATE = 8
 
         # Save file datas
-        self.SAVE_RATE = 100000
+        self.SAVE_RATE = 50000
         self.FILE_NAME = ""
 
         # win count for statistics
