@@ -3,6 +3,8 @@ from typing import override, Collection, Tuple
 import torch
 from agents.deepq_card import DeepQCardAgent
 from agents.deepq_strat import DeepQStratAgent
+from agents.deepmc_card import DeepMCCardAgent
+from agents.deepmc_strat import DeepMCStratAgent
 
 
 import shutil
@@ -40,7 +42,7 @@ def find_max_suffix_file(folder_path: str, prefix: str):
 class DeepQCardAgentPresentatiion(DeepQCardAgent):
     def __init__(self):
         super().__init__()
-        self.presentation_line = " DQN: Card Presentation "
+        self.presentation_line = "DQN: Card Presentation"
 
         file = find_max_suffix_file(
                 folder_path=os.path.join(".", "model_history"),
@@ -57,29 +59,6 @@ class DeepQCardAgentPresentatiion(DeepQCardAgent):
         self.win = 0
 
     @override
-    def step(self, state)->str:
-        print("\033[F\033[K" * 7)
-        real_state = state['raw_obs']
-
-        os.system('cls' if os.name == 'nt' else 'clear')
-
-        print(self.presentation_line)
-
-        print(f"Hand count: {len(real_state['hand'])}")
-        print(f"Hand: {real_state['hand']}")
-
-        print(f"Target: {real_state['target']}")
-
-        print(f"Opponent hand count: {len(real_state['others_hand'])}")
-
-        action = super().step(state)
-
-        print(f"Play: {action}")
-
-
-        return action
-
-    @override
     def eval_step(self, state) -> Tuple[str, Collection]:
         print("\033[2J\033[H")
         # print("#"*TERM_WIDTH)
@@ -91,7 +70,6 @@ class DeepQCardAgentPresentatiion(DeepQCardAgent):
         print(f"Target: {real_state['target']}")
         print(f"Opponent hand count: {len(real_state['others_hand'])}")
         print(f"Discarded deck count: {len(real_state['played_cards'])}")
-
         print()
 
         action, _ = super().eval_step(state)
@@ -132,27 +110,55 @@ class DeepQStratAgentPresentatiion(DeepQStratAgent):
         self.win = 0
 
     @override
-    def step(self, state)->str:
-        print("\033[F\033[K" * 7)
+    def eval_step(self, state) -> Tuple[str, Collection]:
+        print("\033[2J\033[H")
         real_state = state['raw_obs']
 
-        os.system('cls' if os.name == 'nt' else 'clear')
-
         print(self.presentation_line)
-
         print(f"Hand count: {len(real_state['hand'])}")
         print(f"Hand: {real_state['hand']}")
-
         print(f"Target: {real_state['target']}")
-
         print(f"Opponent hand count: {len(real_state['others_hand'])}")
+        print(f"Discarded deck count: {len(real_state['played_cards'])}")
 
-        action = super().step(state)
+        print()
 
+        action, _ = super().eval_step(state)
+        
+        input("press enter to see action")
+        print()
         print(f"Play: {action}")
+        print()
+        input("press enter to continue")
 
+        return action, []
 
-        return action
+    @override
+    def after_game(self, payoff: int):
+        print("*" * TERM_WIDTH)
+        print("\033[2J\033[H")
+        print("DQN Strat WIN!" if payoff == 1 else "DQN Strat LOSE T.T")
+        input('')
+        print("\033[2J\033[H")
+        self.win += 1 if payoff == 1 else 0
+
+class DeepMCStratAgentPresentation(DeepMCStratAgent):
+    def __init__(self):
+        super().__init__()
+        self.presentation_line = "DeepMC: Strat Presentation "
+
+        file = find_max_suffix_file(
+                folder_path=os.path.join(".", "model_history"),
+                prefix="mcstrat")
+
+        if file is not None:
+            file = os.path.join(".", "model_history", file)
+            self.online_nn.load_state_dict(torch.load(file))
+        else:
+            print("not found file")
+            exit()
+
+        self.win = 0
 
     @override
     def eval_step(self, state) -> Tuple[str, Collection]:
@@ -182,7 +188,58 @@ class DeepQStratAgentPresentatiion(DeepQStratAgent):
     def after_game(self, payoff: int):
         print("*" * TERM_WIDTH)
         print("\033[2J\033[H")
-        print("DQN Strat WIN!" if payoff == 1 else "DQN Strat LOSE T.T")
+        print("DeepMC Strat WIN!" if payoff == 1 else "DeepMC Strat LOSE T.T")
+        input('')
+        print("\033[2J\033[H")
+        self.win += 1 if payoff == 1 else 0
+
+class DeepMCCardAgengPresentation(DeepMCCardAgent):
+    def __init__(self):
+        super().__init__()
+        self.presentation_line = "DeepMC: Card Presentation "
+
+        file = find_max_suffix_file(
+                folder_path=os.path.join(".", "model_history"),
+                prefix="mccard")
+
+        if file is not None:
+            file = os.path.join(".", "model_history", file)
+            self.online_nn.load_state_dict(torch.load(file))
+        else:
+            print("not found file")
+            exit()
+
+        self.win = 0
+
+    @override
+    def eval_step(self, state) -> Tuple[str, Collection]:
+        print("\033[2J\033[H")
+        real_state = state['raw_obs']
+
+        print(self.presentation_line)
+        print(f"Hand count: {len(real_state['hand'])}")
+        print(f"Hand: {real_state['hand']}")
+        print(f"Target: {real_state['target']}")
+        print(f"Opponent hand count: {len(real_state['others_hand'])}")
+        print(f"Discarded deck count: {len(real_state['played_cards'])}")
+
+        print()
+
+        action, _ = super().eval_step(state)
+        
+        input("press enter to see action")
+        print()
+        print(f"Play: {action}")
+        print()
+        input("press enter to continue")
+
+        return action, []
+
+    @override
+    def after_game(self, payoff: int):
+        print("*" * TERM_WIDTH)
+        print("\033[2J\033[H")
+        print("DeepMC Card WIN!" if payoff == 1 else "DeepMC Card LOSE T.T")
         input('')
         print("\033[2J\033[H")
         self.win += 1 if payoff == 1 else 0
