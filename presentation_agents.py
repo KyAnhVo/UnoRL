@@ -49,8 +49,8 @@ class DeepQCardAgentPresentatiion(DeepQCardAgent):
 
         if file is not None:
             file = os.path.join(".", "model_history", file)
-            self.online_nn.load_state_dict(torch.load(file))
-            self.target_nn.load_state_dict(torch.load(file))
+            self.online_nn.load_state_dict(torch.load(file, map_location=self.online_nn.device))
+            self.target_nn.load_state_dict(torch.load(file, map_location=self.online_nn.device))
         else:
             print("not found file")
             exit()
@@ -96,8 +96,8 @@ class DeepQStratAgentPresentatiion(DeepQStratAgent):
 
         if file is not None:
             file = os.path.join(".", "model_history", file)
-            self.online_nn.load_state_dict(torch.load(file))
-            self.target_nn.load_state_dict(torch.load(file))
+            self.online_nn.load_state_dict(torch.load(file, map_location=self.online_nn.device))
+            self.target_nn.load_state_dict(torch.load(file, map_location=self.online_nn.device))
         else:
             print("not found file")
             exit()
@@ -144,7 +144,7 @@ class DeepMCStratAgentPresentation(DeepMCStratAgent):
 
         if file is not None:
             file = os.path.join(".", "model_history", file)
-            self.online_nn.load_state_dict(torch.load(file))
+            self.online_nn.load_state_dict(torch.load(file, map_location=self.online_nn.device))
         else:
             print("not found file")
             exit()
@@ -190,7 +190,7 @@ class DeepMCCardAgengPresentation(DeepMCCardAgent):
 
         if file is not None:
             file = os.path.join(".", "model_history", file)
-            self.online_nn.load_state_dict(torch.load(file))
+            self.online_nn.load_state_dict(torch.load(file, map_location=self.online_nn.device))
         else:
             print("not found file")
             exit()
