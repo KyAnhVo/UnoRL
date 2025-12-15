@@ -12,7 +12,7 @@ mcstrat = DeepMCStratFrozenAgent()
 rulebot = get_rule_based_agent()
 randbot = RandomAgent(61)
 
-gamecount = 10000
+gamecount = 1000
 print(f"Games played per round: {gamecount}")
 
 for i in range(gamecount):

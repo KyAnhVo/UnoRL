@@ -6,6 +6,7 @@ from agents.state_translator import int_to_action
 import random
 import math
 import torch
+import os
 
 class DeepUnoAgent(ABC):
     state_dim: int
@@ -74,6 +75,9 @@ class DeepUnoAgent(ABC):
         # reward calculation
         self.GAIN_CARD_PENALTY = 0.05
         self.LOSE_CARD_REWARD = 0.05
+
+        # model history save dir
+        self.MODEL_HISTORY_DIR = 'model_history'
 
     # ------------------------------------------------------
     # RLCard-required API
@@ -217,7 +221,7 @@ class DeepUnoAgent(ABC):
         # Override the save path for strategic models specifically
         if self.episode_count % self.SAVE_RATE == self.SAVE_RATE - 1:
             # Parent already saved as 'deepq_ep{n}.pth', save another copy with specific name
-            torch.save(self.online_nn.state_dict(), f'model_history/{self.FILE_NAME}_{self.episode_count + 1}')
+            torch.save(self.online_nn.state_dict(), os.path.join(self.MODEL_HISTORY_DIR, f'{self.FILE_NAME}_{self.episode_count + 1}'))
 
 
     # ------------------------------------------------------
